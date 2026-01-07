@@ -1,0 +1,352 @@
+---
+title: "Adding Items"
+description: "Complete guide to adding assets to your Storehouses portfolio"
+---
+
+## Overview
+
+Storehouses supports nine different asset categories, each with tailored fields to capture the most relevant information for that type of asset.
+
+## How to Add an Item
+
+<Steps>
+  <Step title="Navigate to Add Page">
+    Click "Add Item" from your dashboard or go to [storehouses.app/add](https://storehouses.app/add)
+  </Step>
+
+  <Step title="Select Category">
+    Choose the asset type you're adding:
+    - Precious Metals
+    - Luxury Watches
+    - Gems & Jewelry
+    - Fine Jewelry
+    - Wine
+    - Spirits
+    - Fine Art
+    - Arms & Armor
+    - Other Collectibles
+  </Step>
+
+  <Step title="Fill in Details">
+    Complete the category-specific form with your asset's information
+  </Step>
+
+  <Step title="Save">
+    Click "Save Item" to add it to your portfolio
+  </Step>
+</Steps>
+
+## Common Fields (All Categories)
+
+Every item includes these basic fields:
+
+### Required Fields
+
+<ParamField path="title" type="string" required>
+  Name or title of the item
+
+  **Example**: "1 oz American Gold Eagle" or "Rolex Submariner Date"
+</ParamField>
+
+<ParamField path="category" type="select" required>
+  Asset category (selected in step 2)
+</ParamField>
+
+### Optional Basic Fields
+
+<ParamField path="description" type="textarea">
+  Additional details or notes about the item
+
+  **Example**: "2023 uncirculated gold coin in original mint packaging"
+</ParamField>
+
+<ParamField path="quantity" type="number" default={1}>
+  Number of identical units
+
+  **Use case**: For multiple identical items (e.g., 10 silver coins of the same type)
+</ParamField>
+
+### Valuation Fields
+
+<ParamField path="purchase_price" type="currency">
+  Amount paid when acquired
+
+  **Use**: Track cost basis for investment tracking
+</ParamField>
+
+<ParamField path="purchase_date" type="date">
+  Date of acquisition
+
+  **Use**: Calculate holding period and track purchase history
+</ParamField>
+
+<ParamField path="seller" type="string">
+  Source of purchase
+
+  **Example**: "APMEX", "Local coin shop", "Private sale"
+</ParamField>
+
+<ParamField path="market_value" type="currency">
+  Current estimated market value
+
+  **Use**: For assets without automatic pricing (watches, art, etc.)
+</ParamField>
+
+<ParamField path="insurance_value" type="currency">
+  Insured value
+
+  **Use**: Track insurance coverage amounts
+</ParamField>
+
+### Organization Fields
+
+<ParamField path="location" type="select">
+  Physical storage location
+
+  Choose from your saved locations or create a new one:
+  - Home Safe
+  - Bank Safe Deposit Box
+  - Vault Storage
+  - Wine Cellar
+  - Gallery
+  - Custom locations
+</ParamField>
+
+<ParamField path="collection" type="select">
+  Assign to a collection
+
+  **Example collections**:
+  - "Gold Coins"
+  - "Swiss Watches"
+  - "Bordeaux Wines"
+  - "American Art"
+</ParamField>
+
+### Additional Fields
+
+<ParamField path="notes" type="textarea">
+  Private notes
+
+  **Use**: Any additional information, provenance notes, or reminders
+</ParamField>
+
+<ParamField path="photos" type="file" multiple>
+  Upload images
+
+  **Best practice**: Include multiple angles and any certificates or documentation
+</ParamField>
+
+## Category-Specific Fields
+
+Each asset type has unique fields tailored to that category:
+
+<CardGroup cols={3}>
+  <Card title="Precious Metals" icon="coins" href="/asset-types/precious-metals">
+    - Metal type
+    - Weight (oz)
+    - Purity
+    - Product name
+  </Card>
+
+  <Card title="Luxury Watches" icon="clock" href="/asset-types/watches">
+    - Brand
+    - Model
+    - Reference number
+    - Movement type
+    - Case material
+  </Card>
+
+  <Card title="Gems" icon="gem" href="/asset-types/gems">
+    - Gem type
+    - Carat weight
+    - Cut, Color, Clarity
+    - Certification
+  </Card>
+
+  <Card title="Fine Jewelry" icon="ring" href="/asset-types/jewelry">
+    - Materials
+    - Designer/Maker
+    - Stones
+    - Hallmarks
+  </Card>
+
+  <Card title="Wine" icon="wine-glass" href="/asset-types/wine">
+    - Producer
+    - Vintage
+    - Region/Appellation
+    - Bottle size
+    - Storage conditions
+  </Card>
+
+  <Card title="Spirits" icon="whiskey-glass" href="/asset-types/spirits">
+    - Spirit type
+    - Distillery
+    - Age statement
+    - ABV
+    - Bottle number
+  </Card>
+
+  <Card title="Fine Art" icon="palette" href="/asset-types/fine-art">
+    - Artist
+    - Medium
+    - Dimensions
+    - Year created
+    - Provenance
+    - Certificate of authenticity
+  </Card>
+
+  <Card title="Arms & Armor" icon="shield" href="/asset-types/arms-armor">
+    - Item type
+    - Era/Period
+    - Maker/Manufacturer
+    - Material
+    - Condition
+  </Card>
+
+  <Card title="Other Collectibles" icon="box" href="/asset-types/other-collectibles">
+    General fields for any other valuable items
+  </Card>
+</CardGroup>
+
+## Tips for Adding Items
+
+<AccordionGroup>
+  <Accordion title="Be Detailed" icon="list">
+    More information makes your records more valuable for:
+    - Insurance claims
+    - Tax documentation
+    - Estate planning
+    - Future sales
+  </Accordion>
+
+  <Accordion title="Include Photos" icon="camera">
+    Upload high-quality photos showing:
+    - Overall item
+    - Hallmarks or signatures
+    - Condition details
+    - Certificates or documentation
+    - Serial numbers (if applicable)
+
+    <Warning>
+      Be careful with photos containing serial numbers - these are stored securely but consider privacy when sharing portfolios.
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Track Purchase Info" icon="receipt">
+    Always record:
+    - Purchase price (for cost basis)
+    - Purchase date
+    - Seller/source
+    - Purchase receipts (upload as photos)
+
+    This information is valuable for taxes and resale.
+  </Accordion>
+
+  <Accordion title="Set Accurate Locations" icon="location-dot">
+    Track where items are stored for:
+    - Quick retrieval
+    - Insurance purposes
+    - Estate planning
+    - Security planning
+  </Accordion>
+
+  <Accordion title="Use Collections Wisely" icon="folder">
+    Organize items into collections based on:
+    - Type (e.g., "Gold Coins", "Silver Bars")
+    - Purpose (e.g., "Investment", "Personal Collection")
+    - Source (e.g., "Estate Items", "Recent Purchases")
+    - Location (e.g., "Vault A", "Home Safe")
+  </Accordion>
+</AccordionGroup>
+
+## Bulk Adding Items
+
+For adding multiple similar items:
+
+<Steps>
+  <Step title="Add First Item">
+    Add one item with full details
+  </Step>
+
+  <Step title="Use as Template">
+    After saving, click "Add Similar" to create a new item with pre-filled fields
+  </Step>
+
+  <Step title="Modify Unique Details">
+    Update only the fields that differ (e.g., serial number, purchase date)
+  </Step>
+
+  <Step title="Repeat">
+    Continue for similar items
+  </Step>
+</Steps>
+
+<Tip>
+  For truly identical items (e.g., 100 identical silver rounds), use the "Quantity" field instead of creating 100 separate entries.
+</Tip>
+
+## After Adding an Item
+
+Once saved, you can:
+
+<CardGroup cols={2}>
+  <Card title="View Details" icon="eye">
+    See the complete item detail page
+  </Card>
+
+  <Card title="Edit Information" icon="pen">
+    Update any fields as needed
+  </Card>
+
+  <Card title="Add to Collection" icon="folder">
+    Organize into collections
+  </Card>
+
+  <Card title="Share" icon="share">
+    Include in shared portfolio views
+  </Card>
+</CardGroup>
+
+## Item Limits by Plan
+
+<CardGroup cols={3}>
+  <Card title="Free Plan" icon="hand">
+    Up to **50 items**
+  </Card>
+
+  <Card title="Pro Plan" icon="star">
+    **Unlimited items and collections**
+  </Card>
+
+  <Card title="Lifetime Plan" icon="infinity">
+    **Unlimited items and collections**
+  </Card>
+</CardGroup>
+
+<Card
+  title="Upgrade to Pro"
+  icon="arrow-up"
+  href="https://storehouses.app/pricing"
+>
+  Need more than 50 items or multiple collections? Upgrade to Pro for unlimited items and collections.
+</Card>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="View Your Items" icon="eye" href="/portfolio/viewing-items">
+    Browse and search your portfolio
+  </Card>
+
+  <Card title="Create Collections" icon="folder" href="/features/collections">
+    Organize your items
+  </Card>
+
+  <Card title="Set Up Locations" icon="location-dot" href="/features/locations">
+    Track storage locations
+  </Card>
+
+  <Card title="Asset Type Guides" icon="shapes" href="/asset-types/overview">
+    Detailed guides for each category
+  </Card>
+</CardGroup>

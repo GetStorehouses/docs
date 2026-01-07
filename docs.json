@@ -11,58 +11,68 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
-              "index",
+              "introduction",
               "quickstart",
-              "development"
+              "account-setup",
+              "adding-first-item"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Core Features",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "features/dashboard",
+              "features/adding-items",
+              "features/collections",
+              "features/locations",
+              "features/search-filters"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Asset Types",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "asset-types/overview",
+              "asset-types/precious-metals",
+              "asset-types/watches",
+              "asset-types/gems",
+              "asset-types/jewelry",
+              "asset-types/wine",
+              "asset-types/spirits",
+              "asset-types/fine-art",
+              "asset-types/arms-armor",
+              "asset-types/other-collectibles"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Portfolio Management",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
+              "portfolio/viewing-items",
+              "portfolio/editing-items",
+              "portfolio/valuation-pricing",
+              "portfolio/export-reporting",
+              "portfolio/wealth-garden"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Advanced Features",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "advanced/price-alerts",
+              "advanced/heir-access",
+              "advanced/sharing",
+              "advanced/offline-mode"
+            ]
+          },
+          {
+            "group": "Account & Billing",
+            "pages": [
+              "account/settings",
+              "account/subscription-plans",
+              "account/billing",
+              "account/security"
             ]
           }
         ]
@@ -71,9 +81,14 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://docs.storehouses.app",
-          "icon": "book-open-cover"
+          "anchor": "Dashboard",
+          "href": "https://storehouses.app/dashboard",
+          "icon": "chart-line"
+        },
+        {
+          "anchor": "Support",
+          "href": "https://storehouses.app/dashboard?support=true",
+          "icon": "headset"
         }
       ]
     }
@@ -85,14 +100,14 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:support@storehouses.app"
+        "label": "Sign In",
+        "href": "https://storehouses.app/login"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://storehouses.app/dashboard"
+      "label": "Get Started",
+      "href": "https://storehouses.app/register"
     }
   },
   "contextual": {

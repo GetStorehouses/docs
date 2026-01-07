@@ -1,0 +1,369 @@
+---
+title: "Locations"
+description: "Track physical storage locations for your assets"
+---
+
+## Overview
+
+The Locations feature helps you track where your valuable assets are physically stored. This is essential for insurance purposes, estate planning, quick retrieval, and security management.
+
+## Why Track Locations?
+
+<CardGroup cols={2}>
+  <Card title="Insurance Claims" icon="file-shield">
+    Provide detailed storage information to insurance companies when filing claims
+  </Card>
+
+  <Card title="Quick Retrieval" icon="magnifying-glass">
+    Easily find where specific items are stored
+  </Card>
+
+  <Card title="Estate Planning" icon="users">
+    Help beneficiaries locate assets in the future
+  </Card>
+
+  <Card title="Security Planning" icon="lock">
+    Understand your storage distribution and security needs
+  </Card>
+</CardGroup>
+
+## Accessing Locations
+
+Navigate to [storehouses.app/locations](https://storehouses.app/locations)
+
+## Default Locations
+
+Storehouses includes common storage location presets:
+
+- **Home Safe** - Personal safe at your residence
+- **Bank Safe Deposit Box** - Bank vault storage
+- **Brinks Vault** - Professional vault services
+- **Wine Cellar** - Temperature-controlled wine storage
+- **Custom Storage** - Any other storage facility
+
+## Creating Custom Locations
+
+<Steps>
+  <Step title="Open Locations Page">
+    Navigate to the Locations page
+  </Step>
+
+  <Step title="Click 'Add Location'">
+    Click the "New Location" button
+  </Step>
+
+  <Step title="Enter Location Details">
+    Fill in the location information:
+
+    <ParamField path="name" type="string" required>
+      Location name
+
+      **Examples**: "Main Home Safe", "Chase Bank Box #247", "Gallery Storage Unit 5B"
+    </ParamField>
+
+    <ParamField path="address" type="textarea">
+      Physical address (optional but recommended)
+
+      **Use**: For insurance documentation and retrieval
+    </ParamField>
+
+    <ParamField path="notes" type="textarea">
+      Additional details
+
+      **Examples**:
+      - Access codes or procedures
+      - Contact information
+      - Hours of access
+      - Climate control details
+    </ParamField>
+  </Step>
+
+  <Step title="Save">
+    Click "Create Location" to save
+  </Step>
+</Steps>
+
+<Warning>
+  Be cautious with storing sensitive access codes. While Storehouses is secure, consider using a separate password manager for highly sensitive access information.
+</Warning>
+
+## Assigning Items to Locations
+
+### When Adding an Item
+
+Select a location from the dropdown when creating any new item.
+
+### From Item Details
+
+1. Open any item's detail page
+2. Click "Edit"
+3. Select or create a location
+4. Save changes
+
+### Bulk Assignment
+
+1. Go to the Locations page
+2. Open a location
+3. Click "Add Items"
+4. Select multiple items
+5. Click "Assign to Location"
+
+## Viewing Location Contents
+
+Click on any location to see:
+
+<ParamField path="Items List" type="array">
+  All items stored at this location with:
+  - Item name and photo
+  - Category
+  - Current value
+  - Quick edit access
+</ParamField>
+
+<ParamField path="Total Value" type="currency">
+  Combined value of all items at this location
+
+  **Use**: Understand the value concentration for insurance purposes
+</ParamField>
+
+<ParamField path="Item Count" type="number">
+  Number of items stored here
+</ParamField>
+
+<ParamField path="Category Breakdown" type="chart">
+  Visual distribution of asset categories at this location
+</ParamField>
+
+## Managing Locations
+
+### Edit Location
+
+From any location view:
+1. Click the edit icon
+2. Update name, address, or notes
+3. Save changes
+
+### Move Items Between Locations
+
+<Steps>
+  <Step title="Open Source Location">
+    View the location containing the item(s)
+  </Step>
+
+  <Step title="Select Items">
+    Choose items to move
+  </Step>
+
+  <Step title="Click 'Move'">
+    Click the "Move to Location" button
+  </Step>
+
+  <Step title="Choose Destination">
+    Select the new location
+  </Step>
+
+  <Step title="Confirm">
+    Confirm the move
+  </Step>
+</Steps>
+
+### Delete Location
+
+To remove a location:
+1. Open the location
+2. Click delete icon
+3. Choose what to do with items:
+   - **Move to another location** (recommended)
+   - **Set items to "No location"**
+4. Confirm deletion
+
+<Note>
+  You cannot delete a location that contains items without first reassigning those items.
+</Note>
+
+## Location Types & Examples
+
+### Home Storage
+
+<AccordionGroup>
+  <Accordion title="Home Safe" icon="home">
+    - Fireproof/waterproof safe
+    - Hidden wall safe
+    - Floor safe
+    - Gun safe (for arms & armor)
+
+    **Tips**:
+    - Note safe model and specifications
+    - Record combination separately
+    - Include in homeowner's insurance
+  </Accordion>
+
+  <Accordion title="Wine Cellar" icon="wine-bottle">
+    - Temperature-controlled cellar
+    - Wine refrigerator
+    - Basement storage
+
+    **Tips**:
+    - Track temperature and humidity
+    - Note cooling system details
+    - Document climate control logs
+  </Accordion>
+
+  <Accordion title="Display Cases" icon="eye">
+    - Wall-mounted cases
+    - Free-standing cabinets
+    - Museum-style displays
+
+    **Best for**: Jewelry, watches, art, arms & armor
+  </Accordion>
+</AccordionGroup>
+
+### Bank & Vault Storage
+
+<AccordionGroup>
+  <Accordion title="Bank Safe Deposit Box" icon="building-columns">
+    **Information to track**:
+    - Bank name and branch
+    - Box number
+    - Access hours
+    - Co-signer information
+    - Annual fee
+
+    **Best for**: Documents, precious metals, jewelry
+  </Accordion>
+
+  <Accordion title="Private Vault Services" icon="vault">
+    - Brinks
+    - Loomis
+    - Private vault companies
+
+    **Information to track**:
+    - Facility name and location
+    - Account/locker number
+    - Access procedures
+    - Insurance coverage
+    - Storage fees
+  </Accordion>
+</AccordionGroup>
+
+### Specialized Storage
+
+<AccordionGroup>
+  <Accordion title="Climate-Controlled Storage" icon="temperature-half">
+    For wine, art, documents:
+    - Professional wine storage
+    - Art storage facilities
+    - Museum-quality storage
+
+    **Track**:
+    - Climate specifications
+    - Insurance coverage
+    - Access scheduling
+  </Accordion>
+
+  <Accordion title="Gallery or Dealer Storage" icon="palette">
+    For art or high-value collectibles:
+    - Art gallery storage
+    - Auction house storage
+    - Dealer consignment
+
+    **Track**:
+    - Consignment agreements
+    - Insurance responsibility
+    - Pickup procedures
+  </Accordion>
+</AccordionGroup>
+
+## Location Security Levels
+
+Consider categorizing your locations by security level:
+
+| Security Level | Examples | Best For |
+|----------------|----------|----------|
+| **High** | Bank vault, Private vault | Precious metals, high-value gems, important documents |
+| **Medium** | Home safe, Safe deposit box | Jewelry, watches, valuable coins |
+| **Standard** | Wine cellar, Display cases | Wine, art, collectibles |
+| **Low** | General storage | Lower-value items, bulk storage |
+
+## Location Reports
+
+Generate reports showing:
+- All items by location
+- Total value by location
+- Location distribution charts
+- Insurance documentation
+
+[Learn more about exports →](/portfolio/export-reporting)
+
+## Insurance Considerations
+
+<Tip>
+  Insurance companies often require detailed storage location information. Storehouses makes it easy to generate location-based reports for insurance purposes.
+</Tip>
+
+### What to Document
+
+For insurance purposes, include:
+- Exact location address
+- Security features (alarm, safe rating, etc.)
+- Climate control specifications
+- Access controls
+- Photos of storage areas
+- Inventory of items by location
+
+### Regular Updates
+
+Update location information when:
+- Moving items between locations
+- Changing storage facilities
+- Upgrading security
+- Adding new storage locations
+
+## Location Statistics
+
+View portfolio-wide location statistics:
+- Number of locations
+- Items per location
+- Value per location
+- Location types distribution
+- Geographic distribution (if addresses included)
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Be Specific" icon="location-crosshairs">
+    Use detailed location names: "Chase Bank Downtown - Box #247" not just "Bank"
+  </Card>
+
+  <Card title="Document Access" icon="key">
+    Keep access information current in notes field
+  </Card>
+
+  <Card title="Regular Audits" icon="list-check">
+    Periodically verify items are where you think they are
+  </Card>
+
+  <Card title="Distribute Wisely" icon="shield">
+    Don't keep all high-value items in one location
+  </Card>
+</CardGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Add Items" icon="plus" href="/features/adding-items">
+    Add items to your locations
+  </Card>
+
+  <Card title="Create Collections" icon="folder" href="/features/collections">
+    Organize beyond locations
+  </Card>
+
+  <Card title="Export Reports" icon="file-export" href="/portfolio/export-reporting">
+    Generate location reports
+  </Card>
+
+  <Card title="Account Security" icon="lock" href="/account/security">
+    Secure your account data
+  </Card>
+</CardGroup>

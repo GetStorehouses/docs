@@ -1,0 +1,962 @@
+---
+title: "Fine Jewelry"
+description: "Complete guide to tracking fine jewelry, designer pieces, materials, gemstones, and hallmarks in Storehouses"
+---
+
+## Overview
+
+Track your fine jewelry collection with detailed fields for materials, designer attribution, gemstone documentation, hallmarks, and provenance. Perfect for collectors managing designer jewelry, estate pieces, and valuable jewelry items.
+
+<Note>
+  This category is for **jewelry pieces** (mounted gems, completed items). For loose, unmounted gemstones, use the [Gems category](/asset-types/gems).
+</Note>
+
+## Adding Jewelry
+
+<Steps>
+  <Step title="Navigate to Add Item">
+    Click "Add Item" from your dashboard or go to [storehouses.app/add](https://storehouses.app/add)
+  </Step>
+
+  <Step title="Select Fine Jewelry">
+    Choose "Fine Jewelry" as the category
+  </Step>
+
+  <Step title="Enter Jewelry Details">
+    Fill in type, materials, designer, and gemstone information
+  </Step>
+
+  <Step title="Document Hallmarks">
+    Record maker's marks, hallmarks, and stamps
+  </Step>
+
+  <Step title="Upload Photos">
+    Add photos showing piece, hallmarks, and any certificates
+  </Step>
+
+  <Step title="Save">
+    Click "Save Item" to add to your collection
+  </Step>
+</Steps>
+
+## Jewelry Fields
+
+### Type and Description
+
+<ParamField path="jewelry_type" type="string">
+  Type of jewelry piece
+
+  **Common types:**
+  - Ring (engagement, wedding, cocktail, signet, etc.)
+  - Necklace (pendant, chain, statement, etc.)
+  - Bracelet (tennis, bangle, cuff, charm, etc.)
+  - Earrings (studs, drops, hoops, chandeliers, etc.)
+  - Brooch/Pin
+  - Watch (fashion/jewelry watches)
+  - Anklet
+  - Tiara/Crown
+  - Cufflinks
+  - Pendant
+
+  **Be specific:**
+  - "Diamond Tennis Bracelet"
+  - "Solitaire Engagement Ring"
+  - "Pearl Strand Necklace"
+  - "Hoop Earrings"
+</ParamField>
+
+### Materials and Construction
+
+<ParamField path="metal_type" type="string">
+  Primary metal or base material
+
+  **Precious metals:**
+  - Gold (yellow, white, rose)
+  - Platinum (950, 900)
+  - Silver (sterling, fine)
+  - Palladium
+
+  **Karat designations:**
+  - 24K (pure gold, 99.9%)
+  - 22K (91.67% gold)
+  - 18K (75% gold) - most common fine jewelry
+  - 14K (58.3% gold) - common in US
+  - 10K (41.7% gold) - minimum karat for "gold" in US
+
+  **Examples:**
+  - "18K Yellow Gold"
+  - "Platinum 950"
+  - "Sterling Silver (.925)"
+  - "14K White Gold"
+  - "Two-Tone 18K Rose and White Gold"
+
+  <Tip>
+    Check hallmarks for metal content stamps (750 = 18K, 585 = 14K, 950 = platinum)
+  </Tip>
+</ParamField>
+
+<ParamField path="weight" type="string">
+  Weight of the piece
+
+  **Formats:**
+  - Grams (most common): "15.5g"
+  - Pennyweight: "10 dwt"
+  - Troy ounces: "0.5 ozt"
+
+  **Use:** Important for:
+  - Insurance valuation
+  - Melt value calculation
+  - Authenticity verification
+
+  <Note>
+    1 troy ounce = 31.1 grams = 20 pennyweight
+  </Note>
+</ParamField>
+
+### Designer and Maker
+
+<ParamField path="designer" type="string">
+  Designer, brand, or maker
+
+  **Luxury jewelry houses:**
+  - Cartier
+  - Van Cleef & Arpels
+  - Tiffany & Co.
+  - Bulgari (Bvlgari)
+  - Harry Winston
+  - Chopard
+  - Graff
+  - Boucheron
+  - Piaget
+  - David Yurman
+
+  **High-end brands:**
+  - David Webb
+  - Suzanne Belperron
+  - JAR (Joel Arthur Rosenthal)
+  - Verdura
+  - Buccellati
+  - Mikimoto (pearls)
+
+  **Custom/Estate:**
+  - "Custom - [Jeweler Name]"
+  - "Estate Piece - Unsigned"
+  - "Antique Victorian"
+
+  <Tip>
+    Designer pieces often command significant premiums over melt/stone value
+  </Tip>
+</ParamField>
+
+<ParamField path="collection_line" type="string">
+  Specific collection or line
+
+  **Examples:**
+  - Cartier: "Love", "Juste un Clou", "Panthère", "Trinity"
+  - Van Cleef & Arpels: "Alhambra", "Perlée", "Frivole"
+  - Tiffany: "T Collection", "Victoria", "Keys", "Hardwear"
+  - Bvlgari: "Serpenti", "B.zero1", "Divas' Dream"
+
+  **Use:** Helps identify specific designs and market values
+</ParamField>
+
+### Gemstones
+
+<ParamField path="primary_stone" type="string">
+  Main gemstone(s) in the piece
+
+  **Format:** Include type, weight (if known), and quality
+
+  **Examples:**
+  - "1.50ct Diamond - G VS2"
+  - "2.0ct Ruby - Unheated Burma"
+  - "0.75ct Emerald - Colombian"
+  - "8mm Tahitian Black Pearl"
+  - "3ct total weight diamonds"
+
+  **Multiple stones:**
+  - "Center: 2ct Diamond E VS1, Halo: 0.5ct total"
+  - "Three 1ct Rubies"
+</ParamField>
+
+<ParamField path="accent_stones" type="string">
+  Secondary or accent stones
+
+  **Examples:**
+  - "0.35ct total weight diamond accents"
+  - "Pavé diamonds - 0.25ct total"
+  - "Two side sapphires - 0.40ct each"
+  - "Baguette diamond shoulders"
+
+  **Use:** Document all stones for insurance purposes
+</ParamField>
+
+<ParamField path="stone_certification" type="string">
+  Certification for primary stone(s)
+
+  **Format:** Lab and certificate number
+
+  **Examples:**
+  - "GIA #2185438976 (center diamond)"
+  - "AGL certificate - ruby"
+  - "Mikimoto certificate - pearls"
+  - "Not certified"
+
+  <Tip>
+    For valuable center stones, certification adds credibility and aids resale
+  </Tip>
+</ParamField>
+
+### Hallmarks and Marks
+
+<ParamField path="hallmarks" type="string">
+  Maker's marks, stamps, and hallmarks
+
+  **What to record:**
+  - Metal purity stamps (750, 585, PT950, etc.)
+  - Maker's marks or signatures
+  - Country marks
+  - Date letters (antique pieces)
+  - Assay office marks
+
+  **Examples:**
+  - "CARTIER 750 (18K)"
+  - "TIFFANY & CO. PT950"
+  - "VCA 750 [serial number]"
+  - "14K [maker's mark]"
+  - "925 STERLING"
+
+  **Location of marks:**
+  - Inside ring shank
+  - On clasp or finding
+  - On back of earrings
+  - On pin stem
+
+  <Note>
+    Photograph hallmarks clearly for authentication and insurance
+  </Note>
+</ParamField>
+
+<ParamField path="serial_number" type="string">
+  Serial number or unique identifier
+
+  **Examples:**
+  - Cartier: Alphanumeric serial numbers
+  - Van Cleef & Arpels: Engraved serial numbers
+  - Tiffany: Serial numbers on some pieces
+
+  **Use:**
+  - Authentication
+  - Warranty tracking
+  - Theft recovery
+  - Provenance documentation
+
+  <Warning>
+    Keep serial numbers private - don't share publicly
+  </Warning>
+</ParamField>
+
+### Condition and History
+
+<ParamField path="condition" type="select">
+  Overall condition of the piece
+
+  **Options:**
+  - **Excellent** - Like new, minimal wear
+  - **Very Good** - Light wear, well maintained
+  - **Good** - Normal wear for age
+  - **Fair** - Visible wear, may need restoration
+  - **Poor** - Significant damage or wear
+
+  **Factors affecting condition:**
+  - Scratches on metal
+  - Stone condition (chips, abrasions)
+  - Prong wear
+  - Clasp function
+  - Polish/finish quality
+
+  <Tip>
+    Professional cleaning and restoration can improve condition and value
+  </Tip>
+</ParamField>
+
+<ParamField path="era" type="string">
+  Historical period or era
+
+  **For vintage/antique jewelry:**
+  - Georgian (1714-1837)
+  - Victorian (1837-1901)
+  - Edwardian (1901-1915)
+  - Art Nouveau (1890-1910)
+  - Art Deco (1920-1935)
+  - Retro (1935-1950)
+  - Mid-Century Modern (1950-1970)
+  - Vintage (20+ years old)
+  - Contemporary/Modern (current)
+
+  **Use:** Era affects style, value, and collector interest
+</ParamField>
+
+<ParamField path="provenance" type="textarea">
+  Ownership history and background
+
+  **Include:**
+  - Previous owners (if notable)
+  - Purchase location/auction house
+  - Historical significance
+  - Family history
+  - Any documentation
+
+  **Examples:**
+  - "Purchased at Sotheby's auction, 2020"
+  - "Estate of [family member], circa 1950s"
+  - "Acquired from Cartier boutique, Paris"
+  - "Family heirloom - great-grandmother's engagement ring"
+
+  <Note>
+    Strong provenance can significantly increase value
+  </Note>
+</ParamField>
+
+## Jewelry Categories
+
+### Rings
+
+<AccordionGroup>
+  <Accordion title="Engagement Rings" icon="ring">
+    **Key details to track:**
+    - Center stone (type, weight, quality)
+    - Setting style (solitaire, halo, three-stone, etc.)
+    - Metal type and karat
+    - Side stones (if any)
+    - Certificate for center diamond
+
+    **Popular settings:**
+    - Solitaire (single center stone)
+    - Halo (center surrounded by small diamonds)
+    - Three-stone (past, present, future)
+    - Side-stone/cathedral
+    - Tension setting
+    - Bezel setting
+  </Accordion>
+
+  <Accordion title="Wedding Bands" icon="rings-wedding">
+    **Styles:**
+    - Plain metal band
+    - Diamond eternity/half-eternity
+    - Paved/channel set
+    - Engraved/milgrain
+    - Matching set (bride/groom)
+
+    **Details:**
+    - Metal type and weight
+    - Diamond total weight (if any)
+    - Width and profile
+    - Engraving (inside)
+  </Accordion>
+
+  <Accordion title="Cocktail/Statement Rings" icon="gem">
+    Large, bold rings with:
+    - Oversized center stone
+    - Multiple stones
+    - Unique designs
+    - Art Deco or vintage styles
+
+    Popular for colored gemstones
+  </Accordion>
+
+  <Accordion title="Signet Rings" icon="stamp">
+    - Family crest or monogram
+    - Metal (often gold)
+    - Historical/heritage pieces
+    - Engraving details important
+  </Accordion>
+</AccordionGroup>
+
+### Necklaces
+
+<AccordionGroup>
+  <Accordion title="Pendants" icon="gem">
+    **Types:**
+    - Solitaire (single stone)
+    - Locket
+    - Cross/religious
+    - Initial/monogram
+    - Designer pendant
+
+    **Document:**
+    - Pendant details
+    - Chain type and length
+    - Chain metal and weight
+  </Accordion>
+
+  <Accordion title="Statement Necklaces" icon="sparkles">
+    - Collar necklaces
+    - Bib necklaces
+    - Multi-strand
+    - Rivière (graduated diamonds)
+    - Designer pieces
+  </Accordion>
+
+  <Accordion title="Pearl Necklaces" icon="circle">
+    **Types:**
+    - Strand (single/double/triple)
+    - Opera length
+    - Choker
+
+    **Details to track:**
+    - Pearl type (Akoya, South Sea, Tahitian, freshwater)
+    - Size (mm diameter)
+    - Quality (luster, surface, shape)
+    - Length
+    - Clasp (often valuable on its own)
+    - Certificate (Mikimoto, GIA, etc.)
+  </Accordion>
+
+  <Accordion title="Chains" icon="link">
+    - Link style (cable, curb, wheat, etc.)
+    - Length and width
+    - Metal purity
+    - Weight
+    - Clasp style
+  </Accordion>
+</AccordionGroup>
+
+### Bracelets
+
+<AccordionGroup>
+  <Accordion title="Tennis Bracelets" icon="gem">
+    Classic diamond line bracelets:
+    - Total carat weight
+    - Diamond quality (color/clarity)
+    - Metal type
+    - Length
+    - Clasp style (safety clasp important)
+
+    Popular in diamonds, also colored stones
+  </Accordion>
+
+  <Accordion title="Bangles" icon="circle">
+    Rigid circular bracelets:
+    - Plain or decorated
+    - Hinged or slip-on
+    - Metal weight important
+    - Designer pieces (Cartier Love, VCA)
+  </Accordion>
+
+  <Accordion title="Cuffs" icon="hand">
+    Open-ended bracelets:
+    - Often statement pieces
+    - Metal weight
+    - Stone content
+    - Width and design
+  </Accordion>
+
+  <Accordion title="Charm Bracelets" icon="stars">
+    - Base bracelet details
+    - Individual charm documentation
+    - Total weight
+    - Link or chain style
+  </Accordion>
+</AccordionGroup>
+
+### Earrings
+
+<AccordionGroup>
+  <Accordion title="Studs" icon="gem">
+    Classic earrings:
+    - Stone type and total weight
+    - Quality of stones
+    - Metal and findings
+    - Backs (screw-back, push-back, etc.)
+
+    **Common:** Diamond studs most popular
+  </Accordion>
+
+  <Accordion title="Drops/Dangles" icon="sparkles">
+    Hanging earrings:
+    - Length
+    - Stone/pearl content
+    - Finding type
+    - Movement style
+  </Accordion>
+
+  <Accordion title="Hoops" icon="circle">
+    - Diameter
+    - Width/thickness
+    - Metal weight
+    - Closure type (snap, hinge, etc.)
+    - Plain or decorated (pavé, etc.)
+  </Accordion>
+
+  <Accordion title="Chandeliers" icon="sparkles">
+    Elaborate drop earrings:
+    - Multiple tiers
+    - Total stone weight
+    - Metal and construction
+    - Often vintage or designer
+  </Accordion>
+</AccordionGroup>
+
+## Tracking Examples
+
+### Example 1: Cartier Love Bracelet
+
+<ParamField path="title" type="string">
+  Cartier Love Bracelet - 18K Yellow Gold Size 17
+</ParamField>
+
+<ParamField path="jewelry_type" type="string">
+  Bangle Bracelet
+</ParamField>
+
+<ParamField path="designer" type="string">
+  Cartier
+</ParamField>
+
+<ParamField path="collection_line" type="string">
+  Love
+</ParamField>
+
+<ParamField path="metal_type" type="string">
+  18K Yellow Gold (750)
+</ParamField>
+
+<ParamField path="weight" type="string">
+  32.5g
+</ParamField>
+
+<ParamField path="serial_number" type="string">
+  [Serial number on inside]
+</ParamField>
+
+<ParamField path="hallmarks" type="string">
+  CARTIER 750 [serial] Made in France
+</ParamField>
+
+<ParamField path="condition" type="select">
+  Excellent
+</ParamField>
+
+<ParamField path="purchase_price" type="currency">
+  $7,800
+</ParamField>
+
+<ParamField path="market_value" type="currency">
+  $8,500
+</ParamField>
+
+---
+
+### Example 2: Diamond Engagement Ring
+
+<ParamField path="title" type="string">
+  1.5ct Diamond Solitaire Engagement Ring
+</ParamField>
+
+<ParamField path="jewelry_type" type="string">
+  Engagement Ring - Solitaire
+</ParamField>
+
+<ParamField path="metal_type" type="string">
+  Platinum 950
+</ParamField>
+
+<ParamField path="weight" type="string">
+  4.2g
+</ParamField>
+
+<ParamField path="primary_stone" type="string">
+  1.50ct Round Brilliant Diamond - E VS1 (GIA Excellent)
+</ParamField>
+
+<ParamField path="stone_certification" type="string">
+  GIA #2185438976
+</ParamField>
+
+<ParamField path="hallmarks" type="string">
+  PT950
+</ParamField>
+
+<ParamField path="condition" type="select">
+  Excellent
+</ParamField>
+
+<ParamField path="purchase_price" type="currency">
+  $18,500
+</ParamField>
+
+<ParamField path="insurance_value" type="currency">
+  $22,000
+</ParamField>
+
+---
+
+### Example 3: Vintage Art Deco Brooch
+
+<ParamField path="title" type="string">
+  Art Deco Diamond and Sapphire Brooch
+</ParamField>
+
+<ParamField path="jewelry_type" type="string">
+  Brooch/Pin
+</ParamField>
+
+<ParamField path="metal_type" type="string">
+  Platinum
+</ParamField>
+
+<ParamField path="era" type="string">
+  Art Deco (circa 1925)
+</ParamField>
+
+<ParamField path="primary_stone" type="string">
+  Calibré-cut sapphires - approx 3ct total
+</ParamField>
+
+<ParamField path="accent_stones" type="string">
+  Old European cut diamonds - approx 2.5ct total
+</ParamField>
+
+<ParamField path="condition" type="select">
+  Very Good
+</ParamField>
+
+<ParamField path="provenance" type="textarea">
+  Purchased at estate auction 2022. French maker's marks suggest Paris origin, circa 1920s.
+</ParamField>
+
+<ParamField path="purchase_price" type="currency">
+  $12,500
+</ParamField>
+
+<ParamField path="market_value" type="currency">
+  $15,000
+</ParamField>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Document Thoroughly" icon="file-text">
+    **Create complete records:**
+    - All maker's marks and hallmarks
+    - Designer/manufacturer
+    - Serial numbers
+    - Stone details and certifications
+    - Purchase documentation
+    - Appraisals
+    - Service/repair history
+
+    **Why important:**
+    - Insurance claims
+    - Authentication
+    - Resale value
+    - Estate planning
+    - Theft recovery
+  </Accordion>
+
+  <Accordion title="Photograph Comprehensively" icon="camera">
+    **Essential photos:**
+    - Overall piece (multiple angles)
+    - Close-up of stones
+    - Hallmarks and signatures (sharp, readable)
+    - Serial numbers (if accessible)
+    - Clasps and closures
+    - Any damage or wear
+    - Certificate/box if included
+    - Scale reference (next to ruler)
+
+    **Photography tips:**
+    - Clean piece before photographing
+    - Good lighting (natural or bright white)
+    - Plain white/black background
+    - Macro mode for detail shots
+    - Multiple angles
+
+    <Tip>
+      Take close-up photos of hallmarks with good lighting - critical for authentication
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Track Appraisals" icon="dollar-sign">
+    **Regular appraisals important:**
+    - Every 2-3 years for insurance
+    - After significant market changes
+    - Before major sales
+    - For estate planning
+
+    **Choose qualified appraisers:**
+    - GIA Graduate Gemologist (GG)
+    - Accredited by professional organizations
+    - Independent (not buying your piece)
+    - Specializes in your type of jewelry
+
+    **Appraisal should include:**
+    - Detailed description
+    - Measurements and weights
+    - Stone quality assessment
+    - Metal content and weight
+    - Replacement value
+    - Appraiser credentials
+    - Date and signature
+
+    <Note>
+      Insurance appraisals often show higher values (replacement cost) than market value
+    </Note>
+  </Accordion>
+
+  <Accordion title="Maintain and Clean" icon="sparkles">
+    **Regular maintenance:**
+    - Professional cleaning annually
+    - Prong inspection (prevent stone loss)
+    - Clasp check on bracelets/necklaces
+    - Rhodium plating for white gold (every 1-2 years)
+    - Polish scratches as needed
+
+    **At-home care:**
+    - Gentle soap and water cleaning
+    - Soft brush for details
+    - Pat dry with lint-free cloth
+    - Avoid harsh chemicals
+    - Remove during activities
+
+    <Warning>
+      Some stones (pearls, opals, emeralds) require special care - avoid ultrasonic cleaners
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Store Properly" icon="box">
+    **Safe storage practices:**
+    - Individual soft pouches or boxes
+    - Separate pieces (prevent scratching)
+    - Cool, dry location
+    - Away from direct sunlight
+    - Secure safe or jewelry box
+
+    **Organization tips:**
+    - Keep similar items together
+    - Store in original boxes when possible
+    - Anti-tarnish strips for silver
+    - Pearl necklaces laid flat
+
+    **Documents separately:**
+    - Store certificates away from jewelry
+    - Keep in waterproof/fireproof location
+    - Digital backups in Storehouses
+
+    <Tip>
+      Never store all valuable jewelry in one location - diversify storage for security
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Insurance Coverage" icon="shield">
+    **Protect valuable pieces:**
+    - Scheduled items policy or rider
+    - Document with appraisals and photos
+    - Update coverage regularly
+    - Understand coverage limits
+
+    **Documentation for insurance:**
+    - Recent appraisal (2-3 years)
+    - Purchase receipt
+    - Certificate for center stones
+    - Photos
+    - Storehouses export
+
+    **Coverage considerations:**
+    - Replacement cost vs. agreed value
+    - Coverage for loss, theft, damage
+    - International travel coverage
+    - Deductibles
+
+    <Note>
+      Many insurers require appraisal from qualified gemologist for pieces over $5,000
+    </Note>
+  </Accordion>
+
+  <Accordion title="Authentication for Designer Pieces" icon="certificate">
+    **Verify authenticity:**
+    - Buy from authorized dealers
+    - Check hallmarks and signatures
+    - Serial number verification
+    - Original packaging/papers
+    - Professional authentication if unsure
+
+    **Red flags:**
+    - Missing or incorrect hallmarks
+    - Poor quality craftsmanship
+    - Price too good to be true
+    - No papers or box
+    - Seller reluctant to authenticate
+
+    **Authentication services:**
+    - Brand boutiques (Cartier, VCA, etc.)
+    - Certified appraisers
+    - Auction houses
+    - Specialized authentication services
+
+    <Warning>
+      Counterfeit designer jewelry is common - always verify authenticity for valuable pieces
+    </Warning>
+  </Accordion>
+</AccordionGroup>
+
+## Designer Jewelry Value Factors
+
+<Card title="What Affects Designer Jewelry Value" icon="chart-line">
+  **Premium factors:**
+  - Brand prestige (Cartier, VCA > lesser brands)
+  - Current popularity (trending collections)
+  - Completeness (box, papers, certificate)
+  - Condition (excellent > good)
+  - Rarity (limited editions, discontinued)
+  - Age (vintage from certain eras)
+
+  **Value components:**
+  1. **Intrinsic value** - Metal + stone value
+  2. **Brand premium** - Designer markup
+  3. **Collectibility** - Rarity and demand
+
+  **Example:**
+  - Intrinsic: $3,000 (gold + diamond value)
+  - Brand premium: $4,000 (Cartier name)
+  - Total value: $7,000
+
+  Designer pieces often sell for 30-70% of original retail on secondary market.
+</Card>
+
+## Common Questions
+
+<AccordionGroup>
+  <Accordion title="How do I find hallmarks?" icon="search">
+    **Common locations:**
+    - **Rings:** Inside shank (band)
+    - **Bracelets:** Near clasp or inside
+    - **Necklaces:** On clasp or small tag
+    - **Earrings:** On back or posts
+    - **Brooches:** On pin stem
+
+    **What to look for:**
+    - Metal purity (750, 585, PT950, etc.)
+    - Maker's mark or logo
+    - Country mark
+    - Date letters (antique)
+
+    **Need help?**
+    - Jeweler's loupe or magnifying glass
+    - Take to jeweler for inspection
+    - Photo with macro lens
+  </Accordion>
+
+  <Accordion title="Should I get insurance for all jewelry?" icon="shield">
+    **Definitely insure:**
+    - Pieces over $5,000
+    - Designer/branded items
+    - Engagement/wedding rings
+    - Family heirlooms
+    - Irreplaceable items
+
+    **May skip insurance:**
+    - Costume jewelry
+    - Pieces under $500-1,000
+    - Easily replaceable items
+
+    **Cost:** Typically 1-2% of value annually
+
+    <Tip>
+      Consider scheduled items insurance for valuable pieces - better coverage than homeowner's policy
+    </Tip>
+  </Accordion>
+
+  <Accordion title="How often should I get jewelry appraised?" icon="calendar">
+    **Recommended frequency:**
+    - Every 2-3 years for insurance purposes
+    - When market prices change significantly
+    - After major restoration/repair
+    - Before selling
+    - For estate planning
+
+    **Cost:** $50-$150 per item typically
+
+    <Note>
+      Some insurers require updated appraisals every 3-5 years
+    </Note>
+  </Accordion>
+
+  <Accordion title="What's the difference between appraisal types?" icon="file-invoice">
+    **Insurance/Replacement appraisal:**
+    - Highest value (retail replacement)
+    - What insurer would pay to replace
+    - Usually 1.5-2x market value
+
+    **Fair market value appraisal:**
+    - What item would sell for
+    - Estate/donation purposes
+    - More realistic pricing
+
+    **Liquidation value:**
+    - Quick sale value
+    - Lowest appraisal type
+    - Typically 30-50% of retail
+
+    Specify appraisal type needed when hiring appraiser.
+  </Accordion>
+
+  <Accordion title="How do I clean jewelry safely?" icon="sparkles">
+    **Safe for most jewelry:**
+    - Warm water + mild soap
+    - Soft brush (soft toothbrush)
+    - Pat dry with soft cloth
+    - 5-10 minutes soaking
+
+    **Avoid for certain stones:**
+    - **Pearls:** Never soak, wipe only
+    - **Opals:** No water, can crack
+    - **Emeralds:** Gentle only (often oil-filled)
+    - **Turquoise:** No water
+    - **Soft stones:** Professional cleaning only
+
+    **Never use:**
+    - Harsh chemicals
+    - Ultrasonic for some stones
+    - Abrasive cleaners
+    - Hot water for some stones
+
+    <Warning>
+      When in doubt, take to professional jeweler for cleaning
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Track each earring separately?" icon="question">
+    **No** - track as a pair:
+    - Creates one entry for both earrings
+    - Enter total weight/stone weight for pair
+    - Note "pair of earrings" in description
+    - Easier for insurance and tracking
+
+    **Exception:** If one is lost/damaged, you can:
+    - Update notes to reflect single earring
+    - Adjust value accordingly
+    - Or create new entry for single
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Add Your Jewelry" icon="plus" href="https://storehouses.app/add">
+    Start tracking your jewelry collection
+  </Card>
+
+  <Card title="Gems Guide" icon="gem" href="/asset-types/gems">
+    Learn about loose gemstone tracking
+  </Card>
+
+  <Card title="View Collection" icon="eye" href="/portfolio/viewing-items">
+    Browse your jewelry
+  </Card>
+
+  <Card title="Export for Insurance" icon="file-export" href="/portfolio/export-reporting">
+    Generate jewelry inventory reports
+  </Card>
+</CardGroup>

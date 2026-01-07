@@ -1,0 +1,934 @@
+---
+title: "Wine"
+description: "Complete guide to tracking fine wine collections with vintage, producer, region, and storage condition management in Storehouses"
+---
+
+## Overview
+
+Track your wine collection with detailed fields for vintage, producer, region, bottle size, storage conditions, and drinking windows. Perfect for collectors, investors, and enthusiasts managing cellars of fine and rare wines.
+
+<Card title="Wine Tracking Features" icon="wine-glass">
+  - Vintage year tracking
+  - Producer and appellation
+  - Region and vineyard
+  - Bottle size variations
+  - Storage location and conditions
+  - Optimal drinking windows
+  - Provenance and purchase history
+  - Collection organization
+</Card>
+
+## Adding Wine
+
+<Steps>
+  <Step title="Navigate to Add Item">
+    Click "Add Item" from your dashboard or go to [storehouses.app/add](https://storehouses.app/add)
+  </Step>
+
+  <Step title="Select Wine">
+    Choose "Wine" as the category
+  </Step>
+
+  <Step title="Enter Wine Details">
+    Fill in producer, vintage, region, and appellation
+  </Step>
+
+  <Step title="Document Bottle">
+    Add bottle size, label condition, fill level
+  </Step>
+
+  <Step title="Add Storage Info">
+    Record storage location and conditions
+  </Step>
+
+  <Step title="Upload Photos">
+    Add photos of bottle, label, and purchase documentation
+  </Step>
+
+  <Step title="Save">
+    Click "Save Item" to add to your cellar
+  </Step>
+</Steps>
+
+## Wine Fields
+
+### Producer and Vintage
+
+<ParamField path="producer" type="string" required>
+  Winery, château, or producer name
+
+  **Examples:**
+  - Château Margaux
+  - Domaine de la Romanée-Conti
+  - Screaming Eagle
+  - Penfolds
+  - Opus One
+  - Ridge Vineyards
+
+  **Format:**
+  - Use official producer name
+  - Include "Château", "Domaine", etc. if part of name
+  - Consistent spelling for tracking
+
+  <Tip>
+    Use the exact name from the label for consistency
+  </Tip>
+</ParamField>
+
+<ParamField path="vintage" type="number" required>
+  Year the grapes were harvested
+
+  **Examples:**
+  - 2015
+  - 2000
+  - 1982
+  - NV (non-vintage - use 0 or leave blank)
+
+  **Importance:**
+  - Vintage quality varies significantly
+  - Affects value and drinking window
+  - Some vintages legendary (1982 Bordeaux, 2005 Burgundy)
+
+  <Note>
+    Vintage is critical for fine wine valuation and optimal drinking time
+  </Note>
+</ParamField>
+
+### Region and Appellation
+
+<ParamField path="region" type="string">
+  Geographic wine region
+
+  **Major regions:**
+  - **France:** Bordeaux, Burgundy, Rhône, Champagne, Loire
+  - **Italy:** Tuscany, Piedmont, Veneto
+  - **USA:** Napa Valley, Sonoma, Willamette Valley
+  - **Spain:** Rioja, Ribera del Duero, Priorat
+  - **Australia:** Barossa, McLaren Vale, Margaret River
+  - **Argentina:** Mendoza
+  - **Chile:** Maipo Valley, Colchagua Valley
+  - **South Africa:** Stellenbosch, Swartland
+
+  **Examples:**
+  - "Bordeaux, France"
+  - "Napa Valley, California"
+  - "Burgundy, France"
+</ParamField>
+
+<ParamField path="appellation" type="string">
+  Specific appellation or classification
+
+  **Bordeaux examples:**
+  - Pauillac
+  - Saint-Julien
+  - Margaux
+  - Pomerol
+  - Saint-Émilion Grand Cru
+
+  **Burgundy examples:**
+  - Vosne-Romanée 1er Cru
+  - Chambertin Grand Cru
+  - Meursault
+
+  **Other examples:**
+  - Napa Valley Cabernet Sauvignon
+  - Barolo DOCG
+  - Rioja DOCa Reserva
+
+  <Tip>
+    Include classification level (Grand Cru, Premier Cru, etc.) when applicable
+  </Tip>
+</ParamField>
+
+### Wine Type and Characteristics
+
+<ParamField path="wine_type" type="string">
+  Type and style of wine
+
+  **Main categories:**
+  - Red Wine
+  - White Wine
+  - Rosé
+  - Sparkling Wine (Champagne, Prosecco, Cava)
+  - Dessert Wine (Sauternes, Port, Ice Wine)
+  - Fortified Wine (Port, Sherry, Madeira)
+
+  **Be specific:**
+  - "Red - Cabernet Sauvignon"
+  - "White - Chardonnay"
+  - "Sparkling - Champagne Brut"
+  - "Dessert - Sauternes"
+</ParamField>
+
+<ParamField path="varietal" type="string">
+  Grape variety or blend
+
+  **Single varietals:**
+  - Cabernet Sauvignon
+  - Pinot Noir
+  - Chardonnay
+  - Riesling
+  - Syrah/Shiraz
+
+  **Blends:**
+  - "Bordeaux Blend (Cabernet Sauvignon, Merlot, Cabernet Franc)"
+  - "GSM (Grenache, Syrah, Mourvèdre)"
+  - "Champagne Blend (Chardonnay, Pinot Noir, Pinot Meunier)"
+
+  <Note>
+    Many prestigious wines are blends - list main grapes when known
+  </Note>
+</ParamField>
+
+### Bottle Details
+
+<ParamField path="bottle_size" type="string">
+  Bottle format/size
+
+  **Standard sizes:**
+  - **Half Bottle** (375ml) - 0.5 standard bottles
+  - **Standard Bottle** (750ml) - Most common
+  - **Magnum** (1.5L) - 2 bottles
+  - **Double Magnum** (3L) - 4 bottles
+  - **Jeroboam** (4.5L Bordeaux / 3L Champagne) - 6/4 bottles
+  - **Imperial** (6L) - 8 bottles
+  - **Methuselah** (6L Champagne)
+  - **Salmanazar** (9L) - 12 bottles
+  - **Balthazar** (12L) - 16 bottles
+  - **Nebuchadnezzar** (15L) - 20 bottles
+
+  <Tip>
+    Larger formats (magnums+) age more gracefully and command premiums
+  </Tip>
+</ParamField>
+
+<ParamField path="quantity" type="number" default={1}>
+  Number of identical bottles
+
+  **Use cases:**
+  - Tracking multiple bottles of same wine
+  - Case purchases (12 bottles)
+  - Investment quantities
+
+  **Example:** Purchased case of 12 bottles - enter 12
+</ParamField>
+
+### Condition and Storage
+
+<ParamField path="fill_level" type="string">
+  Current fill level (ullage)
+
+  **Fill level indicators:**
+  - **IN (Into Neck)** - Perfect fill, ideal
+  - **BN (Base Neck)** - Excellent, normal for age
+  - **VTS (Very Top Shoulder)** - Very good
+  - **TS (Top Shoulder)** - Good, acceptable
+  - **HS (High Shoulder)** - Fair, some concern
+  - **MS (Mid Shoulder)** - Poor, risky
+  - **LS (Low Shoulder)** - Very poor, likely oxidized
+
+  **For younger wines:** Usually IN or BN
+
+  <Note>
+    Fill level critical for older wines - indicates storage quality and oxidation risk
+  </Note>
+</ParamField>
+
+<ParamField path="label_condition" type="string">
+  Condition of label(s)
+
+  **Grades:**
+  - **Pristine** - Perfect, no damage
+  - **Excellent** - Minimal wear
+  - **Very Good** - Light wear, fully readable
+  - **Good** - Some staining/scuffing, readable
+  - **Fair** - Damaged but identifiable
+  - **Poor** - Severely damaged or missing
+
+  **Common issues:**
+  - Staining from storage
+  - Torn or peeling edges
+  - Bin soiled (cellar dust/grime)
+  - Missing or damaged label
+
+  <Tip>
+    Label condition affects value - pristine labels command premiums
+  </Tip>
+</ParamField>
+
+<ParamField path="storage_conditions" type="textarea">
+  Storage environment and history
+
+  **Ideal conditions:**
+  - Temperature: 55°F (13°C), stable
+  - Humidity: 60-70%
+  - Dark (no UV light)
+  - Vibration-free
+  - Horizontal storage (cork stays wet)
+
+  **Document:**
+  - Professional storage vs. home cellar
+  - Temperature control
+  - Length of time in current storage
+  - Previous storage history
+  - Any storage issues
+
+  **Example:**
+  ```
+  Stored in temperature-controlled wine cellar at 55°F
+  since purchase in 2018. Professional storage facility,
+  optimal conditions maintained.
+  ```
+
+  <Warning>
+    Poor storage (heat, light, temperature fluctuations) can ruin wine
+  </Warning>
+</ParamField>
+
+<ParamField path="provenance" type="textarea">
+  Purchase history and ownership chain
+
+  **Include:**
+  - Where purchased (retailer, auction, winery)
+  - Purchase date
+  - Previous owners (if known)
+  - Original source (direct from château, etc.)
+  - Any documentation
+
+  **Examples:**
+  - "Purchased direct from winery allocation 2020"
+  - "Acquired at Sotheby's wine auction, lot #123"
+  - "From original owner's cellar, stored since release"
+  - "Purchased from K&L Wine Merchants, proper storage documented"
+
+  <Tip>
+    Strong provenance (direct from producer, auction house, reputable retailer) adds value and authenticity
+  </Tip>
+</ParamField>
+
+### Drinking Window and Notes
+
+<ParamField path="drinking_window" type="string">
+  Optimal drinking period
+
+  **Format:** Year range or assessment
+
+  **Examples:**
+  - "2025-2040"
+  - "Now-2030"
+  - "Drink now"
+  - "Past peak"
+  - "2030+ (still developing)"
+
+  **Sources:**
+  - Wine critic recommendations (Parker, Wine Spectator)
+  - Producer recommendations
+  - Personal assessment
+
+  <Note>
+    Drinking windows are estimates - wine evolution varies with storage and vintage
+  </Note>
+</ParamField>
+
+<ParamField path="ratings" type="string">
+  Professional ratings and scores
+
+  **Major critics:**
+  - **Robert Parker / Wine Advocate** (100-point scale)
+  - **Wine Spectator** (100-point scale)
+  - **Jancis Robinson** (20-point scale)
+  - **James Suckling** (100-point scale)
+  - **Antonio Galloni / Vinous**
+
+  **Example format:**
+  ```
+  RP 98, WS 96, JR 18.5
+  ```
+
+  **Score meanings (100-point):**
+  - 95-100: Classic, extraordinary
+  - 90-94: Outstanding
+  - 85-89: Very good to excellent
+  - 80-84: Above average to good
+
+  <Tip>
+    High scores (95+) significantly increase value and collectibility
+  </Tip>
+</ParamField>
+
+## Wine Regions and Styles
+
+### France
+
+<AccordionGroup>
+  <Accordion title="Bordeaux" icon="wine-glass">
+    **Left Bank (Médoc):**
+    - Cabernet Sauvignon dominant
+    - Pauillac, Margaux, Saint-Julien, Saint-Estèphe
+    - 1855 Classification estates (First Growth, etc.)
+    - Age-worthy, tannic when young
+
+    **Right Bank:**
+    - Merlot dominant
+    - Pomerol (Pétrus, Le Pin)
+    - Saint-Émilion (Ausone, Cheval Blanc)
+    - More approachable young, still age-worthy
+
+    **Investment wines:** First Growth Bordeaux (Lafite, Latour, Margaux, Haut-Brion, Mouton)
+  </Accordion>
+
+  <Accordion title="Burgundy" icon="wine-glass-crack">
+    **Red (Pinot Noir):**
+    - Côte de Nuits: Vosne-Romanée, Gevrey-Chambertin
+    - Romanée-Conti most expensive wine in world
+    - Grand Cru and Premier Cru designations
+
+    **White (Chardonnay):**
+    - Côte de Beaune: Meursault, Puligny-Montrachet
+    - Chablis (northern Burgundy)
+
+    **Complexity:**
+    - Small vineyard parcels, many producers
+    - Vintage variation significant
+    - Highly collectible
+  </Accordion>
+
+  <Accordion title="Rhône Valley" icon="wine-bottle">
+    **Northern Rhône:**
+    - Hermitage, Côte-Rôtie (Syrah)
+    - Age-worthy, powerful reds
+
+    **Southern Rhône:**
+    - Châteauneuf-du-Pape (Grenache-based blends)
+    - Gigondas, Vacqueyras
+
+    **Value:** Often better value than Bordeaux/Burgundy
+  </Accordion>
+
+  <Accordion title="Champagne" icon="champagne-glasses">
+    **Categories:**
+    - Non-Vintage (NV) - House style blend
+    - Vintage - Exceptional years only
+    - Prestige Cuvée - Top bottling (Dom Pérignon, Cristal)
+    - Blanc de Blancs - 100% Chardonnay
+    - Blanc de Noirs - Pinot Noir/Meunier
+
+    **Major houses:** Krug, Dom Pérignon, Cristal, Salon
+  </Accordion>
+</AccordionGroup>
+
+### California
+
+<AccordionGroup>
+  <Accordion title="Napa Valley" icon="grapes">
+    **Cult Cabernets:**
+    - Screaming Eagle, Harlan Estate, Colgin
+    - Allocation-only, extreme prices
+    - Investment-grade wines
+
+    **Established producers:**
+    - Caymus, Silver Oak, Joseph Phelps
+    - Opus One, Dominus
+    - Stag's Leap, Shafer
+
+    **Characteristics:** Rich, powerful Cabernet Sauvignon
+  </Accordion>
+
+  <Accordion title="Sonoma" icon="wine-glass">
+    - Russian River Valley (Pinot Noir, Chardonnay)
+    - Dry Creek Valley (Zinfandel)
+    - Alexander Valley (Cabernet)
+
+    Often better value than Napa
+  </Accordion>
+</AccordionGroup>
+
+### Other Notable Regions
+
+<AccordionGroup>
+  <Accordion title="Italy" icon="flag">
+    **Tuscany:**
+    - Brunello di Montalcino
+    - Barolo, Barbaresco (Piedmont)
+    - Super Tuscans (Sassicaia, Ornellaia)
+
+    **Characteristics:** Sangiovese (Tuscany), Nebbiolo (Piedmont)
+  </Accordion>
+
+  <Accordion title="Spain" icon="castle">
+    - Rioja (Tempranillo)
+    - Ribera del Duero (Vega Sicilia)
+    - Priorat (concentrated reds)
+
+    Often excellent value for age-worthy wines
+  </Accordion>
+
+  <Accordion title="Australia" icon="kangaroo">
+    - Penfolds Grange (icon wine)
+    - Barossa Shiraz
+    - Margaret River Cabernet
+
+    Bold, fruit-forward style
+  </Accordion>
+</AccordionGroup>
+
+## Tracking Examples
+
+### Example 1: Bordeaux First Growth
+
+<ParamField path="title" type="string">
+  2015 Château Lafite Rothschild - Pauillac
+</ParamField>
+
+<ParamField path="producer" type="string">
+  Château Lafite Rothschild
+</ParamField>
+
+<ParamField path="vintage" type="number">
+  2015
+</ParamField>
+
+<ParamField path="region" type="string">
+  Bordeaux, France
+</ParamField>
+
+<ParamField path="appellation" type="string">
+  Pauillac - Premier Grand Cru Classé (First Growth)
+</ParamField>
+
+<ParamField path="wine_type" type="string">
+  Red - Bordeaux Blend
+</ParamField>
+
+<ParamField path="varietal" type="string">
+  Cabernet Sauvignon, Merlot, Cabernet Franc, Petit Verdot
+</ParamField>
+
+<ParamField path="bottle_size" type="string">
+  Standard (750ml)
+</ParamField>
+
+<ParamField path="fill_level" type="string">
+  IN (Into Neck) - Perfect
+</ParamField>
+
+<ParamField path="label_condition" type="string">
+  Pristine
+</ParamField>
+
+<ParamField path="ratings" type="string">
+  RP 97, WS 98
+</ParamField>
+
+<ParamField path="drinking_window" type="string">
+  2030-2060
+</ParamField>
+
+<ParamField path="provenance" type="string">
+  Purchased from K&L Wine Merchants upon release, stored in professional cellar since 2018
+</ParamField>
+
+<ParamField path="purchase_price" type="currency">
+  $850
+</ParamField>
+
+<ParamField path="market_value" type="currency">
+  $1,200
+</ParamField>
+
+---
+
+### Example 2: California Cult Cabernet
+
+<ParamField path="title" type="string">
+  2018 Screaming Eagle Cabernet Sauvignon
+</ParamField>
+
+<ParamField path="producer" type="string">
+  Screaming Eagle
+</ParamField>
+
+<ParamField path="vintage" type="number">
+  2018
+</ParamField>
+
+<ParamField path="region" type="string">
+  Napa Valley, California
+</ParamField>
+
+<ParamField path="wine_type" type="string">
+  Red - Cabernet Sauvignon
+</ParamField>
+
+<ParamField path="bottle_size" type="string">
+  Standard (750ml)
+</ParamField>
+
+<ParamField path="ratings" type="string">
+  RP 100, AG 98
+</ParamField>
+
+<ParamField path="drinking_window" type="string">
+  2028-2050
+</ParamField>
+
+<ParamField path="provenance" type="string">
+  Direct from winery mailing list allocation
+</ParamField>
+
+<ParamField path="purchase_price" type="currency">
+  $3,500
+</ParamField>
+
+<ParamField path="market_value" type="currency">
+  $5,200
+</ParamField>
+
+---
+
+### Example 3: Champagne Prestige Cuvée
+
+<ParamField path="title" type="string">
+  2012 Dom Pérignon Vintage Champagne
+</ParamField>
+
+<ParamField path="producer" type="string">
+  Dom Pérignon (Moët & Chandon)
+</ParamField>
+
+<ParamField path="vintage" type="number">
+  2012
+</ParamField>
+
+<ParamField path="region" type="string">
+  Champagne, France
+</ParamField>
+
+<ParamField path="wine_type" type="string">
+  Sparkling - Champagne
+</ParamField>
+
+<ParamField path="varietal" type="string">
+  Chardonnay and Pinot Noir blend
+</ParamField>
+
+<ParamField path="bottle_size" type="string">
+  Standard (750ml)
+</ParamField>
+
+<ParamField path="label_condition" type="string">
+  Excellent
+</ParamField>
+
+<ParamField path="drinking_window" type="string">
+  Now-2035
+</ParamField>
+
+<ParamField path="purchase_price" type="currency">
+  $220
+</ParamField>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Document Provenance" icon="file-text">
+    **Why provenance matters:**
+    - Proves authenticity
+    - Documents proper storage
+    - Increases resale value
+    - Important for rare/expensive wines
+
+    **What to document:**
+    - Purchase source
+    - Storage history
+    - Temperature control
+    - Previous owners (if known)
+    - Original purchase receipts
+    - Auction lot information
+
+    <Tip>
+      Save purchase receipts and upload to Storehouses - critical for provenance
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Track Storage Conditions" icon="temperature-half">
+    **Optimal conditions:**
+    - **Temperature:** 55°F (13°C), ±2°F max variation
+    - **Humidity:** 60-70%
+    - **Light:** Complete darkness (UV damages wine)
+    - **Vibration:** None
+    - **Position:** Horizontal (keeps cork moist)
+
+    **Storage options:**
+    - Professional wine storage facility (ideal for valuable wines)
+    - Home wine cellar/fridge
+    - Climate-controlled storage unit
+
+    **Document:**
+    - Where stored (location in Storehouses)
+    - How long in current storage
+    - Temperature control method
+    - Any storage issues
+
+    <Warning>
+      Poor storage ruins wine - heat, light, and temperature swings are wine killers
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Monitor Fill Levels" icon="wine-glass">
+    **Check regularly:**
+    - Ullage increases over time (natural evaporation)
+    - Inspect annually for older wines
+    - Note any changes
+
+    **Take action if:**
+    - Fill level drops significantly
+    - Wine appears brown/oxidized
+    - Cork issues visible
+
+    **For investment wines:**
+    - Professional refill/recork services available
+    - Some châteaus offer recorking
+    - Document any recorking
+
+    <Note>
+      Fill level critical for wines 15+ years old - affects value and drinkability
+    </Note>
+  </Accordion>
+
+  <Accordion title="Photograph Bottles" icon="camera">
+    **Essential photos:**
+    - Front label (clear, readable)
+    - Back label (vintage, region info)
+    - Capsule (top of bottle)
+    - Fill level (visible through bottle)
+    - Any damage or issues
+    - Entire bottle showing condition
+    - Purchase documentation
+
+    **For valuable bottles:**
+    - Close-ups of label details
+    - Bottle number (if numbered)
+    - Any authenticity markers
+    - Storage environment
+
+    <Tip>
+      Photograph bottles when received - documents condition at purchase
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Organize Your Cellar" icon="folder">
+    **Use Storehouses collections:**
+    - **By region:** "Bordeaux", "Burgundy", "Napa"
+    - **By producer:** "First Growths", "DRC Wines"
+    - **By drinking window:** "Drink Soon", "Lay Down 10+ Years"
+    - **By occasion:** "Special Occasions", "Daily Drinkers"
+    - **By storage:** "Home Cellar", "Professional Storage"
+
+    **Track location:**
+    - Specific rack/bin numbers
+    - Storage facility details
+    - Easy retrieval
+
+    <Tip>
+      Update drinking window status annually - helps plan consumption
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Insurance for Valuable Wines" icon="shield">
+    **Consider insurance for:**
+    - Individual bottles over $500-1,000
+    - Collections over $10,000 total
+    - Rare/allocated wines
+    - Investment-grade wines
+
+    **Coverage types:**
+    - Valuable articles rider on homeowner's insurance
+    - Specialized wine insurance
+    - Professional storage facility insurance
+
+    **Documentation needed:**
+    - Purchase receipts
+    - Current market valuations
+    - Storage conditions documented
+    - Photos of bottles and labels
+    - Storehouses export
+
+    <Note>
+      Wine values fluctuate - update insurance valuations every 2-3 years
+    </Note>
+  </Accordion>
+
+  <Accordion title="Track Market Values" icon="chart-line">
+    **Resources for valuation:**
+    - Wine-Searcher.com (current retail prices)
+    - Auction results (Sotheby's, Christie's, Acker Merrall)
+    - WineBid.com (auction prices)
+    - Retail wine shops
+
+    **Update regularly:**
+    - Annually for investment wines
+    - Before selling
+    - For insurance purposes
+
+    **Factors affecting value:**
+    - Vintage quality and reputation
+    - Producer prestige
+    - Critics' scores
+    - Drinking window (peak vs. past prime)
+    - Storage history/provenance
+    - Label condition
+    - Market demand trends
+
+    <Tip>
+      Rare vintages from top producers can appreciate significantly
+    </Tip>
+  </Accordion>
+</AccordionGroup>
+
+## Drinking Window Management
+
+<Card title="Managing Your Cellar's Drinking Windows" icon="calendar">
+  **Create a drinking plan:**
+  - Young wines (0-5 years) - Still developing
+  - Medium term (5-15 years) - Approaching peak
+  - Long term (15-30+ years) - Decades of aging potential
+  - Drink soon (entering/at peak) - Monitor closely
+  - Past peak - Drink now or assess
+
+  **Annual review:**
+  - Check drinking window recommendations
+  - Assess which wines entering peak
+  - Plan consumption accordingly
+  - Update market values
+
+  **Use Storehouses:**
+  - Collections by drinking window
+  - Notes for drinking dates
+  - Reminders for peak windows
+</Card>
+
+## Common Questions
+
+<AccordionGroup>
+  <Accordion title="How do I know when to drink my wine?" icon="clock">
+    **Consult multiple sources:**
+    - Producer recommendations (château, winery)
+    - Professional critics (Parker, Wine Spectator)
+    - Vintage charts
+    - Online communities (CellarTracker)
+
+    **General guidelines:**
+    - **Bordeaux:** 10-30+ years depending on classification
+    - **Burgundy:** 5-20 years typically
+    - **Napa Cab:** 10-25 years for age-worthy
+    - **Champagne:** NV drink young, Vintage 10-20+ years
+
+    <Note>
+      Drinking windows are guidelines - personal taste varies
+    </Note>
+  </Accordion>
+
+  <Accordion title="Should I track each bottle separately?" icon="question">
+    **Use quantity field for identical bottles:**
+    - Same wine, vintage, purchase
+    - Stored together
+    - Identical provenance
+
+    **Create separate entries when:**
+    - Different vintages
+    - Different bottle sizes
+    - Different purchase dates/sources
+    - Different storage locations
+    - One for drinking, one for investment
+
+    <Tip>
+      As you drink bottles, reduce quantity in Storehouses
+    </Tip>
+  </Accordion>
+
+  <Accordion title="What's the best storage temperature?" icon="temperature-half">
+    **Ideal: 55°F (13°C)**
+    - Consistency more important than exact temperature
+    - Range: 50-59°F acceptable
+    - Avoid fluctuations (max ±2-3°F)
+
+    **Temperature impacts:**
+    - Too warm (70°F+): Accelerated aging, cooked wine
+    - Too cold (below 45°F): Slowed development
+    - Fluctuations: Cork expansion/contraction, premature aging
+
+    <Warning>
+      Even brief heat exposure (85°F+) can permanently damage wine
+    </Warning>
+  </Accordion>
+
+  <Accordion title="How important is provenance?" icon="stamp">
+    **Critical for:**
+    - Rare wines ($500+)
+    - Older vintages (20+ years)
+    - Collectible/investment wines
+    - Auction purchases/sales
+
+    **Provenance adds value:**
+    - Direct from producer/retailer
+    - Documented storage history
+    - Professional storage
+    - Reputable auction house
+    - Known previous owner
+
+    **Red flags:**
+    - Unknown storage history
+    - Private sales without documentation
+    - Signs of poor storage (low fill, damaged labels)
+    - Too-good-to-be-true prices
+
+    <Tip>
+      Buy from reputable sources - provenance impossible to establish later
+    </Tip>
+  </Accordion>
+
+  <Accordion title="What about counterfeits?" icon="shield-exclamation">
+    **Counterfeit risk highest for:**
+    - Very expensive wines (First Growths, DRC)
+    - Rare vintages
+    - Auction purchases from unknown sources
+
+    **Protection:**
+    - Buy from reputable sources
+    - Check bottle details (glass, capsule, label)
+    - Verify provenance
+    - Some wines have security features
+    - Professional authentication available
+
+    **Reputable sources:**
+    - Direct from producer
+    - Established retailers
+    - Major auction houses (Christie's, Sotheby's)
+    - Temperature-controlled storage facilities
+
+    <Warning>
+      If deal seems too good to be true, it probably is - counterfeits common for trophy wines
+    </Warning>
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Add Your Wine" icon="plus" href="https://storehouses.app/add">
+    Start tracking your wine cellar
+  </Card>
+
+  <Card title="Spirits Guide" icon="whiskey-glass" href="/asset-types/spirits">
+    Track your spirits collection
+  </Card>
+
+  <Card title="View Cellar" icon="eye" href="/portfolio/viewing-items">
+    Browse your wine collection
+  </Card>
+
+  <Card title="Export Cellar List" icon="file-export" href="/portfolio/export-reporting">
+    Generate wine inventory
+  </Card>
+</CardGroup>

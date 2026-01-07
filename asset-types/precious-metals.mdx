@@ -1,0 +1,625 @@
+---
+title: "Precious Metals"
+description: "Complete guide to tracking gold, silver, platinum, palladium, and rhodium in your Storehouses portfolio"
+---
+
+## Overview
+
+Precious metals are one of the most popular asset categories in Storehouses, offering automatic spot price valuation and real-time portfolio tracking for your bullion investments.
+
+<Tip>
+  Precious metals automatically calculate their value based on weight, purity, and current spot prices. Values update daily as market prices change.
+</Tip>
+
+## Supported Metals
+
+Storehouses tracks five precious metals with automatic spot pricing:
+
+<CardGroup cols={2}>
+  <Card title="Gold (Au)" icon="coins">
+    Most popular precious metal investment. Tracked in troy ounces with spot pricing.
+  </Card>
+
+  <Card title="Silver (Ag)" icon="coins">
+    Affordable precious metal with industrial applications. Real-time spot pricing.
+  </Card>
+
+  <Card title="Platinum (Pt)" icon="coins">
+    Rarer than gold with industrial uses. Automatic spot price valuation.
+  </Card>
+
+  <Card title="Palladium (Pd)" icon="coins">
+    Industrial precious metal used in catalytic converters. Live spot pricing.
+  </Card>
+
+  <Card title="Rhodium (Rh)" icon="coins">
+    Rarest and often most valuable precious metal. Real-time pricing.
+  </Card>
+</CardGroup>
+
+## How Automatic Valuation Works
+
+Precious metals in Storehouses use automatic spot price valuation:
+
+```
+Spot Value = Weight (troy oz) × Purity × Current Spot Price
+Total Value = Spot Value + Premium Value (optional)
+```
+
+### Example Calculation
+
+**1 oz American Gold Eagle:**
+- Weight: 1.0 troy oz
+- Purity: 0.9167 (22 karat)
+- Spot price: $2,000/oz
+- Premium value: $50
+
+```
+Spot Value = 1.0 × 0.9167 × $2,000 = $1,833.40
+Total Value = $1,833.40 + $50 = $1,883.40
+```
+
+<Note>
+  Spot prices are updated automatically from reliable market data providers. Your portfolio value updates in real-time as prices change.
+</Note>
+
+## Adding Precious Metals
+
+<Steps>
+  <Step title="Navigate to Add Item">
+    Click "Add Item" from your dashboard or go to [storehouses.app/add](https://storehouses.app/add)
+  </Step>
+
+  <Step title="Select Precious Metals">
+    Choose "Precious Metals" as the category
+  </Step>
+
+  <Step title="Fill in Required Fields">
+    Complete the precious metals-specific fields (see below)
+  </Step>
+
+  <Step title="Add Optional Details">
+    Include purchase price, seller, location, and photos
+  </Step>
+
+  <Step title="Save">
+    Click "Save Item" to add to your portfolio
+  </Step>
+</Steps>
+
+## Precious Metals Fields
+
+### Required Fields
+
+<ParamField path="metal_type" type="select" required>
+  Type of precious metal
+
+  **Options:**
+  - Gold
+  - Silver
+  - Platinum
+  - Palladium
+  - Rhodium
+</ParamField>
+
+<ParamField path="weight" type="number" required>
+  Weight in troy ounces
+
+  **Examples:**
+  - 1.0 (one troy ounce)
+  - 0.5 (half ounce)
+  - 10.0 (ten ounces)
+  - 0.1 (one-tenth ounce)
+
+  <Tip>
+    Troy ounces are the standard for precious metals. 1 troy oz = 31.1035 grams
+  </Tip>
+</ParamField>
+
+<ParamField path="purity" type="number" required>
+  Metal purity as a decimal (0-1)
+
+  **Common purities:**
+  - 0.999 or 0.9999 (fine gold/silver)
+  - 0.9167 (22 karat gold - American Eagle)
+  - 0.917 (22 karat gold - British Sovereign)
+  - 0.750 (18 karat gold)
+  - 1.000 (pure rhodium, platinum, or palladium)
+
+  <Note>
+    Enter purity as a decimal. For example, .999 fine = 0.999, 24 karat = 1.0, 22 karat = 0.9167
+  </Note>
+</ParamField>
+
+### Optional Fields
+
+<ParamField path="product_name" type="string">
+  Specific product or coin name
+
+  **Examples:**
+  - "American Gold Eagle"
+  - "Canadian Maple Leaf"
+  - "10 oz Silver Bar - PAMP Suisse"
+  - "1 oz Gold Buffalo"
+  - "100 oz Silver Bar - Sunshine Mint"
+  - "1/4 oz Platinum Eagle"
+
+  **Use:** Helps identify specific products for resale and insurance
+</ParamField>
+
+<ParamField path="premium_value" type="currency">
+  Additional value above spot price
+
+  **Use cases:**
+  - Numismatic or collector value
+  - Rare coins with premium over melt value
+  - Limited edition pieces
+  - Proof or special finish coins
+
+  **Example:** A $1,900 spot value Gold Eagle might have a $100 premium value for total $2,000 value
+</ParamField>
+
+## Common Precious Metal Forms
+
+### Gold
+
+<AccordionGroup>
+  <Accordion title="Government Mint Coins" icon="landmark">
+    **Popular options:**
+    - American Gold Eagle (22K, 0.9167 purity)
+    - Canadian Gold Maple Leaf (24K, 0.9999 purity)
+    - Austrian Philharmonic (24K, 0.9999 purity)
+    - South African Krugerrand (22K, 0.9167 purity)
+    - Australian Kangaroo (24K, 0.9999 purity)
+    - British Britannia (24K, 0.9999 purity)
+
+    **Weights:** 1 oz, 1/2 oz, 1/4 oz, 1/10 oz
+  </Accordion>
+
+  <Accordion title="Gold Bars" icon="square">
+    **Common sizes:**
+    - 1 oz, 5 oz, 10 oz bars
+    - 1 kilo (32.15 oz)
+    - 100 gram (3.215 oz)
+
+    **Popular refiners:**
+    - PAMP Suisse
+    - Credit Suisse
+    - Valcambi
+    - Perth Mint
+    - Royal Canadian Mint
+  </Accordion>
+
+  <Accordion title="Gold Rounds" icon="circle">
+    Privately minted coins, usually .9999 fine gold
+    - Lower premiums than government coins
+    - 1 oz is most common size
+    - Various designs and themes
+  </Accordion>
+</AccordionGroup>
+
+### Silver
+
+<AccordionGroup>
+  <Accordion title="Government Mint Coins" icon="landmark">
+    **Popular options:**
+    - American Silver Eagle (0.999 purity)
+    - Canadian Silver Maple Leaf (0.9999 purity)
+    - Austrian Silver Philharmonic (0.9999 purity)
+    - Australian Kangaroo (0.9999 purity)
+    - British Britannia (0.999 purity)
+
+    **Standard weight:** 1 troy oz
+  </Accordion>
+
+  <Accordion title="Silver Bars" icon="square">
+    **Common sizes:**
+    - 1 oz, 5 oz, 10 oz bars
+    - 100 oz bars (most common for investors)
+    - 1 kilo bars (32.15 oz)
+    - 1000 oz commercial bars
+
+    **Purity:** Usually .999 or .9999 fine
+  </Accordion>
+
+  <Accordion title="Silver Rounds" icon="circle">
+    - Privately minted, usually 1 oz
+    - .999 or .9999 fine silver
+    - Lower premiums than government coins
+    - Various designs
+  </Accordion>
+
+  <Accordion title="Junk Silver" icon="coins">
+    Pre-1965 US coins containing 90% silver:
+    - Dimes, quarters, half dollars
+    - Purity: 0.900
+    - Sold by face value ($1 face = 0.715 oz silver)
+  </Accordion>
+</AccordionGroup>
+
+### Platinum, Palladium, and Rhodium
+
+<AccordionGroup>
+  <Accordion title="Platinum" icon="gem">
+    **Common forms:**
+    - American Platinum Eagle (1 oz)
+    - Canadian Platinum Maple Leaf
+    - Platinum bars (various sizes)
+
+    **Purity:** Usually .9995 or 1.0000
+  </Accordion>
+
+  <Accordion title="Palladium" icon="gem">
+    **Common forms:**
+    - Canadian Palladium Maple Leaf
+    - Palladium bars
+
+    **Purity:** Usually .9995 or 1.0000
+  </Accordion>
+
+  <Accordion title="Rhodium" icon="gem">
+    **Forms:**
+    - Primarily bars (1 oz most common)
+    - Very few coins available
+
+    **Purity:** Usually 1.0000 (pure)
+
+    <Warning>
+      Rhodium is extremely rare and volatile. Prices can fluctuate dramatically.
+    </Warning>
+  </Accordion>
+</AccordionGroup>
+
+## Understanding Purity Formats
+
+Precious metals purity can be expressed in different ways. Here's how to convert to Storehouses format:
+
+### Fineness (.999, .9999)
+
+Most common for bullion:
+- .999 fine = 0.999 purity (99.9% pure)
+- .9999 fine = 0.9999 purity (99.99% pure)
+- .995 fine = 0.995 purity (99.5% pure)
+
+**Enter directly as the decimal value**
+
+### Karat (Gold)
+
+Gold jewelry and some coins use karat:
+- 24 karat = 1.0000 purity (100% gold)
+- 22 karat = 0.9167 purity (91.67% gold)
+- 18 karat = 0.750 purity (75% gold)
+- 14 karat = 0.5833 purity (58.33% gold)
+
+### Sterling (Silver)
+
+- Sterling silver = 0.925 purity (92.5% silver)
+- Coin silver = 0.900 purity (90% silver)
+
+## Tracking Examples
+
+### Example 1: American Gold Eagle
+
+<ParamField path="title" type="string">
+  2024 American Gold Eagle 1 oz
+</ParamField>
+
+<ParamField path="metal_type" type="select">
+  Gold
+</ParamField>
+
+<ParamField path="weight" type="number">
+  1.0
+</ParamField>
+
+<ParamField path="purity" type="number">
+  0.9167
+</ParamField>
+
+<ParamField path="product_name" type="string">
+  American Gold Eagle
+</ParamField>
+
+<ParamField path="purchase_price" type="currency">
+  $2,050.00
+</ParamField>
+
+<ParamField path="premium_value" type="currency">
+  $0 (or add numismatic premium if applicable)
+</ParamField>
+
+---
+
+### Example 2: 100 oz Silver Bar
+
+<ParamField path="title" type="string">
+  100 oz Silver Bar - Sunshine Mint
+</ParamField>
+
+<ParamField path="metal_type" type="select">
+  Silver
+</ParamField>
+
+<ParamField path="weight" type="number">
+  100.0
+</ParamField>
+
+<ParamField path="purity" type="number">
+  0.999
+</ParamField>
+
+<ParamField path="product_name" type="string">
+  100 oz Silver Bar - Sunshine Mint
+</ParamField>
+
+<ParamField path="purchase_price" type="currency">
+  $2,450.00
+</ParamField>
+
+---
+
+### Example 3: Canadian Maple Leaf (Mixed Sizes)
+
+For multiple coins of different sizes, create separate entries:
+
+**1 oz Maple Leaf:**
+- Weight: 1.0
+- Purity: 0.9999
+
+**1/2 oz Maple Leaf:**
+- Weight: 0.5
+- Purity: 0.9999
+
+**1/4 oz Maple Leaf:**
+- Weight: 0.25
+- Purity: 0.9999
+
+<Tip>
+  For multiple identical coins, use the "Quantity" field instead of creating separate entries
+</Tip>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Always Record Exact Weight" icon="weight-scale">
+    - Use troy ounces (not regular ounces)
+    - Include fractional weights (0.5, 0.25, 0.1)
+    - Verify weight on product documentation
+    - 1 troy oz = 31.1035 grams
+  </Accordion>
+
+  <Accordion title="Enter Accurate Purity" icon="certificate">
+    - Check product specifications
+    - Use decimal format (0.999, not 999)
+    - Common purities: .9999, .999, .9167, .900
+    - Purity affects spot value calculation
+  </Accordion>
+
+  <Accordion title="Include Product Names" icon="tag">
+    **Benefits:**
+    - Easier identification for insurance
+    - Helps determine premiums when selling
+    - Useful for inventory tracking
+    - Better for estate documentation
+
+    **Good examples:**
+    - "American Silver Eagle"
+    - "10 oz PAMP Suisse Gold Bar"
+    - "Canadian Maple Leaf 1 oz"
+  </Accordion>
+
+  <Accordion title="Track Premiums Separately" icon="dollar-sign">
+    Use the premium_value field for:
+    - Numismatic value (rare coins)
+    - Collectible editions
+    - Proof coins
+    - Limited mintages
+    - Special packaging (First Strike, etc.)
+
+    This separates melt value from collector value
+  </Accordion>
+
+  <Accordion title="Document Purchase Details" icon="receipt">
+    Always record:
+    - Purchase price (for cost basis)
+    - Purchase date
+    - Dealer/seller name
+    - Upload receipts as photos
+
+    Important for:
+    - Tax reporting (capital gains)
+    - Insurance claims
+    - Resale documentation
+  </Accordion>
+
+  <Accordion title="Photograph Your Metals" icon="camera">
+    Take photos showing:
+    - Front and back of coins
+    - Packaging and certificates
+    - Serial numbers on bars
+    - Mint marks
+    - Overall condition
+
+    <Warning>
+      Store photos securely - they contain valuable information
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Track Storage Locations" icon="vault">
+    Use the location field to record:
+    - Home safe
+    - Bank safe deposit box
+    - Third-party vault storage
+    - Multiple locations for diversification
+
+    Benefits:
+    - Quick retrieval when needed
+    - Insurance documentation
+    - Estate planning
+  </Accordion>
+
+  <Accordion title="Organize with Collections" icon="folder">
+    Create collections for:
+    - By metal type ("Gold Coins", "Silver Bars")
+    - By purpose ("Long-term Hold", "Trading Stack")
+    - By storage ("Home Safe", "Bank Vault")
+    - By purchase year ("2024 Purchases")
+  </Accordion>
+</AccordionGroup>
+
+## Understanding Spot Prices
+
+### What Are Spot Prices?
+
+Spot prices represent the current market price for immediate delivery of precious metals. Storehouses uses these prices to automatically value your holdings.
+
+### Price Updates
+
+<Card title="Automatic Updates" icon="arrows-rotate">
+  - Spot prices update automatically throughout the trading day
+  - Your portfolio value adjusts in real-time
+  - No manual updates needed
+  - Prices from reliable market data sources
+</Card>
+
+### Spot Price vs. Purchase Price
+
+- **Spot value**: Current market value based on weight and purity
+- **Purchase price**: What you actually paid
+- **Premium**: Difference between purchase price and spot value at time of purchase
+
+Track all three for complete records and to calculate gains/losses.
+
+## Premium Tracking
+
+### When to Use Premium Value
+
+Use the `premium_value` field for:
+
+1. **Numismatic coins** - Rare or collectible coins worth more than melt value
+2. **Proof coins** - Special finish coins with collector premiums
+3. **Low mintage** - Limited edition releases
+4. **Graded coins** - Certified coins with premium grades
+5. **Historical pieces** - Coins with historical significance
+
+### Premium vs. Purchase Premium
+
+**Premium Value (in Storehouses):**
+- Current premium above spot for collector/numismatic value
+- Updates separately from spot price
+- Adds to total item value
+
+**Purchase Premium:**
+- What you paid over spot when buying
+- Recorded in purchase price vs. spot value at purchase
+- For reference/tax purposes
+
+## Tax Considerations
+
+<Note>
+  Precious metals may have tax implications. Consult a tax professional for your situation.
+</Note>
+
+Track these fields for tax purposes:
+- Purchase price (cost basis)
+- Purchase date (holding period)
+- Seller information
+- Current market value (for reporting)
+
+Storehouses helps you track this information but does not provide tax advice.
+
+## Insurance and Estate Planning
+
+### Insurance Documentation
+
+Your precious metals records in Storehouses can serve as:
+- Insurance inventory
+- Proof of ownership
+- Valuation documentation
+- Purchase history
+
+<Tip>
+  Export your precious metals inventory regularly for insurance and estate planning purposes
+</Tip>
+
+### Heir Access
+
+Consider using Storehouses' Heir Access feature (Pro) to provide:
+- Emergency access for beneficiaries
+- Complete inventory for estate settlement
+- Purchase documentation
+- Storage location information
+
+[Learn more about Heir Access →](/advanced/heir-access)
+
+## Common Questions
+
+<AccordionGroup>
+  <Accordion title="How often do spot prices update?" icon="clock">
+    Spot prices update automatically throughout the trading day based on market data. Your portfolio value reflects current market prices in real-time.
+  </Accordion>
+
+  <Accordion title="Can I track numismatic coins?" icon="coins">
+    Yes! Use the `premium_value` field to add numismatic or collector value above the spot (melt) value. This gives you total value = spot value + premium value.
+  </Accordion>
+
+  <Accordion title="What about 90% silver coins (junk silver)?" icon="coins">
+    Track junk silver using:
+    - Metal type: Silver
+    - Purity: 0.900
+    - Weight: Calculate total silver weight (face value × 0.715)
+
+    Example: $10 face value = 7.15 troy oz, so enter 7.15 as weight
+  </Accordion>
+
+  <Accordion title="Should I use quantity or separate entries?" icon="hashtag">
+    **Use Quantity for:**
+    - Identical coins/bars (same weight, purity, product)
+    - Bulk purchases of same item
+
+    **Use Separate Entries for:**
+    - Different sizes (1 oz vs 1/2 oz)
+    - Different products (Eagles vs Maple Leafs)
+    - Different purchase dates/prices
+    - Items you might sell individually
+  </Accordion>
+
+  <Accordion title="How do I convert grams to troy ounces?" icon="calculator">
+    Divide grams by 31.1035:
+
+    - 31.1035 grams = 1 troy oz
+    - 15.55 grams = 0.5 troy oz
+    - 10 grams = 0.3215 troy oz
+    - 100 grams = 3.215 troy oz
+    - 1000 grams (1 kilo) = 32.15 troy oz
+  </Accordion>
+
+  <Accordion title="What if my coin has numismatic value?" icon="star">
+    For coins worth more than melt value:
+    1. Enter weight and purity for automatic spot calculation
+    2. Add the numismatic premium in the `premium_value` field
+    3. Total value = spot value + premium value
+
+    This keeps melt and collector value separated.
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Add Precious Metals" icon="plus" href="https://storehouses.app/add">
+    Start tracking your bullion
+  </Card>
+
+  <Card title="View Dashboard" icon="chart-line" href="/features/dashboard">
+    Monitor your metals portfolio
+  </Card>
+
+  <Card title="Set Price Alerts" icon="bell" href="/advanced/price-alerts">
+    Get notified of price changes
+  </Card>
+
+  <Card title="Export Reports" icon="file-export" href="/portfolio/export-reporting">
+    Generate inventory reports
+  </Card>
+</CardGroup>

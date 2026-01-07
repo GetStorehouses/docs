@@ -1,0 +1,657 @@
+---
+title: "Alerts"
+description: "Set up automated alerts for precious metals prices and item valuations"
+---
+
+## Overview
+
+Alerts is a Pro feature that helps you monitor your collection's value and precious metals market prices by sending automated email notifications when specific conditions are met. Stay informed about market movements and item valuations without constantly checking your dashboard.
+
+<Note>
+  Alerts are available exclusively to Pro and Lifetime subscribers. [Upgrade
+  your account →](https://storehouses.app/account)
+</Note>
+
+## Two Types of Alerts
+
+Storehouses offers two types of automated monitoring:
+
+### Price Alerts
+
+Monitor spot prices for precious metals in real-time:
+
+- Gold, Silver, Platinum, Palladium, and Rhodium
+- Get notified when metal prices rise above or fall below your specified threshold
+- Perfect for tracking market opportunities and timing purchases or sales
+
+### Value Alerts
+
+Monitor individual item valuations in your collection:
+
+- Track specific items based on their total value (market value × quantity)
+- Get notified when an item's value crosses your threshold
+- Ideal for monitoring investment pieces, high-value items, or insurance thresholds
+
+### Use Cases
+
+<CardGroup cols={2}>
+  <Card title="Buy Opportunities" icon="arrow-down">
+    Get notified when metal prices drop to your target buy price
+  </Card>
+
+<Card title="Sell Signals" icon="arrow-up">
+  Alert when prices or item values reach your target sell threshold
+</Card>
+
+<Card title="Portfolio Protection" icon="shield">
+  Monitor significant price drops in your holdings or individual items
+</Card>
+
+  <Card title="Insurance Tracking" icon="file-shield">
+    Get notified when item values exceed insurance coverage limits
+  </Card>
+</CardGroup>
+
+## Accessing Alerts
+
+Navigate to the Alerts page at [storehouses.app/alerts](https://storehouses.app/alerts)
+
+## How Alerts Work
+
+Understanding how alerts monitor and notify you helps you set effective thresholds and avoid unnecessary emails.
+
+### Automated Monitoring
+
+- **Check Frequency**: Alerts automatically check conditions every 30 minutes
+- **Always Running**: Monitoring happens on the server—no need to keep the app open
+- **Smart Notifications**: Only sends emails when alert state changes (prevents spam)
+
+### State-Change Detection
+
+Storehouses uses intelligent state-change detection to prevent alert fatigue while keeping you informed of meaningful changes.
+
+**How it works:**
+
+Each alert maintains one of three states:
+
+- **Normal**: Threshold not met
+- **Above**: Value exceeded your "above" threshold
+- **Below**: Value fell below your "below" threshold
+
+Emails are only sent when the state **changes**, not every time the alert checks.
+
+**Example Timeline** (Gold alert set for "Above $2,000/oz"):
+
+| Time    | Gold Price | State  | Email Sent? | Why?                           |
+| ------- | ---------- | ------ | ----------- | ------------------------------ |
+| 1:00 PM | $1,980     | Normal | No          | Below threshold                |
+| 1:30 PM | $2,010     | Above  | **Yes**     | State changed: Normal to Above |
+| 2:00 PM | $2,050     | Above  | No          | State unchanged (still Above)  |
+| 2:30 PM | $2,080     | Above  | No          | State unchanged (still Above)  |
+| 3:00 PM | $1,990     | Normal | **Yes**     | State changed: Above to Normal |
+| 3:30 PM | $2,020     | Above  | **Yes**     | State changed: Normal to Above |
+
+**Result**: You receive 3 targeted emails that notify you exactly when the threshold is crossed—no spam, no missed transitions.
+
+<Tip>
+  Without state-change detection, you would receive emails every 30 minutes
+  while the price stays above threshold. This smart logic ensures you only get
+  notified when something meaningful happens.
+</Tip>
+
+## Creating a Price Alert
+
+<Steps>
+  <Step title="Open Alerts Page">
+    Click "Alerts" in the navigation menu
+  </Step>
+
+<Step title="Click 'Add Item'">Click the "+ Add Item" button</Step>
+
+<Step title="Select Alert Type">
+  Choose "Price Alert" from the type dropdown
+</Step>
+
+<Step title="Select Metal Type">
+  Choose the precious metal to monitor: - Gold - Silver - Platinum - Palladium -
+  Rhodium
+</Step>
+
+<Step title="Set Condition and Threshold">
+  - **Condition**: Choose "Above" or "Below" - **Threshold**: Enter the price
+  per ounce that will trigger the alert
+</Step>
+
+<Step title="Enable Alert">
+  Toggle the enable switch to activate monitoring
+</Step>
+
+  <Step title="Save">
+    Click "Save" to activate your alert
+  </Step>
+</Steps>
+
+## Alert Condition Types
+
+### Price Above Target
+
+Receive notification when the spot price rises above your specified amount.
+
+**Example**: Alert me when gold exceeds $2,100/oz
+
+```
+Metal: Gold
+Condition: Price above
+Target: $2,100.00
+```
+
+<Tip>
+  Use this for sell signals or to track upward momentum in your holdings.
+</Tip>
+
+### Price Below Target
+
+Receive notification when the spot price drops below your specified amount.
+
+**Example**: Alert me when silver falls below $24/oz
+
+```
+Metal: Silver
+Condition: Price below
+Target: $24.00
+```
+
+<Tip>Use this to identify buying opportunities at your target price.</Tip>
+
+### Percentage Change
+
+Monitor daily percentage changes (increases or decreases) beyond your threshold.
+
+**Example**: Alert me when platinum changes by more than 3% in a day
+
+```
+Metal: Platinum
+Condition: % change exceeds
+Target: 3%
+```
+
+<Tip>Use this to stay informed about significant market volatility.</Tip>
+
+## Creating a Value Alert
+
+Monitor individual items in your collection and get notified when their total value crosses your threshold.
+
+<Steps>
+  <Step title="Open Alerts Page">
+    Click "Alerts" in the navigation menu
+  </Step>
+
+<Step title="Click 'Add Item'">Click the "+ Add Item" button</Step>
+
+<Step title="Select Alert Type">
+  Choose "Value Alert" from the type dropdown
+</Step>
+
+<Step title="Select Item">
+  Choose which item from your collection to monitor
+</Step>
+
+<Step title="Set Condition and Threshold">
+  - **Condition**: Choose "Above" or "Below" - **Threshold**: Enter the total
+  value that will trigger the alert
+</Step>
+
+<Step title="Enable Alert">
+  Toggle the enable switch to activate monitoring
+</Step>
+
+  <Step title="Save">
+    Click "Save" to activate your alert
+  </Step>
+</Steps>
+
+**Example**: Create an alert for a rare coin collection with "Above $50,000" to be notified when the total value (market value × quantity) exceeds $50,000.
+
+<Tip>
+  Value alerts automatically use the current market value from your item
+  details. When you update an item's market value, the alert will use the new
+  value in the next check (within 30 minutes).
+</Tip>
+
+## Managing Active Alerts
+
+### View All Alerts
+
+Your Alerts page displays:
+
+<ParamField path="Type" type="string">
+  Price Alert or Value Alert
+</ParamField>
+
+<ParamField path="Target" type="string">
+  Metal name (for price alerts) or Item name (for value alerts)
+</ParamField>
+
+<ParamField path="Condition" type="string">
+  The alert trigger condition (Above or Below)
+</ParamField>
+
+<ParamField path="Threshold" type="currency">
+  Your specified threshold value
+</ParamField>
+
+<ParamField path="Current Value" type="currency">
+  Real-time spot price (price alerts) or current item value (value alerts)
+</ParamField>
+
+<ParamField path="Status" type="string">
+  Enabled or Disabled
+</ParamField>
+
+<ParamField path="Last Triggered" type="datetime">
+  When the alert last sent an email notification (if ever)
+</ParamField>
+
+### Edit an Alert
+
+To modify an existing alert:
+
+1. Click on any alert field to edit it inline
+2. Modify the threshold, condition, or target
+3. Changes are saved automatically
+
+<Note>
+  Editing an alert resets its state, allowing it to trigger again based on the
+  new threshold.
+</Note>
+
+### Enable/Disable Alerts
+
+Toggle the enable switch on any alert to activate or deactivate it:
+
+- **Disabled alerts**: Stop monitoring immediately and won't send notifications
+- **Enabled alerts**: Resume monitoring within the next 30-minute check cycle
+- **Settings preserved**: Disabling an alert retains all your settings for easy re-activation
+
+<Tip>
+  Disable alerts temporarily instead of deleting them when they're not currently
+  relevant but might be useful later.
+</Tip>
+
+### Delete an Alert
+
+To permanently remove an alert:
+
+1. Click the delete icon (trash can) on any alert
+2. Confirm deletion
+3. The alert is permanently removed from monitoring
+
+<Warning>
+  Deleted alerts cannot be recovered. Consider disabling instead of deleting if
+  you might want to reactivate later.
+</Warning>
+
+## Alert Notifications
+
+### Email Notifications
+
+When an alert triggers, you'll receive an email containing:
+
+- Metal type and alert condition
+- Target price and current price
+- Timestamp of the trigger
+- Link to view current dashboard
+- Direct link to manage alerts
+
+**Example Email**:
+
+```
+Subject: Price Alert Triggered: Gold Above $2,100
+
+Your price alert for Gold has been triggered.
+
+Condition: Price above $2,100.00
+Current Price: $2,108.50
+Triggered: January 7, 2026 at 2:30 PM EST
+
+View your dashboard: https://storehouses.app/dashboard
+Manage alerts: https://storehouses.app/alerts
+```
+
+### Delivery Timing
+
+- Alerts check conditions every 30 minutes automatically
+- Emails are sent only when alert state changes (prevents spam)
+- Actual email delivery is typically instant once the state change is detected
+- You'll receive an email within 30 minutes of a threshold being crossed
+
+### Ensure Email Delivery
+
+To ensure you receive alert notifications:
+- Confirm your email address in Account Settings
+- Check spam/junk folders for first notification
+- Add alerts@storehouses.app to your contacts
+- Emails are sent from "Storehouses Alerts" (alerts@storehouses.app)
+
+<Tip>
+  If you don't receive alert emails, see the [Troubleshooting](#troubleshooting) section below for detailed steps.
+</Tip>
+
+## Alert History
+
+View your alert trigger history:
+
+1. Open the Alerts page
+2. Click "Alert History"
+3. See past triggers with:
+   - Date and time triggered
+   - Metal type and condition
+   - Target vs actual price
+   - Email delivery status
+
+<Tip>
+  Use alert history to analyze your timing and refine your price targets.
+</Tip>
+
+## Spot Price Data
+
+### Data Sources
+
+Storehouses uses reliable, real-time market data from multiple sources to ensure accurate spot prices:
+
+- Prices update regularly during market hours
+- Data aggregated from major precious metals markets
+- Prices displayed in USD per troy ounce
+- Alerts check every 30 minutes, 24/7
+
+### Market Hours
+
+Precious metals markets operate nearly 24/7, with varying liquidity:
+
+- **Peak hours**: 8:00 AM - 5:00 PM EST (US market hours)
+- **Extended hours**: Global markets continue overnight
+- **Weekends**: Limited trading, prices may be stale
+
+<Note>
+  Alert checking continues 24/7 (every 30 minutes), regardless of market hours.
+  Price updates may be less frequent outside peak trading hours.
+</Note>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Set Realistic Targets" icon="bullseye">
+    - Research current price ranges before setting alerts
+    - Consider historical volatility for the metal
+    - Set targets that represent meaningful opportunities
+    - Avoid setting too many alerts with similar targets
+  </Accordion>
+
+<Accordion title="Use Multiple Alert Types" icon="layer-group">
+  Combine different alert types for comprehensive monitoring: - **Buy alert**:
+  Price below $1,950 (gold) - **Sell alert**: Price above $2,200 (gold) -
+  **Volatility alert**: Daily change exceeds 2%
+</Accordion>
+
+<Accordion title="Review Regularly" icon="calendar">
+  - Update targets as market conditions change - Remove or pause alerts that are
+  no longer relevant - Check alert history to refine your strategy - Adjust
+  based on your investment timeline
+</Accordion>
+
+<Accordion title="Don't Over-Alert" icon="bell-slash">
+  - Too many alerts can lead to notification fatigue - Focus on significant
+  price movements - Use percentage alerts for major volatility only -
+  Consolidate similar alerts
+</Accordion>
+
+  <Accordion title="Act on Alerts" icon="bolt">
+    - Have a plan for when alerts trigger
+    - Don't set alerts you won't act on
+    - Consider your liquidity and timing
+    - Review portfolio context before decisions
+  </Accordion>
+</AccordionGroup>
+
+## Alert Limits
+
+### Free vs Pro Features
+
+| Feature              | Free          | Pro              |
+| -------------------- | ------------- | ---------------- |
+| Price Alerts         | Not available | Unlimited        |
+| Value Alerts         | Not available | Unlimited        |
+| Alert History        | Not available | Full history     |
+| Email Notifications  | Not available | Included         |
+| Real-time Monitoring | Not available | Every 30 minutes |
+
+### Pro Subscription Benefits
+
+Upgrade to Pro to unlock:
+
+- Unlimited price alerts for all metals
+- Unlimited value alerts for your items
+- Smart state-change detection (no spam)
+- Email notifications
+- Complete alert history with "Last Triggered" tracking
+- Priority support
+
+[View pricing plans →](https://storehouses.app/pricing)
+
+## Common Alert Strategies
+
+### Dollar-Cost Averaging
+
+Set multiple buy alerts at different price levels:
+
+```
+Gold below $2,000 - Buy 1 oz
+Gold below $1,950 - Buy 1 oz
+Gold below $1,900 - Buy 2 oz
+```
+
+### Profit Taking
+
+Set sell alerts at incremental gains:
+
+```
+Silver above $28 - Sell 25% of holdings
+Silver above $30 - Sell 25% of holdings
+Silver above $32 - Sell 25% of holdings
+```
+
+### Volatility Monitoring
+
+Track unusual market movements:
+
+```
+Gold daily change > 3% - Review market conditions
+Rhodium daily change > 5% - Consider portfolio impact
+```
+
+### Value Alert Strategies
+
+Monitor high-value items and insurance thresholds:
+
+```
+Rare watch collection > $100,000 - Update insurance coverage
+Vintage wine cellar < $75,000 - Consider adding premium bottles
+Fine art piece > $250,000 - Re-evaluate insurance and security
+```
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="How often do alerts check?" icon="clock">
+    Alerts check conditions every 30 minutes automatically, 24/7. This provides timely notifications without overwhelming the system or your inbox.
+  </Accordion>
+
+<Accordion
+  title="Will I get an email every 30 minutes if the price stays above my threshold?"
+  icon="envelope"
+>
+  No. Thanks to state-change detection, you only receive an email when the alert
+  state changes (crosses the threshold). If the price stays above your
+  threshold, you won't receive repeated emails. You'll only be notified when it
+  crosses back below, then above again.
+</Accordion>
+
+  <Accordion title="Can I set multiple alerts for the same metal or item?" icon="layer-group">
+    Yes, you can create multiple alerts for the same metal or item with different thresholds. For example, one alert for "Gold > $2,000" and another for "Gold > $2,500" to track different price levels.
+  </Accordion>
+
+<Accordion title="What happens if I disable an alert?" icon="toggle-off">
+  Disabled alerts stop monitoring immediately and won't check conditions or send
+  emails. You can re-enable them at any time without losing your threshold
+  settings. The "Last Triggered" timestamp is preserved.
+</Accordion>
+
+<Accordion title="Do alerts work for all metals?" icon="coins">
+  Yes, price alerts work for all supported precious metals: Gold, Silver,
+  Platinum, Palladium, and Rhodium. Prices are updated regularly from market
+  data sources.
+</Accordion>
+
+<Accordion title="Can I get alerts for multiple items?" icon="boxes">
+  Yes, create separate value alerts for each item you want to monitor. Each
+  alert operates independently and has its own threshold and state tracking.
+</Accordion>
+
+<Accordion title="What if my item's market value changes?" icon="chart-line-up">
+  Value alerts automatically use the current market value from your item
+  details. When you update an item's market value in your portfolio, the alert
+  will use the new value in the next check cycle (within 30 minutes).
+</Accordion>
+
+<Accordion
+  title="Do I need to keep the app open for alerts to work?"
+  icon="power-off"
+>
+  No, alerts run automatically on the server. You can close the app, log out, or
+  be offline—alerts will still monitor conditions every 30 minutes and send
+  emails when thresholds are crossed.
+</Accordion>
+
+<Accordion title="Can I test my alerts?" icon="flask">
+  Yes, temporarily set a threshold you know will trigger immediately (e.g., set
+  a gold alert for "Above $1" when gold is at $2,000). You'll receive an email
+  within 30 minutes when the alert checks. Remember to adjust the threshold to
+  your actual target afterward.
+</Accordion>
+
+<Accordion
+  title="Will alerts notify me when values return to normal?"
+  icon="arrows-rotate"
+>
+  Yes, if you have an "Above" alert and the price drops back below the
+  threshold, you'll receive an email notifying you of the state change back to
+  normal. This works both ways—you're notified on every state transition.
+</Accordion>
+
+<Accordion
+  title="How long does it take to receive an email after a threshold is crossed?"
+  icon="stopwatch"
+>
+  Alerts check every 30 minutes, so you'll receive an email within 30 minutes of
+  the threshold being crossed. Actual email delivery is typically instant once
+  the alert detects the state change.
+</Accordion>
+
+  <Accordion title="Can I change the email address for alerts?" icon="at">
+    Alerts are sent to your account email address. Update your account email in Account Settings to change where alerts are delivered. The change takes effect immediately for future alerts.
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Alert Not Triggering" icon="circle-xmark">
+    If your alert doesn't trigger when expected:
+    - Verify the alert is enabled (toggle is on)
+    - Check that the threshold is realistic for current market conditions
+    - Confirm your Pro subscription is active
+    - Review the "Last Triggered" field to see if it fired recently
+    - Wait at least 30 minutes for the next check cycle
+    - Verify the current value would actually cross your threshold
+  </Accordion>
+
+  <Accordion title="Too Many or Too Few Emails" icon="bells">
+    Understanding email frequency:
+    - You receive ONE email per state change (not per check)
+    - If prices oscillate around your threshold, you'll get multiple emails (one per crossing)
+    - Consider adjusting your threshold away from current prices to avoid oscillation
+    - Check "Last Triggered" to review alert activity patterns
+  </Accordion>
+
+  <Accordion title="Email Not Received" icon="triangle-exclamation">
+    Check these common issues:
+    - Verify the alert is enabled (toggle is on)
+    - Check your spam/junk folder
+    - Ensure your account email is correct in Account Settings
+    - Wait up to 30 minutes (alerts check every 30 minutes)
+    - Verify the threshold would be crossed by current values
+    - Check "Last Triggered" to see if the alert fired before
+    - Add alerts@storehouses.app to your contacts
+  </Accordion>
+
+  <Accordion title="Outdated Prices" icon="clock-rotate-left">
+    If displayed prices seem outdated:
+    - Refresh your browser to see latest data
+    - Check during market hours for most accurate prices
+    - Weekend prices may reflect Friday close
+    - Alerts continue checking 24/7 regardless of market hours
+  </Accordion>
+</AccordionGroup>
+
+## Integration with Portfolio
+
+### Alert-Driven Actions
+
+After receiving an alert:
+
+1. **Review Dashboard** - Check current portfolio value
+2. **View Holdings** - See how the price change affects your positions
+3. **Update Values** - Precious metals values update automatically
+4. **Make Decisions** - Buy, sell, or hold based on your strategy
+5. **Export Reports** - Generate updated portfolio reports
+
+### Portfolio Impact
+
+View how price changes affect your holdings:
+
+- Dashboard shows updated portfolio value
+- Precious metals items recalculate automatically
+- Use Wealth Garden to visualize changes over time
+- Export updated reports for records
+
+## Privacy & Security
+
+<Card title="Your Data is Protected" icon="lock">
+  - Alert targets are stored securely - Email notifications are sent via
+  encrypted channels - No third parties have access to your alert settings - You
+  can delete all alerts at any time
+</Card>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="View Dashboard" icon="chart-line" href="/features/dashboard">
+    Monitor current spot prices
+  </Card>
+
+<Card
+  title="Upgrade to Pro"
+  icon="crown"
+  href="https://storehouses.app/pricing"
+>
+  Unlock price alerts
+</Card>
+
+<Card title="Add Items" icon="plus" href="/features/adding-items">
+  Build your portfolio
+</Card>
+
+  <Card title="Export Reports" icon="file-export" href="/portfolio/export-reporting">
+    Generate portfolio reports
+  </Card>
+</CardGroup>

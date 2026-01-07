@@ -1,0 +1,790 @@
+---
+title: "Luxury Watches"
+description: "Complete guide to tracking luxury timepieces, brands, reference numbers, and watch collections in Storehouses"
+---
+
+## Overview
+
+Track your luxury watch collection with detailed fields for brand, model, reference numbers, movement types, and service history. Perfect for collectors, investors, and enthusiasts managing high-end timepieces.
+
+<Card title="Watch Tracking Features" icon="clock">
+  - Brand and model documentation
+  - Reference number database
+  - Movement type tracking
+  - Case material and size
+  - Box and papers status
+  - Service history
+  - Market value tracking
+</Card>
+
+## Adding a Watch
+
+<Steps>
+  <Step title="Navigate to Add Item">
+    Click "Add Item" from your dashboard or go to [storehouses.app/add](https://storehouses.app/add)
+  </Step>
+
+  <Step title="Select Luxury Watches">
+    Choose "Luxury Watches" as the category
+  </Step>
+
+  <Step title="Enter Watch Details">
+    Fill in brand, model, reference number, and specifications
+  </Step>
+
+  <Step title="Add Documentation">
+    Upload photos of watch, box, papers, and certificates
+  </Step>
+
+  <Step title="Save">
+    Click "Save Item" to add to your collection
+  </Step>
+</Steps>
+
+## Watch Fields
+
+### Brand Information
+
+<ParamField path="brand" type="string">
+  Watch manufacturer or brand name
+
+  **Popular luxury brands:**
+  - Rolex
+  - Patek Philippe
+  - Audemars Piguet
+  - Omega
+  - TAG Heuer
+  - Cartier
+  - Breitling
+  - IWC Schaffhausen
+  - Jaeger-LeCoultre
+  - Panerai
+  - Vacheron Constantin
+  - A. Lange & Söhne
+
+  <Tip>
+    Use the official brand name spelling for consistency
+  </Tip>
+</ParamField>
+
+<ParamField path="model" type="string">
+  Specific model or collection name
+
+  **Examples:**
+  - Submariner Date
+  - Nautilus
+  - Royal Oak
+  - Speedmaster Professional
+  - Daytona
+  - Seamaster
+  - Carrera
+  - Portugieser
+
+  <Note>
+    Include the full model name including any sub-model designations
+  </Note>
+</ParamField>
+
+### Reference and Serial Numbers
+
+<ParamField path="reference_number" type="string">
+  Official reference number
+
+  **Examples:**
+  - Rolex: 126610LN (Submariner Date)
+  - Patek Philippe: 5711/1A-010 (Nautilus)
+  - Omega: 310.30.42.50.01.001 (Speedmaster)
+  - Audemars Piguet: 15500ST.OO.1220ST.01 (Royal Oak)
+
+  **Use:** Critical for:
+  - Accurate identification
+  - Market value research
+  - Insurance documentation
+  - Resale purposes
+</ParamField>
+
+<ParamField path="serial_number" type="string">
+  Unique serial number
+
+  **Location varies by brand:**
+  - Between lugs
+  - On case back
+  - On movement
+  - Certificate/papers
+
+  <Warning>
+    Serial numbers are sensitive information. Keep photos private and secure.
+  </Warning>
+</ParamField>
+
+### Movement and Technical Specifications
+
+<ParamField path="movement_type" type="select">
+  Type of watch movement
+
+  **Options:**
+  - **Automatic** - Self-winding mechanical movement
+  - **Manual** - Hand-wound mechanical movement
+  - **Quartz** - Battery-powered electronic movement
+  - **Spring Drive** - Seiko's hybrid technology
+  - **Smartwatch** - Electronic smartwatch
+  - **Other** - Other movement types
+
+  <Note>
+    Most luxury watches are automatic or manual mechanical movements
+  </Note>
+</ParamField>
+
+<ParamField path="caliber" type="string">
+  Movement caliber or reference
+
+  **Examples:**
+  - Rolex: 3235, 4130
+  - Omega: 8800, 9300
+  - Patek Philippe: 324 S C
+  - ETA: 2824-2, 7750
+
+  **Use:** Identifies specific movement used in the watch
+</ParamField>
+
+### Case Details
+
+<ParamField path="case_material" type="string">
+  Material of watch case
+
+  **Common materials:**
+  - Stainless Steel (most common)
+  - Gold (yellow, white, rose)
+  - Platinum
+  - Titanium
+  - Ceramic
+  - Two-tone (steel and gold)
+  - Bronze
+  - Carbon fiber
+
+  **Example entries:**
+  - "Stainless Steel"
+  - "18K Yellow Gold"
+  - "Platinum 950"
+  - "Grade 2 Titanium"
+  - "Two-Tone Stainless Steel and Rose Gold"
+</ParamField>
+
+<ParamField path="case_size" type="string">
+  Case diameter and thickness
+
+  **Examples:**
+  - "40mm"
+  - "42mm × 12mm"
+  - "44mm diameter, 15.5mm thick"
+
+  **Standard sizes:**
+  - 36-38mm: Traditional/vintage sizing
+  - 40-42mm: Modern standard
+  - 44mm+: Large/oversized watches
+
+  <Tip>
+    Include both diameter and thickness when known
+  </Tip>
+</ParamField>
+
+### Production and Purchase Details
+
+<ParamField path="year_produced" type="number">
+  Year the watch was manufactured
+
+  **Examples:**
+  - 2024
+  - 2020
+  - 1990
+  - 1965
+
+  **Use:** Important for:
+  - Vintage watch documentation
+  - Warranty periods
+  - Model year variations
+  - Collector value
+</ParamField>
+
+<ParamField path="year_purchased" type="number">
+  Year you acquired the watch
+
+  **Use:** Track ownership history and holding period
+</ParamField>
+
+### Condition and Service
+
+<ParamField path="condition" type="select">
+  Overall condition of the watch
+
+  **Options:**
+  - **New/Unworn** - Never worn, with stickers
+  - **Excellent** - Minimal wear, like new
+  - **Very Good** - Light wear, well maintained
+  - **Good** - Normal wear, good condition
+  - **Fair** - Visible wear, fully functional
+  - **Poor** - Heavy wear or needs service
+
+  <Note>
+    Condition significantly affects market value
+  </Note>
+</ParamField>
+
+<ParamField path="service_history" type="textarea">
+  Service and maintenance records
+
+  **Include:**
+  - Date of service
+  - Service provider (authorized dealer/independent)
+  - Work performed
+  - Cost
+  - Any replaced parts
+
+  **Example:**
+  ```
+  June 2023 - Full service by Rolex Service Center
+  - Movement overhaul
+  - Replaced crown seals
+  - Pressure test passed
+  - Cost: $850
+
+  March 2020 - Bracelet adjustment at AD
+  - Removed 2 links
+  - Polished clasp
+  ```
+
+  <Tip>
+    Regular servicing maintains value and longevity. Keep all service receipts.
+  </Tip>
+</ParamField>
+
+### Box and Papers
+
+<ParamField path="box_papers" type="select">
+  Completeness of original packaging and documentation
+
+  **Options:**
+  - **Full Set** - Watch, box, papers, warranty card, everything
+  - **Box and Papers** - Complete with documents
+  - **Papers Only** - Documentation but no box
+  - **Box Only** - Original box but no papers
+  - **Watch Only** - No box or papers
+
+  <Note>
+    Complete sets (box and papers) typically command higher resale values
+  </Note>
+</ParamField>
+
+<ParamField path="warranty_status" type="string">
+  Current warranty status
+
+  **Examples:**
+  - "Active - expires December 2028"
+  - "Expired - original 5-year warranty"
+  - "No warranty - vintage piece"
+  - "Transferable warranty valid until 2026"
+
+  <Tip>
+    Some brands offer transferable warranties. Keep warranty cards safe.
+  </Tip>
+</ParamField>
+
+## Tracking Examples
+
+### Example 1: Rolex Submariner Date
+
+<ParamField path="title" type="string">
+  Rolex Submariner Date 41mm Black
+</ParamField>
+
+<ParamField path="brand" type="string">
+  Rolex
+</ParamField>
+
+<ParamField path="model" type="string">
+  Submariner Date
+</ParamField>
+
+<ParamField path="reference_number" type="string">
+  126610LN
+</ParamField>
+
+<ParamField path="serial_number" type="string">
+  [Your serial number]
+</ParamField>
+
+<ParamField path="movement_type" type="select">
+  Automatic
+</ParamField>
+
+<ParamField path="caliber" type="string">
+  3235
+</ParamField>
+
+<ParamField path="case_material" type="string">
+  Stainless Steel (904L)
+</ParamField>
+
+<ParamField path="case_size" type="string">
+  41mm
+</ParamField>
+
+<ParamField path="year_produced" type="number">
+  2023
+</ParamField>
+
+<ParamField path="box_papers" type="select">
+  Full Set
+</ParamField>
+
+<ParamField path="condition" type="select">
+  Excellent
+</ParamField>
+
+<ParamField path="purchase_price" type="currency">
+  $10,250
+</ParamField>
+
+<ParamField path="market_value" type="currency">
+  $11,500
+</ParamField>
+
+---
+
+### Example 2: Omega Speedmaster Professional
+
+<ParamField path="title" type="string">
+  Omega Speedmaster Professional Moonwatch
+</ParamField>
+
+<ParamField path="brand" type="string">
+  Omega
+</ParamField>
+
+<ParamField path="model" type="string">
+  Speedmaster Professional
+</ParamField>
+
+<ParamField path="reference_number" type="string">
+  310.30.42.50.01.001
+</ParamField>
+
+<ParamField path="movement_type" type="select">
+  Manual
+</ParamField>
+
+<ParamField path="caliber" type="string">
+  1861
+</ParamField>
+
+<ParamField path="case_material" type="string">
+  Stainless Steel
+</ParamField>
+
+<ParamField path="case_size" type="string">
+  42mm × 13mm
+</ParamField>
+
+<ParamField path="year_produced" type="number">
+  2019
+</ParamField>
+
+<ParamField path="box_papers" type="select">
+  Box and Papers
+</ParamField>
+
+<ParamField path="purchase_price" type="currency">
+  $5,200
+</ParamField>
+
+---
+
+### Example 3: Vintage Rolex Datejust
+
+<ParamField path="title" type="string">
+  Rolex Datejust 36mm Two-Tone Champagne Dial
+</ParamField>
+
+<ParamField path="brand" type="string">
+  Rolex
+</ParamField>
+
+<ParamField path="model" type="string">
+  Datejust
+</ParamField>
+
+<ParamField path="reference_number" type="string">
+  16233
+</ParamField>
+
+<ParamField path="movement_type" type="select">
+  Automatic
+</ParamField>
+
+<ParamField path="case_material" type="string">
+  Stainless Steel and 18K Yellow Gold
+</ParamField>
+
+<ParamField path="case_size" type="string">
+  36mm
+</ParamField>
+
+<ParamField path="year_produced" type="number">
+  1995
+</ParamField>
+
+<ParamField path="box_papers" type="select">
+  Watch Only
+</ParamField>
+
+<ParamField path="condition" type="select">
+  Good
+</ParamField>
+
+<ParamField path="service_history" type="textarea">
+  Last serviced 2022 by independent watchmaker - full overhaul
+</ParamField>
+
+## Popular Watch Brands and Collections
+
+### High-End Swiss Brands
+
+<CardGroup cols={2}>
+  <Card title="Rolex" icon="clock">
+    **Popular models:**
+    - Submariner (sport dive watch)
+    - GMT-Master II (travel watch)
+    - Daytona (chronograph)
+    - Datejust (classic dress watch)
+    - Day-Date (President)
+    - Explorer
+    - Air-King
+  </Card>
+
+  <Card title="Patek Philippe" icon="star">
+    **Popular models:**
+    - Nautilus (sport luxury)
+    - Aquanaut (sport)
+    - Calatrava (dress watch)
+    - Complications (advanced features)
+    - Grand Complications
+
+    <Note>One of the "Holy Trinity" of watchmaking</Note>
+  </Card>
+
+  <Card title="Audemars Piguet" icon="gem">
+    **Popular models:**
+    - Royal Oak (iconic sport luxury)
+    - Royal Oak Offshore (larger sport)
+    - Royal Oak Concept (avant-garde)
+    - Code 11.59 (modern collection)
+  </Card>
+
+  <Card title="Omega" icon="clock">
+    **Popular models:**
+    - Speedmaster (Moonwatch)
+    - Seamaster (dive watch)
+    - Constellation
+    - De Ville
+
+    <Tip>Official timekeeper of the Olympics</Tip>
+  </Card>
+</CardGroup>
+
+### Other Notable Brands
+
+<AccordionGroup>
+  <Accordion title="Cartier" icon="ring">
+    Luxury French brand known for:
+    - Tank (iconic rectangular watch)
+    - Santos (aviation-inspired)
+    - Ballon Bleu (elegant rounded design)
+    - Panthère (elegant bracelet watch)
+  </Accordion>
+
+  <Accordion title="IWC Schaffhausen" icon="plane">
+    German-Swiss brand featuring:
+    - Pilot's Watch (aviation collection)
+    - Portugieser (classic dress)
+    - Aquatimer (dive watches)
+    - Portofino (elegant collection)
+  </Accordion>
+
+  <Accordion title="Jaeger-LeCoultre" icon="sparkles">
+    Manufacture watchmaker with:
+    - Reverso (flip case design)
+    - Master Collection (complications)
+    - Polaris (sport collection)
+  </Accordion>
+
+  <Accordion title="Panerai" icon="ship">
+    Italian luxury watchmaker:
+    - Luminor (cushion case)
+    - Radiomir (vintage style)
+    - Submersible (dive watches)
+    - Known for large cases (44-47mm)
+  </Accordion>
+
+  <Accordion title="TAG Heuer" icon="flag-checkered">
+    Swiss brand with motorsport heritage:
+    - Carrera (racing chronograph)
+    - Monaco (square case, motorsport)
+    - Aquaracer (dive watch)
+    - Formula 1 (sport collection)
+  </Accordion>
+
+  <Accordion title="Breitling" icon="plane-departure">
+    Aviation-focused Swiss brand:
+    - Navitimer (pilot chronograph)
+    - Superocean (dive watch)
+    - Chronomat (sport chronograph)
+  </Accordion>
+</AccordionGroup>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Document Everything" icon="file-text">
+    Create complete records including:
+    - All reference numbers (watch and movement)
+    - Serial numbers
+    - Year of production
+    - Purchase documentation
+    - Service records
+    - Box and papers status
+
+    **Why:** Essential for insurance, resale, and authenticity verification
+  </Accordion>
+
+  <Accordion title="Photograph Thoroughly" icon="camera">
+    Take detailed photos of:
+    - Full watch face
+    - Case back (if visible)
+    - Side profile showing case thickness
+    - Clasp and bracelet
+    - Serial numbers (between lugs)
+    - Movement (if exhibition case back)
+    - Box and papers
+    - Certificate/warranty card
+    - Any unique features or flaws
+
+    <Tip>
+      Use good lighting and capture sharp, clear images for insurance purposes
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Track Service History" icon="wrench">
+    Maintain detailed service records:
+    - Service date and provider
+    - Work performed
+    - Parts replaced
+    - Cost of service
+    - Next service due date
+
+    **Service intervals:**
+    - Rolex: Every 10 years (or 5 years for older models)
+    - Omega: Every 5-8 years
+    - Most mechanical watches: Every 3-5 years
+
+    <Note>
+      Regular servicing maintains value and ensures longevity
+    </Note>
+  </Accordion>
+
+  <Accordion title="Keep Box and Papers" icon="box">
+    Original packaging increases value:
+    - **Full set** (watch, box, papers): Highest value
+    - **Box and papers**: Strong resale value
+    - **Papers only**: Certificate of authenticity
+    - **Watch only**: Lower resale value
+
+    **Papers include:**
+    - Warranty card
+    - Certificate of authenticity
+    - Instruction manual
+    - Original purchase receipt
+    - Service records
+
+    <Warning>
+      Store box and papers separately from watch for security
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Update Market Values" icon="chart-line">
+    Watch values fluctuate:
+    - Check comparable sales on Chrono24, eBay, authorized dealers
+    - Update market value periodically (annually or semi-annually)
+    - Track market trends for your models
+    - Consider condition when valuing
+
+    **Factors affecting value:**
+    - Brand and model popularity
+    - Condition
+    - Box and papers completeness
+    - Service history
+    - Rarity
+    - Market demand
+  </Accordion>
+
+  <Accordion title="Organize by Collection" icon="folder">
+    Use Storehouses collections to organize:
+    - **By brand:** "Rolex Watches", "Omega Collection"
+    - **By type:** "Dive Watches", "Dress Watches", "Chronographs"
+    - **By storage:** "Watch Box A", "Safe", "Wearing Rotation"
+    - **By purpose:** "Investment Pieces", "Daily Wearers"
+  </Accordion>
+
+  <Accordion title="Set Accurate Locations" icon="location-dot">
+    Track where watches are stored:
+    - Watch box/safe at home
+    - Bank safe deposit box
+    - Watch winder
+    - Currently being worn
+    - With watchmaker for service
+
+    **Benefits:**
+    - Quick retrieval
+    - Insurance documentation
+    - Service scheduling
+    - Rotation planning
+  </Accordion>
+
+  <Accordion title="Insurance Considerations" icon="shield">
+    For valuable watches:
+    - Get specialized watch insurance or valuable items rider
+    - Document with photos and appraisals
+    - Update insurance values annually
+    - Keep records of purchase and service
+
+    <Tip>
+      Export your watch inventory from Storehouses for insurance documentation
+    </Tip>
+  </Accordion>
+</AccordionGroup>
+
+## Watch Maintenance Tips
+
+<Card title="Keep Watches Running Well" icon="gear">
+  **For Automatic Watches:**
+  - Wear regularly or use watch winder
+  - Service every 5-10 years (brand dependent)
+  - Avoid magnetization (keep away from strong magnets)
+  - Have water resistance checked during service
+
+  **For Manual Watches:**
+  - Wind daily at same time
+  - Don't overwind
+  - Regular servicing important
+  - Handle crown gently
+
+  **For All Watches:**
+  - Store in cool, dry place
+  - Avoid extreme temperatures
+  - Clean regularly with soft cloth
+  - Check bracelet screws periodically
+</Card>
+
+## Common Questions
+
+<AccordionGroup>
+  <Accordion title="Where do I find my reference number?" icon="hashtag">
+    **Common locations:**
+    - **Rolex:** Between lugs (12 o'clock side) or on warranty card
+    - **Omega:** Case back or warranty card
+    - **Patek Philippe:** Case back or warranty card
+    - **Most brands:** Papers/warranty card or engraved on case back
+
+    If you can't find it, check your purchase documents or contact an authorized dealer.
+  </Accordion>
+
+  <Accordion title="Should I track each watch separately?" icon="watch">
+    **Yes**, create a separate entry for each watch, even if same model:
+    - Each has unique serial number
+    - Different purchase dates/prices
+    - Individual service histories
+    - Separate condition tracking
+    - Better for insurance documentation
+  </Accordion>
+
+  <Accordion title="How do I value my watch?" icon="dollar-sign">
+    **Research current market value:**
+    1. Check Chrono24.com for comparable listings
+    2. Review completed eBay auctions
+    3. Contact authorized dealers
+    4. Consider professional appraisal for high-value pieces
+
+    **Factors affecting value:**
+    - Box and papers (adds 10-30%)
+    - Condition (excellent vs. good)
+    - Service history (recent service adds value)
+    - Market demand and trends
+    - Rarity and production numbers
+  </Accordion>
+
+  <Accordion title="When should I service my watch?" icon="wrench">
+    **General guidelines:**
+    - **Rolex:** Every 10 years (newer models), 5 years (older)
+    - **Omega:** Every 5-8 years
+    - **Other mechanical:** Every 3-5 years
+    - **Quartz:** Battery every 2-3 years, service every 10 years
+
+    **Service immediately if:**
+    - Time keeping becomes inaccurate
+    - Crown feels loose or difficult
+    - Water inside the crystal
+    - Any unusual sounds
+  </Accordion>
+
+  <Accordion title="Box and papers - how important?" icon="box">
+    **Very important for resale value:**
+    - Full set: 100% value
+    - No box/papers: Typically 10-30% lower value
+    - Papers only: Better than nothing (proves authenticity)
+    - Box only: Minimal impact on value
+
+    **Most important paper:** Warranty card with serial number match
+
+    <Tip>
+      Always request box and papers when purchasing pre-owned
+    </Tip>
+  </Accordion>
+
+  <Accordion title="How to photograph my watch for documentation?" icon="camera">
+    **Essential shots:**
+    1. Full watch face (straight-on, well-lit)
+    2. Side profile showing case thickness
+    3. Case back
+    4. Between lugs showing serial number (if accessible)
+    5. Clasp and bracelet
+    6. Any damage or wear
+    7. Box, papers, and warranty card
+    8. Movement (if exhibition case back)
+
+    **Photography tips:**
+    - Natural lighting or bright white light
+    - Clean watch before photographing
+    - Plain background (white or black)
+    - Sharp, in-focus images
+    - Multiple angles for complete documentation
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Add Your Watches" icon="plus" href="https://storehouses.app/add">
+    Start building your watch collection
+  </Card>
+
+  <Card title="View Collection" icon="eye" href="/portfolio/viewing-items">
+    Browse your timepieces
+  </Card>
+
+  <Card title="Organize Watches" icon="folder" href="/features/collections">
+    Create watch collections
+  </Card>
+
+  <Card title="Export Inventory" icon="file-export" href="/portfolio/export-reporting">
+    Generate watch reports
+  </Card>
+</CardGroup>

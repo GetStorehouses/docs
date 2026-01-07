@@ -1,0 +1,680 @@
+---
+title: "Billing & Payments"
+description: "Manage your Storehouses billing, payment methods, invoices, and subscription"
+---
+
+## Overview
+
+Your Storehouses billing settings allow you to manage payment methods, view invoices, update billing information, and control your subscription. Access your billing dashboard at [storehouses.app/billing](https://storehouses.app/billing).
+
+<Note>
+  All payments are processed securely through Stripe, a PCI-compliant payment processor trusted by millions of businesses worldwide.
+</Note>
+
+## Accessing Billing Settings
+
+<Steps>
+  <Step title="Navigate to Billing">
+    Click your profile icon in the top navigation
+  </Step>
+  <Step title="Select Billing">
+    Choose "Billing" from the dropdown menu
+  </Step>
+  <Step title="View Billing Dashboard">
+    Access your subscription, payment methods, and invoices
+  </Step>
+</Steps>
+
+## Current Subscription
+
+### Viewing Your Plan
+
+Your billing dashboard displays:
+
+<ParamField path="Current Plan" type="string">
+  Free, Pro, or Lifetime
+</ParamField>
+
+<ParamField path="Billing Status" type="string">
+  Active, Canceled, Past Due, or Trial
+</ParamField>
+
+<ParamField path="Next Billing Date" type="date">
+  When your next payment is due (Pro only)
+</ParamField>
+
+<ParamField path="Amount" type="currency">
+  Your subscription cost ($12/month or $99/year for Pro)
+</ParamField>
+
+### Plan Details Card
+
+<Card title="Subscription Information" icon="file-invoice-dollar">
+  Your billing dashboard shows:
+  - Current plan tier
+  - Subscription status
+  - Next billing date
+  - Monthly or annual pricing
+  - Quick upgrade/downgrade actions
+</Card>
+
+## Payment Methods
+
+### Adding a Payment Method
+
+To subscribe to Pro or purchase a Lifetime plan, you need to add a payment method:
+
+<Steps>
+  <Step title="Go to Billing">
+    Navigate to [storehouses.app/billing](https://storehouses.app/billing)
+  </Step>
+  <Step title="Add Payment Method">
+    Click "Add Payment Method" button
+  </Step>
+  <Step title="Enter Card Details">
+    Provide your credit or debit card information via Stripe's secure form
+  </Step>
+  <Step title="Save Card">
+    Click "Save" to securely store the payment method
+  </Step>
+</Steps>
+
+<Warning>
+  Storehouses never stores your complete credit card information. All payment data is securely handled by Stripe and encrypted.
+</Warning>
+
+### Accepted Payment Methods
+
+<CardGroup cols={2}>
+  <Card title="Credit Cards" icon="credit-card">
+    - Visa
+    - Mastercard
+    - American Express
+    - Discover
+    - Diners Club
+    - JCB
+  </Card>
+
+  <Card title="Debit Cards" icon="money-check">
+    - Visa Debit
+    - Mastercard Debit
+    - Maestro
+    - Other major debit networks
+  </Card>
+</CardGroup>
+
+<Note>
+  International cards are accepted. Currency conversion fees may apply from your card issuer.
+</Note>
+
+### Updating Payment Information
+
+To update your payment method:
+
+<Steps>
+  <Step title="Navigate to Billing">
+    Go to your billing settings
+  </Step>
+  <Step title="Find Payment Methods">
+    Locate the "Payment Methods" section
+  </Step>
+  <Step title="Add New Card">
+    Click "Add Payment Method" to enter a new card
+  </Step>
+  <Step title="Set as Default">
+    Select the new card as your default payment method
+  </Step>
+  <Step title="Remove Old Card">
+    Optionally delete the old payment method
+  </Step>
+</Steps>
+
+<Tip>
+  Update your payment method before it expires to avoid subscription interruption.
+</Tip>
+
+### Removing Payment Methods
+
+To remove a saved payment method:
+
+<Steps>
+  <Step title="Go to Payment Methods">
+    Navigate to the payment methods section in billing
+  </Step>
+  <Step title="Select Card">
+    Click on the card you want to remove
+  </Step>
+  <Step title="Delete">
+    Click "Delete" or "Remove" button
+  </Step>
+  <Step title="Confirm">
+    Confirm the deletion
+  </Step>
+</Steps>
+
+<Warning>
+  You cannot remove your default payment method if you have an active Pro subscription. Add a new payment method first, then remove the old one.
+</Warning>
+
+## Billing Cycle
+
+### Pro Plan Billing
+
+<ParamField path="Billing Frequency" type="string">
+  Monthly on the same day you subscribed
+</ParamField>
+
+<ParamField path="Billing Date" type="string">
+  Same calendar day each month (e.g., if you subscribe on the 15th, you're billed on the 15th of each month)
+</ParamField>
+
+<ParamField path="Billing Time" type="string">
+  Automatic charge typically processes between 12:00 AM - 6:00 AM UTC
+</ParamField>
+
+**Example Billing Cycle (Monthly):**
+- Subscribe on January 15, 2026
+- First charge: January 15, 2026 ($12)
+- Second charge: February 15, 2026 ($12)
+- Third charge: March 15, 2026 ($12)
+- And so on...
+
+**Example Billing Cycle (Annual):**
+- Subscribe on January 15, 2026
+- First charge: January 15, 2026 ($99)
+- Second charge: January 15, 2027 ($99)
+- And so on...
+
+### Failed Payments
+
+If your payment fails, here's what happens:
+
+<Steps>
+  <Step title="Payment Attempt">
+    Stripe attempts to charge your default payment method
+  </Step>
+  <Step title="First Retry">
+    If payment fails, Stripe retries 3 days later
+  </Step>
+  <Step title="Email Notification">
+    You receive an email about the failed payment
+  </Step>
+  <Step title="Additional Retries">
+    Stripe continues retrying for up to 2 weeks
+  </Step>
+  <Step title="Subscription Canceled">
+    If payment cannot be collected after 2 weeks, subscription downgrades to Free
+  </Step>
+</Steps>
+
+<Warning>
+  Update your payment method immediately if you receive a failed payment notification to avoid losing Pro access.
+</Warning>
+
+### Lifetime Plan Billing
+
+<Card title="One-Time Payment" icon="money-bill">
+  - Single charge of $349 USD
+  - No recurring billing
+  - Lifetime access to all Pro features
+  - No expiration or renewal
+</Card>
+
+## Invoices
+
+### Viewing Invoices
+
+Access all your billing history and invoices:
+
+<Steps>
+  <Step title="Go to Billing">
+    Navigate to your billing dashboard
+  </Step>
+  <Step title="Find Invoice History">
+    Scroll to the "Invoice History" or "Billing History" section
+  </Step>
+  <Step title="View List">
+    See all past invoices with dates and amounts
+  </Step>
+  <Step title="Download">
+    Click on any invoice to download a PDF copy
+  </Step>
+</Steps>
+
+### Invoice Details
+
+Each invoice includes:
+
+<CardGroup cols={2}>
+  <Card title="Invoice Information" icon="file-invoice">
+    - Invoice number
+    - Date of charge
+    - Amount paid
+    - Payment method (last 4 digits)
+    - Invoice status (paid, pending, failed)
+  </Card>
+
+  <Card title="Subscription Details" icon="receipt">
+    - Subscription plan (Pro or Lifetime)
+    - Billing period
+    - Line item breakdown
+    - Taxes (if applicable)
+    - Total amount charged
+  </Card>
+</CardGroup>
+
+<Tip>
+  Download invoices regularly for your business or tax records. Invoices are available indefinitely in your account.
+</Tip>
+
+### Email Receipts
+
+Storehouses automatically emails you a receipt after each successful payment:
+
+- Sent to your account email address
+- Includes PDF invoice attachment
+- Links to view invoice online
+- Payment confirmation details
+
+<Note>
+  If you don't receive invoice emails, check your spam folder and ensure your email address is correct in your account settings.
+</Note>
+
+## Managing Your Subscription
+
+### Upgrading to Pro
+
+<Steps>
+  <Step title="Go to Billing">
+    Navigate to [storehouses.app/billing](https://storehouses.app/billing)
+  </Step>
+  <Step title="Click Upgrade">
+    Select "Upgrade to Pro" button
+  </Step>
+  <Step title="Add Payment Method">
+    Enter your credit card information
+  </Step>
+  <Step title="Choose Billing Cycle">
+    Select monthly ($12/month) or annual ($99/year) billing
+  </Step>
+  <Step title="Confirm Subscription">
+    Review the charge and confirm
+  </Step>
+  <Step title="Instant Access">
+    Pro features activate immediately
+  </Step>
+</Steps>
+
+<Note>
+  Your first Pro payment is charged immediately. Future payments occur monthly on the same day.
+</Note>
+
+### Upgrading to Lifetime
+
+<Steps>
+  <Step title="Visit Pricing">
+    Go to [storehouses.app/pricing](https://storehouses.app/pricing)
+  </Step>
+  <Step title="Select Lifetime">
+    Click "Get Lifetime Access"
+  </Step>
+  <Step title="Complete Payment">
+    Pay $349 one-time via Stripe
+  </Step>
+  <Step title="Lifetime Activated">
+    All Pro features unlocked permanently
+  </Step>
+</Steps>
+
+<Warning>
+  Lifetime plan availability is limited to 2,000 users. Secure your lifetime access while available.
+</Warning>
+
+### Canceling Your Subscription
+
+To cancel your Pro subscription and downgrade to Free:
+
+<Steps>
+  <Step title="Navigate to Billing">
+    Go to your billing settings
+  </Step>
+  <Step title="Find Cancel Option">
+    Scroll to "Cancel Subscription" section
+  </Step>
+  <Step title="Click Cancel">
+    Select "Cancel Subscription" button
+  </Step>
+  <Step title="Provide Feedback">
+    Optionally share why you're canceling
+  </Step>
+  <Step title="Confirm Cancellation">
+    Confirm you want to cancel
+  </Step>
+  <Step title="Access Until Period End">
+    Pro features remain active until the end of your current billing period
+  </Step>
+</Steps>
+
+<Card title="What Happens When You Cancel" icon="circle-info">
+  - No future charges to your payment method
+  - Pro features remain active until the end of your billing period
+  - After billing period ends, account downgrades to Free plan
+  - All your data is preserved
+  - You can re-subscribe to Pro at any time
+</Card>
+
+<Warning>
+  If you have more than 50 items, you'll need to delete items to meet the Free plan limit after cancellation.
+</Warning>
+
+### Reactivating a Canceled Subscription
+
+To reactivate Pro after canceling:
+
+<Steps>
+  <Step title="Go to Billing">
+    Navigate to your billing settings
+  </Step>
+  <Step title="Click Reactivate">
+    Select "Reactivate Subscription" or "Resume Pro"
+  </Step>
+  <Step title="Confirm Payment Method">
+    Verify your payment method is current
+  </Step>
+  <Step title="Reactivate">
+    Confirm reactivation
+  </Step>
+  <Step title="Instant Access">
+    Pro features are immediately restored
+  </Step>
+</Steps>
+
+## Pro-Rated Billing
+
+### How Pro-Rating Works
+
+<AccordionGroup>
+  <Accordion title="Upgrades" icon="arrow-up">
+    When upgrading to Pro:
+    - You're charged immediately (monthly: $12, annual: $99)
+    - Your billing cycle starts on the day you upgrade
+    - Next payment is one month (monthly) or one year (annual) later
+    - No partial period credits or discounts
+  </Accordion>
+
+  <Accordion title="Downgrades" icon="arrow-down">
+    When canceling Pro:
+    - No refunds for partial months
+    - Pro access continues until the end of your current billing period
+    - Account automatically downgrades to Free after period ends
+    - No charges after downgrade
+  </Accordion>
+
+  <Accordion title="Lifetime Upgrades" icon="infinity">
+    When upgrading from Pro to Lifetime:
+    - Pro subscription canceled immediately
+    - No partial refund for unused Pro time
+    - Lifetime access begins immediately
+    - No future charges
+  </Accordion>
+</AccordionGroup>
+
+## Billing Support
+
+### Common Billing Issues
+
+<AccordionGroup>
+  <Accordion title="Payment Declined" icon="credit-card">
+    If your payment is declined:
+    - Verify card details are correct
+    - Check with your bank for declined transactions
+    - Ensure sufficient funds are available
+    - Try a different payment method
+    - Contact support if issue persists
+  </Accordion>
+
+  <Accordion title="Duplicate Charges" icon="copy">
+    If you see duplicate charges:
+    - Check if charges are from different billing periods
+    - Verify you don't have multiple subscriptions
+    - Contact support with invoice numbers for investigation
+    - Refunds processed within 5-7 business days if duplicate confirmed
+  </Accordion>
+
+  <Accordion title="Can't Update Payment Method" icon="triangle-exclamation">
+    If you can't update your payment method:
+    - Clear browser cache and cookies
+    - Try a different browser
+    - Disable browser extensions temporarily
+    - Check if Stripe is accessible in your region
+    - Contact support for assistance
+  </Accordion>
+
+  <Accordion title="Missing Invoices" icon="file-circle-question">
+    If invoices are missing:
+    - Check the billing history section in your account
+    - Verify you're looking at the correct date range
+    - Check email spam folder for receipts
+    - Contact support to resend missing invoices
+  </Accordion>
+</AccordionGroup>
+
+## Refund Policy
+
+### Pro Subscription Refunds
+
+<Card title="Pro Monthly Refunds" icon="rotate-left">
+  - **First payment**: Full refund within 14 days if no features used
+  - **Subsequent payments**: No refunds for partial months
+  - **Accidental subscriptions**: Full refund within 48 hours
+  - **Service issues**: Evaluated case-by-case
+</Card>
+
+<Warning>
+  Pro subscriptions are generally non-refundable after the first 14 days. Cancel your subscription to stop future charges.
+</Warning>
+
+### Lifetime Plan Refunds
+
+<Card title="Lifetime Refunds" icon="infinity">
+  - **Within 30 days**: Full refund if no features used extensively
+  - **After 30 days**: No refunds (permanent license)
+  - **Service issues**: Evaluated case-by-case
+  - **Change of mind**: No refunds after 30-day window
+</Card>
+
+<Note>
+  "No features used extensively" means fewer than 50 items added and minimal feature usage. Lifetime refunds are at Storehouses' discretion.
+</Note>
+
+### Requesting a Refund
+
+To request a refund:
+
+<Steps>
+  <Step title="Contact Support">
+    [Open a support request](https://storehouses.app/dashboard?support=true) for the fastest response
+  </Step>
+  <Step title="Include Details">
+    Provide:
+    - Account email address
+    - Invoice number or payment date
+    - Reason for refund request
+  </Step>
+  <Step title="Review Process">
+    Support team reviews your request within 2-3 business days
+  </Step>
+  <Step title="Refund Processing">
+    If approved, refund processes within 5-7 business days to original payment method
+  </Step>
+</Steps>
+
+## Tax Information
+
+### Sales Tax
+
+<ParamField path="Tax Collection" type="string">
+  Sales tax collected based on your billing address where required by law
+</ParamField>
+
+<ParamField path="Regions" type="string">
+  Applicable in EU (VAT), US (state sales tax), and other regions as required
+</ParamField>
+
+<ParamField path="Tax Invoices" type="string">
+  Tax amounts shown separately on invoices
+</ParamField>
+
+### VAT for EU Customers
+
+If you're in the European Union:
+
+- VAT is automatically calculated based on your country
+- VAT rate shown before payment
+- VAT number can be added for business accounts
+- Invoices include VAT breakdown
+
+### Business Tax Information
+
+To add business tax information:
+
+<Steps>
+  <Step title="Go to Billing">
+    Navigate to billing settings
+  </Step>
+  <Step title="Add Tax ID">
+    Click "Add Tax Information" or "Add VAT Number"
+  </Step>
+  <Step title="Enter Details">
+    Provide business name and tax ID
+  </Step>
+  <Step title="Verify">
+    Tax ID is verified through Stripe
+  </Step>
+  <Step title="Future Invoices">
+    Business information appears on all future invoices
+  </Step>
+</Steps>
+
+## Billing Notifications
+
+### Email Notifications
+
+You'll receive email notifications for:
+
+<CardGroup cols={2}>
+  <Card title="Payment Confirmations" icon="circle-check">
+    - Successful payment processed
+    - Invoice attached to email
+    - Confirmation of billing period
+  </Card>
+
+  <Card title="Payment Failures" icon="circle-exclamation">
+    - Failed payment attempts
+    - Instructions to update payment method
+    - Timeline before subscription cancellation
+  </Card>
+
+  <Card title="Subscription Changes" icon="arrows-rotate">
+    - Upgrades confirmed
+    - Downgrades processed
+    - Cancellation confirmations
+  </Card>
+
+  <Card title="Upcoming Charges" icon="calendar">
+    - Reminder 3 days before renewal
+    - Upcoming charge amount
+    - Link to update payment method
+  </Card>
+</CardGroup>
+
+<Note>
+  Billing notification preferences can be managed in your account settings, but critical billing emails cannot be disabled.
+</Note>
+
+## Security & Privacy
+
+### Payment Security
+
+<Card title="PCI Compliance" icon="shield-halved">
+  Storehouses and Stripe maintain PCI DSS Level 1 compliance, the highest level of payment security certification.
+</Card>
+
+**Security measures:**
+- Credit card numbers never stored by Storehouses
+- All payment data encrypted in transit and at rest
+- Tokenized card information via Stripe
+- 3D Secure authentication when required
+- Fraud detection and prevention
+
+### Data Privacy
+
+<Card title="Billing Privacy" icon="lock">
+  Your billing information:
+  - Stored securely by Stripe, not Storehouses
+  - Never shared with third parties
+  - Used only for subscription management
+  - Subject to Stripe's privacy policy
+</Card>
+
+[Learn more about Security →](/account/security)
+
+## Stripe Customer Portal
+
+### Managing Billing Through Stripe
+
+For additional billing management, you can access the Stripe Customer Portal:
+
+<Steps>
+  <Step title="Go to Billing">
+    Navigate to your Storehouses billing page
+  </Step>
+  <Step title="Click Manage Billing">
+    Select "Manage Billing via Stripe" link
+  </Step>
+  <Step title="Access Portal">
+    Opens Stripe's secure customer portal
+  </Step>
+  <Step title="Manage Directly">
+    Update payment methods, view invoices, and manage subscriptions
+  </Step>
+</Steps>
+
+**What you can do in Stripe Portal:**
+- Update payment methods
+- View all invoices
+- Download receipts
+- Update billing information
+- View subscription details
+
+## Need Help?
+
+<CardGroup cols={2}>
+  <Card title="Billing Support" icon="headset" href="https://storehouses.app/dashboard?support=true">
+    Contact support for billing questions
+  </Card>
+
+  <Card title="Stripe Support" icon="stripe" href="https://support.stripe.com">
+    For payment processing issues, contact Stripe support
+  </Card>
+</CardGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Subscription Plans" icon="layer-group" href="/account/subscription-plans">
+    Compare Free, Pro, and Lifetime plans
+  </Card>
+
+  <Card title="Account Settings" icon="user" href="/account/settings">
+    Manage your account preferences
+  </Card>
+
+  <Card title="Security Guide" icon="shield" href="/account/security">
+    Learn about account security
+  </Card>
+
+  <Card title="Export Data" icon="file-export" href="/portfolio/export-reporting">
+    Generate portfolio reports
+  </Card>
+</CardGroup>

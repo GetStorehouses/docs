@@ -1,0 +1,236 @@
+---
+title: "Dashboard"
+description: "Understand your Storehouses portfolio dashboard"
+---
+
+## Overview
+
+The Storehouses dashboard is your portfolio command center, providing real-time insights into your alternative asset holdings with visual charts, statistics, and quick access to key features.
+
+## Accessing Your Dashboard
+
+Navigate to [storehouses.app/dashboard](https://storehouses.app/dashboard) after logging in.
+
+## Dashboard Components
+
+### Portfolio Value
+
+<Card title="Total Portfolio Value" icon="dollar-sign">
+  Your dashboard prominently displays your total portfolio value, calculated as the sum of:
+  - **Precious metals**: Current spot value (weight × purity × spot price)
+  - **Other assets**: Market value, purchase price, or insurance value (whichever you've set)
+</Card>
+
+<Tip>
+  For precious metals, values update automatically as spot prices change throughout the day.
+</Tip>
+
+### Allocation Charts
+
+<CardGroup cols={2}>
+  <Card title="Category Breakdown" icon="chart-pie">
+    Visual pie chart showing portfolio allocation by asset category:
+    - Precious Metals
+    - Luxury Watches
+    - Gems & Jewelry
+    - Wine & Spirits
+    - Fine Art
+    - Arms & Armor
+    - Other Collectibles
+  </Card>
+
+  <Card title="Metal Distribution" icon="coins">
+    For precious metals holdings, see breakdown by metal type:
+    - Gold
+    - Silver
+    - Platinum
+    - Palladium
+    - Rhodium
+  </Card>
+</CardGroup>
+
+### Portfolio Statistics
+
+Key metrics displayed on your dashboard:
+
+<ParamField path="Total Items" type="number">
+  Total number of assets in your portfolio
+</ParamField>
+
+<ParamField path="Total Value" type="currency">
+  Combined value of all assets
+</ParamField>
+
+<ParamField path="Collections" type="number">
+  Number of collections you've created
+</ParamField>
+
+<ParamField path="Locations" type="number">
+  Number of storage locations tracked
+</ParamField>
+
+### Recent Activity
+
+View your most recently added or updated items with:
+- Item name and category
+- Thumbnail image (if uploaded)
+- Current value
+- Last modified date
+
+Click any item to view its detail page.
+
+### Quick Actions
+
+<Steps>
+  <Step title="Add Item">
+    Quick button to add a new asset to your portfolio
+  </Step>
+  <Step title="View All Items">
+    Navigate to see all items with filtering and search
+  </Step>
+  <Step title="Export">
+    Generate reports or export data
+  </Step>
+</Steps>
+
+## Spot Prices Widget (Pro)
+
+For precious metals investors, the dashboard displays current spot prices:
+
+| Metal | Price per Troy Ounce | 24h Change |
+|-------|---------------------|------------|
+| Gold | Live pricing | % change |
+| Silver | Live pricing | % change |
+| Platinum | Live pricing | % change |
+| Palladium | Live pricing | % change |
+| Rhodium | Live pricing | % change |
+
+<Note>
+  Spot prices update automatically and are sourced from reliable market data providers.
+</Note>
+
+## Active Price Alerts (Pro)
+
+See your active price alerts with:
+- Metal type
+- Target price
+- Current price
+- Alert status
+
+[Learn more about Price Alerts →](/advanced/price-alerts)
+
+## Wealth Garden Link
+
+Quick access to visualize your portfolio growth over time in the Wealth Garden view.
+
+[Learn more about Wealth Garden →](/portfolio/wealth-garden)
+
+## Navigation Menu
+
+Access all Storehouses features from the dashboard sidebar:
+
+<AccordionGroup>
+  <Accordion title="Portfolio" icon="chart-line">
+    - Dashboard (home)
+    - All Items
+    - Add Item
+  </Accordion>
+
+  <Accordion title="Organization" icon="folder">
+    - Collections
+    - Locations
+  </Accordion>
+
+  <Accordion title="Features" icon="sparkles">
+    - Price Alerts (Pro)
+    - Heir Access (Pro)
+    - Export & Reports
+    - Share Portfolio
+    - Wealth Garden
+  </Accordion>
+
+  <Accordion title="Account" icon="user">
+    - Account Settings
+    - Billing
+    - Sign Out
+  </Accordion>
+</AccordionGroup>
+
+## Mobile Dashboard
+
+The dashboard is fully responsive and optimized for mobile devices:
+
+- Touch-friendly navigation
+- Swipeable charts
+- Quick access menu
+- Full offline support (PWA)
+
+## Customization
+
+### Filtering Dashboard View
+
+Filter your dashboard view by:
+- **Category** - Show only specific asset types
+- **Location** - View items from specific storage locations
+- **Collection** - Display specific collections
+
+### Sorting
+
+Sort your recent items by:
+- Date added (newest/oldest)
+- Value (highest/lowest)
+- Name (A-Z)
+
+## Tips for Using Your Dashboard
+
+<CardGroup cols={2}>
+  <Card title="Check Daily" icon="calendar">
+    For precious metals holders, check daily to monitor spot price changes
+  </Card>
+  <Card title="Regular Updates" icon="arrows-rotate">
+    Keep items updated with current market values for accurate portfolio tracking
+  </Card>
+  <Card title="Use Alerts" icon="bell">
+    Set price alerts to be notified of significant price movements
+  </Card>
+  <Card title="Export Regularly" icon="download">
+    Regular exports serve as backups of your portfolio data
+  </Card>
+</CardGroup>
+
+## Understanding Value Calculations
+
+### Precious Metals
+```
+Spot Value = Weight (oz) × Purity × Current Spot Price
+Total Value = Spot Value + Premium/Collector Value (if set)
+```
+
+### Other Assets
+```
+Item Value = Market Value (if set)
+  OR Insurance Value (if set)
+  OR Purchase Price (if set)
+  OR $0
+```
+
+<Tip>
+  For the most accurate portfolio value, regularly update market values for non-precious metal assets.
+</Tip>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Add Items" icon="plus" href="/features/adding-items">
+    Build your portfolio
+  </Card>
+  <Card title="Create Collections" icon="folder" href="/features/collections">
+    Organize your assets
+  </Card>
+  <Card title="Set Up Alerts" icon="bell" href="/advanced/price-alerts">
+    Monitor prices
+  </Card>
+  <Card title="Export Data" icon="file-export" href="/portfolio/export-reporting">
+    Generate reports
+  </Card>
+</CardGroup>

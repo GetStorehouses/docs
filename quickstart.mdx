@@ -1,80 +1,172 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: "Quick Start"
+description: "Get started with Storehouses in minutes"
 ---
 
-## Get started in three steps
+import Pro from '/snippets/pro.mdx';
 
-Get your documentation site running locally and make your first customization.
+## Create Your Account
 
-### Step 1: Set up your local environment
+Getting started with Storehouses is quick and simple.
 
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
+<Steps>
+  <Step title="Sign Up">
+    Visit [storehouses.app/register](https://storehouses.app/register) and create your account with:
+    - Email address
+    - Secure password
 
-### Step 2: Deploy your changes
+    No identity verification or credit card is required to sign up.
+  </Step>
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+  <Step title="Verify Your Email">
+    Check your inbox for a verification email and click the confirmation link.
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+    <Tip>Can't find the email? Check your spam folder</Tip>
+  </Step>
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+  <Step title="Access Your Dashboard">
+    Once verified, you'll be redirected to your dashboard at [storehouses.app/dashboard](https://storehouses.app/dashboard)
+  </Step>
+</Steps>
 
-### Step 3: Go live
+## Add Your First Item
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+<Info>We create a default collection for your items called "My Collection" to get you started. Free plan users are limited to this one collection, while Pro and Lifetime plan users can create unlimited custom collections.</Info>
 
-## Next steps
+<Steps>
+  <Step title="Click 'Add Item'">
+    From your dashboard, click the "Add Item" button or navigate to the add page.
+  </Step>
 
-Now that you have your docs running, explore these key features:
+  <Step title="Select Asset Category">
+    Choose the type of asset you're adding:
+    - Precious Metals
+    - Luxury Watches
+    - Gems & Jewelry
+    - Fine Jewelry
+    - Wine
+    - Spirits
+    - Fine Art
+    - Arms & Armor
+    - Other Collectibles
+  </Step>
+
+  <Step title="Fill in Details">
+    Enter the relevant information for your item. Required fields include:
+    - Title/Name
+    - Collection (default is "My Collection")
+    - Category-specific details (e.g., metal type, weight for precious metals)
+    - Optional: Purchase price, date, location, photos
+  </Step>
+
+  <Step title="Save & View">
+    Save your item and view it in your portfolio. Your dashboard will automatically update with the new item's value.
+  </Step>
+</Steps>
+
+<Tip>
+  For precious metals, Storehouses automatically fetches current spot prices to calculate your item's value based on weight and purity.
+</Tip>
+
+## Set Up Locations
+
+<Info>Locations are for your own organization and any details you provide are simply for your reference.</Info>
+
+Organize where your assets are stored:
+
+1. Navigate to the **Locations** page
+2. Add custom storage locations (e.g., "Home Safe", "Bank Vault", "Wine Cellar")
+3. Assign items to locations for better tracking
+
+## Create Collections
+
+<Pro />
+
+Group related items together (Pro and Lifetime plans only):
+
+1. Go to the **Collections** page
+2. Create a new collection (e.g., "Gold Coins", "Swiss Watches", "Bordeaux Wines")
+3. Add items to your collections for organized viewing
+
+<Note>Free plan users have one default collection ("My Collection") for all their items.</Note>
+
+## Explore Your Dashboard
+
+Your dashboard provides:
 
 <CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
+  <Card title="Portfolio Value" icon="chart-line">
+    Total value of all items with real-time precious metals pricing
+  </Card>
+  <Card title="Allocation Chart" icon="chart-pie">
+    Visual breakdown by category
+  </Card>
+  <Card title="Recent Items" icon="clock">
+    Recently added or updated items
+  </Card>
+  <Card title="Price Alerts" icon="bell">
+    Active alerts for price movements (Pro plan)
+  </Card>
 </CardGroup>
 
+## Next Steps
+
+<AccordionGroup>
+  <Accordion title="Set Up Price Alerts" icon="bell">
+    Track precious metals prices and get notified when they hit your target levels.
+
+    [Learn about Price Alerts](/advanced/price-alerts)
+  </Accordion>
+
+  <Accordion title="Configure Heir Access" icon="users">
+    Set up emergency access for designated beneficiaries.
+
+    [Learn about Heir Access](/advanced/heir-access)
+  </Accordion>
+
+  <Accordion title="Export Your Portfolio" icon="file-export">
+    Generate PDF reports or CSV exports for insurance or tax purposes.
+
+    [Learn about Exports](/portfolio/export-reporting)
+  </Accordion>
+
+  <Accordion title="Share Your Portfolio" icon="share">
+    Create secure links to share your portfolio with family members or financial advisors.
+
+    [Learn about Sharing](/advanced/sharing)
+  </Accordion>
+</AccordionGroup>
+
+## Install as Mobile App
+
+Storehouses is a Progressive Web App (PWA) that you can install on your device:
+
+### iOS (iPhone/iPad)
+1. Open Safari and go to storehouses.app
+2. Tap the Share button
+3. Scroll down and tap "Add to Home Screen"
+
+### Android
+1. Open Chrome and go to storehouses.app
+2. Tap the menu (three dots)
+3. Tap "Install App" or "Add to Home Screen"
+
+### Desktop
+1. Visit storehouses.app in Chrome, Edge, or Safari
+2. Look for the install icon in the address bar
+3. Click to install
+
 <Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+  Once installed, you can access your portfolio offline with the PWA's offline mode.
 </Note>
+
+## Need Help?
+
+<CardGroup cols={2}>
+  <Card title="Documentation" icon="book" href="/features/dashboard">
+    Browse our complete documentation
+  </Card>
+  <Card title="Support" icon="headset" href="https://storehouses.app/dashboard?support=true">
+    Get help from our support team
+  </Card>
+</CardGroup>

@@ -1,0 +1,559 @@
+---
+title: "Wealth Garden"
+description: "Visualize your portfolio's growth over time with interactive charts and historical value tracking"
+---
+
+## Overview
+
+Wealth Garden is Storehouses' interactive portfolio visualization feature that transforms your asset data into beautiful, insightful charts showing how your wealth has grown over time. See your entire portfolio's journey from first acquisition to present day.
+
+## What is Wealth Garden?
+
+Wealth Garden provides:
+
+<CardGroup cols={2}>
+  <Card title="Growth Visualization" icon="chart-line">
+    Interactive charts showing portfolio value over time
+  </Card>
+
+  <Card title="Historical Tracking" icon="clock">
+    Complete value history from first purchase to present
+  </Card>
+
+  <Card title="Asset Allocation" icon="chart-pie">
+    See how your portfolio composition changes over time
+  </Card>
+
+  <Card title="Performance Insights" icon="lightbulb">
+    Identify trends and your best-performing assets
+  </Card>
+</CardGroup>
+
+## Accessing Wealth Garden
+
+<Steps>
+  <Step title="Navigate to Wealth Garden">
+    Go to [storehouses.app/wealth-garden](https://storehouses.app/wealth-garden) or click **Wealth Garden** from your dashboard
+  </Step>
+
+  <Step title="View Main Chart">
+    See your portfolio's total value over time
+  </Step>
+
+  <Step title="Interact with Visualizations">
+    Click, hover, and filter to explore your data
+  </Step>
+
+  <Step title="Adjust Time Range">
+    Select different time periods to analyze
+  </Step>
+</Steps>
+
+<Tip>
+Wealth Garden works best with portfolios that have been active for at least a few months. The more history you have, the more insightful the visualizations become.
+</Tip>
+
+## Main Portfolio Value Chart
+
+### What It Shows
+
+The primary Wealth Garden chart displays:
+
+- **Total portfolio value** over time
+- **Key milestones** when significant items were added
+- **Value fluctuations** from market changes and additions/sales
+- **Growth trajectory** from first purchase to present
+
+### Chart Features
+
+<ParamField path="Timeline" type="x-axis">
+  Horizontal axis showing dates from first purchase to present
+
+  **Zoom**: Click and drag to zoom into specific time periods
+</ParamField>
+
+<ParamField path="Value" type="y-axis">
+  Vertical axis showing portfolio value in dollars
+
+  **Scale**: Automatically adjusts to your portfolio size
+</ParamField>
+
+<ParamField path="Data Points" type="interactive">
+  Each point represents a valuation event
+
+  **Hover**: See exact date and value
+  **Click**: View items added or changed on that date
+</ParamField>
+
+<ParamField path="Trend Line" type="visual">
+  Smooth line showing overall growth trajectory
+
+  **Color**: Green for positive growth, red for decline
+</ParamField>
+
+### Interactive Features
+
+**Hover over any point** to see:
+- Exact date
+- Portfolio value at that time
+- Value change from previous point
+- What caused the change (new item, value update, etc.)
+
+**Click on a date** to:
+- See all items in portfolio at that time
+- View what was added or removed
+- Compare to current portfolio
+
+**Zoom and pan**:
+- Drag to select a time range
+- Scroll to zoom in/out
+- Double-click to reset view
+
+## Time Range Selection
+
+Analyze different time periods:
+
+<CardGroup cols={3}>
+  <Card title="All Time" icon="infinity">
+    Complete portfolio history from first item
+  </Card>
+
+  <Card title="Year to Date" icon="calendar">
+    Current year's performance
+  </Card>
+
+  <Card title="Last 12 Months" icon="calendar-days">
+    Rolling annual view
+  </Card>
+
+  <Card title="Last 6 Months" icon="calendar-week">
+    Recent short-term trends
+  </Card>
+
+  <Card title="Last 30 Days" icon="calendar-day">
+    Very recent changes
+  </Card>
+
+  <Card title="Custom Range" icon="sliders">
+    Select specific start and end dates
+  </Card>
+</CardGroup>
+
+<Tip>
+Use different time ranges to spot short-term volatility vs long-term growth trends.
+</Tip>
+
+## Asset Allocation Over Time
+
+### Category Breakdown
+
+See how your portfolio composition has evolved:
+
+**Stacked area chart** shows:
+- Percentage of portfolio in each asset category
+- How allocation shifts over time
+- Which categories dominate your holdings
+
+**Categories displayed**:
+- Precious Metals
+- Luxury Watches
+- Gems
+- Fine Jewelry
+- Wine
+- Spirits
+- Fine Art
+- Arms & Armor
+- Other Collectibles
+
+### Reading the Allocation Chart
+
+**Vertical axis**: 0% to 100% of portfolio value
+
+**Horizontal axis**: Timeline from first purchase to present
+
+**Color bands**: Each asset category shown in different color
+
+**Hover**: See exact percentage and value for each category at any point in time
+
+### Allocation Insights
+
+<AccordionGroup>
+  <Accordion title="Diversification Trends">
+    Watch how your portfolio diversifies (or concentrates) over time. Are you adding variety or focusing on specific asset classes?
+  </Accordion>
+
+  <Accordion title="Category Performance">
+    Identify which categories are growing faster. If precious metals gain value while other categories remain flat, their percentage increases.
+  </Accordion>
+
+  <Accordion title="Rebalancing Opportunities">
+    Spot when one category becomes too large a portion of your portfolio, signaling potential rebalancing needs.
+  </Accordion>
+
+  <Accordion title="Collection Strategy">
+    Review whether your buying patterns align with your intended strategy. Are you over-concentrated in one area?
+  </Accordion>
+</AccordionGroup>
+
+## Value Change Indicators
+
+### Gain/Loss Visualization
+
+Key metrics displayed prominently:
+
+<CardGroup cols={2}>
+  <Card title="Total Value" icon="dollar-sign">
+    Current total portfolio value
+
+    **Updated**: Real-time for precious metals, or last manual update
+  </Card>
+
+  <Card title="Total Gain/Loss" icon="chart-line">
+    Difference between current value and total cost basis
+
+    **Format**: Dollar amount and percentage
+  </Card>
+
+  <Card title="Since Last Update" icon="clock">
+    Value change since your last manual update or item addition
+
+    **Use**: See recent portfolio performance
+  </Card>
+
+  <Card title="All-Time High" icon="mountain">
+    Peak portfolio value ever reached
+
+    **Date**: When the peak occurred
+  </Card>
+</CardGroup>
+
+### Color Coding
+
+Visual indicators throughout:
+- **Green**: Positive growth, gains, increases
+- **Red**: Declines, losses, decreases
+- **Gray**: Neutral, no change
+
+## Portfolio Milestones
+
+### Automatic Milestone Detection
+
+Wealth Garden automatically highlights:
+
+**Major additions**:
+- When you add high-value items
+- First item in new category
+- Portfolio value milestones ($10k, $25k, $50k, $100k, etc.)
+
+**Significant changes**:
+- Largest single-day value increases
+- Major value updates
+- Important appraisal dates
+
+**Markers on timeline**:
+- Visual indicators at milestone dates
+- Hover to see milestone description
+- Click to view details
+
+### Custom Milestones
+
+Add your own milestones:
+
+1. Click **Add Milestone** on the timeline
+2. Select date
+3. Add description (e.g., "Inherited father's coin collection")
+4. Save milestone
+
+**Use cases**:
+- Document inheritance dates
+- Mark major purchases
+- Note appraisal dates
+- Record insurance policy updates
+
+## Historical Value Tracking
+
+### How Values are Tracked
+
+Wealth Garden shows value evolution through:
+
+**Precious metals**: Automatic daily updates based on spot prices
+
+**Other assets**: Value snapshots at each manual update
+
+**Purchases**: Item additions increase total value
+
+**Sales**: Item removals decrease total value
+
+### Value Update Events
+
+Each point on the chart represents:
+- **Item added**: New purchase increases portfolio value
+- **Manual update**: You updated an item's market value
+- **Automatic update**: Precious metals spot price changed
+- **Item sold/removed**: Portfolio value decreased
+
+### Accuracy Considerations
+
+<Warning>
+Wealth Garden is only as accurate as your data. Regular value updates for non-precious-metal items ensure realistic portfolio tracking.
+</Warning>
+
+**For best results**:
+- Update market values quarterly or annually
+- Record purchase prices accurately
+- Add items promptly after acquisition
+- Remove sold items and record sale dates
+
+## Performance Insights
+
+### Best Performers
+
+Identify your top-performing assets:
+
+**Sort by**:
+- Highest percentage gain
+- Largest absolute gain
+- Best performers in each category
+- Recent top performers (last 30/90/365 days)
+
+**Insights gained**:
+- Which asset classes appreciate fastest for you
+- Individual items with exceptional growth
+- Categories worth adding to
+- Timing of best purchases
+
+### Performance by Category
+
+Compare how different asset types perform:
+
+**Metrics shown**:
+- Average return per category
+- Best and worst items in each category
+- Category volatility (precious metals vs stable collectibles)
+- Growth rates over time
+
+<Card title="Portfolio Strategy Tip" icon="strategy">
+  Use category performance data to inform future acquisition decisions. If certain asset types consistently outperform, consider increasing allocation to those categories.
+</Card>
+
+## Comparing Time Periods
+
+### Year-over-Year Comparison
+
+View how current year compares to previous years:
+
+- Select **Year-over-Year** view
+- See each calendar year's performance
+- Identify seasonal trends
+- Compare acquisition patterns
+
+### Month-over-Month Growth
+
+Track monthly portfolio growth:
+
+- Monthly value snapshots
+- Month-to-month change percentages
+- Identify busy acquisition months
+- Spot value update patterns
+
+## Wealth Garden on Mobile
+
+Full Wealth Garden experience on mobile:
+
+**Optimized for touchscreens**:
+- Pinch to zoom on charts
+- Swipe to pan timeline
+- Tap for data point details
+- Responsive chart sizing
+
+**Mobile-specific features**:
+- Simplified view for small screens
+- Rotate to landscape for full charts
+- Quick time range selection
+- Gesture-based navigation
+
+## Interpreting Your Wealth Garden
+
+### Growth Patterns
+
+<AccordionGroup>
+  <Accordion title="Steady Climber">
+    **Pattern**: Smooth upward curve
+    **Meaning**: Consistent acquisitions and/or value appreciation
+    **Action**: Stay the course; your strategy is working
+  </Accordion>
+
+  <Accordion title="Stair-Step Growth">
+    **Pattern**: Flat periods followed by jumps
+    **Meaning**: Periodic large purchases with quiet periods between
+    **Action**: Normal for many collectors; consider if you want more consistent activity
+  </Accordion>
+
+  <Accordion title="Volatile Swings">
+    **Pattern**: Frequent ups and downs
+    **Meaning**: Heavy precious metals allocation (daily spot price changes)
+    **Action**: Expected for commodity-based portfolios
+  </Accordion>
+
+  <Accordion title="Plateau">
+    **Pattern**: Flat horizontal line
+    **Meaning**: No new purchases and stable values
+    **Action**: Consider if this is intentional or if portfolio review is needed
+  </Accordion>
+
+  <Accordion title="Decline">
+    **Pattern**: Downward trend
+    **Meaning**: Market value decreases or items sold
+    **Action**: Review asset quality and market conditions
+  </Accordion>
+</AccordionGroup>
+
+### Allocation Insights
+
+**Concentrated portfolio** (one category dominates):
+- **Pros**: Deep expertise, potential for outsized gains
+- **Cons**: Higher risk if that market declines
+- **Consider**: Diversifying into complementary assets
+
+**Diversified portfolio** (multiple categories balanced):
+- **Pros**: Risk spread across asset types
+- **Cons**: May dilute exceptional performance
+- **Consider**: Optimal for most collectors
+
+**Emerging diversification** (allocation bands widening):
+- **Meaning**: You're actively diversifying
+- **Action**: Monitor to ensure intentional strategy
+
+## Using Wealth Garden for Planning
+
+### Investment Strategy
+
+Inform future purchases with historical data:
+
+1. **Identify best performers** - What asset types grew most?
+2. **Spot opportunities** - Which categories are underrepresented?
+3. **Timing patterns** - When do you typically add items?
+4. **Value trends** - Are your assets appreciating consistently?
+
+### Insurance Planning
+
+Use Wealth Garden for insurance reviews:
+
+- **Value milestones** trigger coverage increases
+- **Growth rates** inform premium budgeting
+- **Category breakdowns** help optimize coverage types
+- **Historical peaks** show maximum exposure
+
+### Estate Planning
+
+Demonstrate portfolio growth for estate planning:
+
+- **Total appreciation** over ownership period
+- **Value projections** based on growth rates
+- **Category allocation** for heir discussions
+- **Milestone events** provide context
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Regular Value Updates">
+    Update non-precious-metal item values at least annually. This keeps your Wealth Garden chart accurate and useful for decision-making.
+  </Accordion>
+
+  <Accordion title="Record Purchase Dates Accurately">
+    Correct purchase dates ensure timeline accuracy. Even approximate dates are better than none.
+  </Accordion>
+
+  <Accordion title="Add Items Promptly">
+    Enter new acquisitions soon after purchase so your growth chart reflects real-time portfolio development.
+  </Accordion>
+
+  <Accordion title="Use Milestones">
+    Add custom milestones for major events like inheritances, gifts, or significant market events affecting your portfolio.
+  </Accordion>
+
+  <Accordion title="Review Quarterly">
+    Make it a habit to review your Wealth Garden quarterly. Look for trends and adjust your collecting strategy accordingly.
+  </Accordion>
+
+  <Accordion title="Compare to Benchmarks">
+    Track how your portfolio performs versus relevant benchmarks (gold price, stock market, art indices) over the same time periods.
+  </Accordion>
+
+  <Accordion title="Document Insights">
+    When you notice significant patterns or insights, add notes to milestones or item descriptions for future reference.
+  </Accordion>
+</AccordionGroup>
+
+## Privacy & Security
+
+<Card title="Your Data is Private" icon="lock">
+  Wealth Garden visualizations use only your own portfolio data. Nothing is shared with Storehouses or other users unless you explicitly create a share link.
+</Card>
+
+**Data handling**:
+- All calculations happen in real-time
+- Historical data pulled from your item records
+- No third-party analytics tracking
+- Charts are not cached or stored separately
+
+## Limitations & Considerations
+
+### Data Requirements
+
+Wealth Garden requires:
+- At least one item with a purchase date
+- Some value data (purchase price or market value)
+- Ideally, multiple items over time for meaningful trends
+
+**Limited data scenarios**:
+- **New portfolios**: Limited history means short timelines
+- **Single category**: No allocation insights
+- **No dates**: Items without purchase dates can't be placed on timeline
+- **No values**: Items without any valuation data don't contribute
+
+### Value Accuracy
+
+<Warning>
+Wealth Garden shows the values you've entered, but doesn't verify their accuracy. For meaningful insights, maintain current and realistic valuations.
+</Warning>
+
+**Challenges**:
+- **Stale values**: Outdated manual values skew recent performance
+- **Missing spot prices**: Precious metals data depends on market APIs
+- **Estimated purchases**: Approximate purchase prices reduce cost basis accuracy
+
+## Future Enhancement Ideas
+
+Potential future features for Wealth Garden:
+
+- Comparison to market indices (gold price, S&P 500, art market)
+- Scenario modeling (what if I sell X, buy Y?)
+- Goal tracking (visualize progress toward target portfolio value)
+- Category-specific deep dives
+- Correlation analysis between different assets
+- Tax reporting integration
+
+<Tip>
+Have ideas for Wealth Garden improvements? Share feedback through the in-app feedback button or contact support.
+</Tip>
+
+## Related Resources
+
+<CardGroup cols={2}>
+  <Card title="Dashboard" icon="chart-pie" href="/features/dashboard">
+    View current portfolio summary and totals
+  </Card>
+
+  <Card title="Valuation & Pricing" icon="dollar-sign" href="/portfolio/valuation-pricing">
+    Understand how portfolio values are calculated
+  </Card>
+
+  <Card title="Export & Reporting" icon="download" href="/portfolio/export-reporting">
+    Export portfolio data and reports
+  </Card>
+
+  <Card title="Viewing Items" icon="eye" href="/portfolio/viewing-items">
+    Browse and explore your portfolio items
+  </Card>
+</CardGroup>

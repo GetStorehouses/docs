@@ -1,0 +1,657 @@
+---
+title: "Export & Reporting"
+description: "Complete guide to exporting portfolio data, generating reports, and creating documentation for insurance and tax purposes"
+---
+
+## Overview
+
+Export your portfolio data in multiple formats for insurance documentation, tax reporting, estate planning, and backup purposes. Storehouses provides flexible export options for your entire portfolio or specific subsets.
+
+## Export Formats
+
+<CardGroup cols={2}>
+  <Card title="PDF Reports" icon="file-pdf">
+    Professional formatted reports with photos and detailed information
+  </Card>
+
+  <Card title="CSV Spreadsheets" icon="table">
+    Tabular data for Excel, accounting software, or databases
+  </Card>
+
+  <Card title="Print View" icon="print">
+    Optimized layout for physical printing
+  </Card>
+
+  <Card title="Share Links" icon="link">
+    Secure online access without file downloads
+  </Card>
+</CardGroup>
+
+## How to Export Your Portfolio
+
+<Steps>
+  <Step title="Navigate to Export Page">
+    Go to [storehouses.app/export](https://storehouses.app/export) or click **Export** from your dashboard
+  </Step>
+
+  <Step title="Choose What to Export">
+    Select full portfolio, specific collections, locations, or categories
+  </Step>
+
+  <Step title="Select Format">
+    Choose PDF report or CSV spreadsheet
+  </Step>
+
+  <Step title="Configure Options">
+    Customize what information to include
+  </Step>
+
+  <Step title="Generate Export">
+    Click **Generate Export** and download the file
+  </Step>
+</Steps>
+
+<Tip>
+Export large portfolios may take a few minutes to generate. You'll receive a notification when your export is ready.
+</Tip>
+
+## PDF Reports
+
+### Full Portfolio PDF
+
+Generate a comprehensive PDF report of your entire portfolio:
+
+**Includes**:
+- Cover page with portfolio summary
+- Table of contents
+- Individual item detail pages
+- Photos for each item
+- Valuation summary tables
+- Category breakdowns
+- Total portfolio value
+
+**Best for**:
+- Insurance documentation
+- Estate planning
+- Sharing with financial advisors
+- Personal records
+
+### PDF Report Options
+
+<ParamField path="include_photos" type="boolean" default={true}>
+  Include item photos in the report
+
+  **Note**: Photos increase file size significantly
+</ParamField>
+
+<ParamField path="include_purchase_info" type="boolean" default={true}>
+  Show purchase prices, dates, and sellers
+
+  **Privacy**: Disable when sharing with untrusted parties
+</ParamField>
+
+<ParamField path="include_descriptions" type="boolean" default={true}>
+  Include full item descriptions and notes
+
+  **Use**: Provides complete context for each item
+</ParamField>
+
+<ParamField path="show_locations" type="boolean" default={true}>
+  Display storage locations for each item
+
+  **Security**: Disable for reports leaving your control
+</ParamField>
+
+<ParamField path="group_by" type="select">
+  Organize report by category, collection, or location
+
+  **Options**: Category, Collection, Location, None (alphabetical)
+</ParamField>
+
+### PDF Use Cases
+
+<AccordionGroup>
+  <Accordion title="Insurance Documentation">
+    Generate annual PDF reports for your insurance company:
+    - Include all photos
+    - Show insurance values
+    - Add purchase receipts if available
+    - Update after appraisals
+  </Accordion>
+
+  <Accordion title="Estate Planning">
+    Create reports for heirs or executors:
+    - Include full descriptions
+    - Show both market and insurance values
+    - Add provenance information
+    - Omit extremely private notes if desired
+  </Accordion>
+
+  <Accordion title="Financial Advisor Sharing">
+    Provide portfolio overview to advisors:
+    - Include purchase prices for cost basis
+    - Show current values
+    - Omit storage locations for security
+    - Focus on investment-grade items
+  </Accordion>
+
+  <Accordion title="Personal Archive">
+    Maintain offline backup records:
+    - Full export with all information
+    - Store in secure location
+    - Update quarterly or annually
+    - Keep previous versions for history
+  </Accordion>
+</AccordionGroup>
+
+## CSV Exports
+
+### Full Portfolio CSV
+
+Export all portfolio data as a spreadsheet:
+
+**Columns include**:
+- Item ID
+- Title and description
+- Category
+- Purchase date, price, seller
+- Current market value
+- Insurance value
+- Location
+- Collections
+- Quantity
+- Category-specific fields
+- Last updated date
+
+**Best for**:
+- Import to other software
+- Custom analysis in Excel
+- Tax preparation
+- Database integration
+
+### CSV Export Options
+
+<ParamField path="include_all_fields" type="boolean" default={true}>
+  Export every field for each item
+
+  **Alternative**: Select specific fields only
+</ParamField>
+
+<ParamField path="flatten_collections" type="boolean" default={true}>
+  List collections as comma-separated text
+
+  **Alternative**: One row per collection assignment
+</ParamField>
+
+<ParamField path="include_metadata" type="boolean" default={true}>
+  Add created date, updated date, item ID
+
+  **Use**: Helpful for syncing and tracking changes
+</ParamField>
+
+<ParamField path="currency_format" type="select">
+  Format currency values
+
+  **Options**: Numbers only, formatted with $, formatted with commas
+</ParamField>
+
+### Working with CSV Exports
+
+**Import to Excel**:
+1. Open Excel
+2. File > Import > CSV
+3. Set proper encoding (UTF-8)
+4. Configure column types (dates, currency)
+
+**Import to Google Sheets**:
+1. File > Import > Upload
+2. Select your CSV file
+3. Choose "Replace current sheet" or "Insert new sheet"
+
+**Import to Accounting Software**:
+- QuickBooks: Import as inventory or assets
+- FreshBooks: Import as items
+- Wave: Import as fixed assets
+
+<Warning>
+CSV exports don't include photos. Use PDF exports if you need images.
+</Warning>
+
+## Filtered Exports
+
+### Export Specific Collections
+
+Generate reports for individual collections:
+
+<Steps>
+  <Step title="Navigate to Collections">
+    Go to the Collections page
+  </Step>
+
+  <Step title="Select Collection">
+    Click on the collection you want to export
+  </Step>
+
+  <Step title="Click Export">
+    Click the **Export Collection** button
+  </Step>
+
+  <Step title="Choose Format">
+    Select PDF or CSV format
+  </Step>
+</Steps>
+
+**Use cases**:
+- Insurance documentation for items in one location
+- Sharing specific collection with potential buyers
+- Tax records for sale of collection subset
+
+Learn more in the [Collections guide](/features/collections).
+
+### Export by Location
+
+Generate inventory reports for specific storage locations:
+
+<Steps>
+  <Step title="Navigate to Locations">
+    Go to the Locations page
+  </Step>
+
+  <Step title="Select Location">
+    Click on the location to export
+  </Step>
+
+  <Step title="Click Export">
+    Click the **Export Location Inventory** button
+  </Step>
+
+  <Step title="Choose Format">
+    Select PDF or CSV format
+  </Step>
+</Steps>
+
+**Use cases**:
+- Bank vault inventory for safe deposit box audit
+- Home safe contents for insurance rider
+- Storage unit inventory for facility records
+
+Learn more in the [Locations guide](/features/locations).
+
+### Export by Category
+
+Filter exports to specific asset types:
+
+1. On export page, select **Filter by Category**
+2. Choose one or more categories
+3. Generate report with only those asset types
+
+**Use cases**:
+- Precious metals-only export for tax reporting
+- Wine collection for cellar insurance
+- Watch collection for specialty insurer
+
+### Export by Date Range
+
+Filter exports by acquisition date:
+
+1. On export page, select **Filter by Date**
+2. Set start and end dates
+3. Export only items purchased in that period
+
+**Use cases**:
+- Annual purchase summaries
+- Tax year reporting
+- Quarterly acquisition reports
+
+### Custom Filters
+
+Combine multiple filters for precise exports:
+
+**Example 1**: All gold items in bank vault
+- Category: Precious Metals (Gold)
+- Location: Bank Vault
+
+**Example 2**: Watches purchased in 2024
+- Category: Luxury Watches
+- Date Range: Jan 1 - Dec 31, 2024
+
+**Example 3**: High-value items for insurance
+- Value Range: $10,000+
+- Include: All categories
+
+## Insurance Documentation
+
+### Annual Insurance Reports
+
+Best practices for insurance documentation:
+
+<Steps>
+  <Step title="Update All Values">
+    Ensure market and insurance values are current before exporting
+  </Step>
+
+  <Step title="Get Recent Photos">
+    Update photos for any items with condition changes
+  </Step>
+
+  <Step title="Generate Full PDF">
+    Export complete portfolio with all photos and values
+  </Step>
+
+  <Step title="Include Appraisals">
+    Attach any professional appraisal certificates
+  </Step>
+
+  <Step title="Submit to Insurer">
+    Provide to insurance company for policy review
+  </Step>
+
+  <Step title="Keep Copy">
+    Store a copy securely for your records
+  </Step>
+</Steps>
+
+### Insurance Report Options
+
+Recommended settings for insurance reports:
+- **Format**: PDF
+- **Include Photos**: Yes
+- **Show Insurance Values**: Yes
+- **Show Locations**: Yes (insurer needs this)
+- **Group By**: Category or Location
+- **Include Purchase Info**: Yes (for cost basis)
+
+### Scheduled Items vs Blanket Coverage
+
+**Scheduled items** (individually listed):
+- Generate individual item exports
+- Include detailed descriptions and photos
+- Show insurance values
+- Update annually or when values change
+
+**Blanket coverage** (category totals):
+- Export category summaries
+- Show total values by type
+- Less detailed item information
+- Update when totals cross thresholds
+
+## Tax Reporting
+
+### Cost Basis Reports
+
+When selling items, export cost basis information:
+
+**Include**:
+- Purchase price (cost basis)
+- Purchase date (for holding period)
+- Seller information
+- Any improvements or restoration costs
+
+**Format**: CSV for easy import to tax software
+
+### Sales Transaction Records
+
+After selling items:
+
+1. Export item details before deleting
+2. Note sale date, price, and buyer
+3. Calculate gain/loss
+4. Keep export for tax records
+
+<Card title="Tax Professional Tip" icon="calculator">
+  Export full portfolio at year-end and provide to your tax preparer. They can calculate gains/losses and collectibles tax implications.
+</Card>
+
+<Warning>
+Storehouses provides data export tools, not tax advice. Consult a qualified tax professional for guidance on reporting collectibles sales and capital gains.
+</Warning>
+
+## Estate Planning Exports
+
+### Heir Documentation
+
+Create reports for designated heirs or executors:
+
+**Recommended format**: PDF with full details
+
+**Include**:
+- Complete item descriptions
+- Current market values
+- Purchase history
+- Photos
+- Provenance information
+- Storage locations
+- Special handling instructions
+
+**Exclude**:
+- Extremely private notes if desired
+- Sensitive purchase prices (if preferred)
+
+### Estate Inventory
+
+For executors and estate planning attorneys:
+
+**Format**: Both PDF (readable) and CSV (data)
+
+**Information needed**:
+- Current market values
+- Purchase dates and prices
+- Insurance values
+- Appraisal information
+- Location details
+
+<Tip>
+Update estate planning exports annually and provide to your executor. Store copies with estate documents.
+</Tip>
+
+Learn more in the [Heir Access guide](/features/heir-access).
+
+## Print Options
+
+### Print Preview
+
+Before printing:
+
+1. Go to Export page
+2. Select **Print View**
+3. Configure print settings
+4. Preview before printing
+
+### Print Settings
+
+<ParamField path="page_size" type="select" default="Letter">
+  Paper size for printing
+
+  **Options**: Letter, Legal, A4
+</ParamField>
+
+<ParamField path="orientation" type="select" default="Portrait">
+  Page orientation
+
+  **Options**: Portrait, Landscape
+</ParamField>
+
+<ParamField path="color" type="select" default="Color">
+  Color or black and white
+
+  **Options**: Color, Grayscale, Black & White
+</ParamField>
+
+<ParamField path="photos_per_page" type="number" default={1}>
+  How many item photos per page
+
+  **Options**: 1, 2, 4, 6
+</ParamField>
+
+### Print Best Practices
+
+- **Use color** for photos of jewelry, art, collectibles
+- **Landscape** for wide-format photos
+- **Multiple photos per page** to save paper
+- **High quality** settings for insurance documentation
+- **Archive quality** paper for long-term storage
+
+## Backup & Archival
+
+### Regular Backups
+
+Schedule regular portfolio exports for data protection:
+
+**Recommended frequency**:
+- **Monthly**: Quick CSV exports
+- **Quarterly**: Full PDF reports
+- **Annually**: Comprehensive documentation with photos
+
+**Storage locations**:
+- Local computer or NAS
+- Cloud storage (encrypted)
+- Physical copy in safe location
+- Copy with trusted advisor
+
+### Version Control
+
+Maintain export history:
+
+- Name files with dates (Portfolio_2024-01-15.pdf)
+- Keep previous versions for reference
+- Note major changes in file names
+- Store in organized folder structure
+
+<Warning>
+Store backup exports securely. They contain sensitive financial and location information about valuable assets.
+</Warning>
+
+## Export Limits & Performance
+
+### File Size Limits
+
+- **PDF Reports**: No size limit (large portfolios may be 100+ MB)
+- **CSV Exports**: No size limit
+- **Photos**: Compressed automatically for PDFs
+
+### Generation Time
+
+Typical export generation times:
+- **Small portfolio** (< 50 items): 10-30 seconds
+- **Medium portfolio** (50-200 items): 30-90 seconds
+- **Large portfolio** (200-1000 items): 2-5 minutes
+- **Very large** (1000+ items): 5-15 minutes
+
+<Tip>
+For large exports, you'll receive an email notification when your export is ready to download.
+</Tip>
+
+## Share Links (Alternative to Exports)
+
+Instead of generating file exports, create secure share links:
+
+**Advantages**:
+- Always up-to-date (no regeneration needed)
+- No file management required
+- Granular permission control
+- Revocable access
+
+**Use cases**:
+- Financial advisor access
+- Family member viewing
+- Temporary sharing with buyers
+
+Learn more in the [Sharing guide](/features/sharing).
+
+## Common Export Scenarios
+
+<AccordionGroup>
+  <Accordion title="Switching to Different Software">
+    Migrating to another platform:
+    1. Export full portfolio as CSV
+    2. Include all fields and metadata
+    3. Download any photos separately
+    4. Test import before deleting original data
+  </Accordion>
+
+  <Accordion title="Preparing for Sale">
+    Selling your collection:
+    1. Export items for sale as PDF with photos
+    2. Include detailed descriptions
+    3. Show condition and provenance
+    4. Omit purchase prices if preferred
+  </Accordion>
+
+  <Accordion title="Sharing with Appraiser">
+    For professional appraisals:
+    1. Export items to be appraised
+    2. Include all photos
+    3. Show previous valuations
+    4. Add any certificates or documentation
+  </Accordion>
+
+  <Accordion title="Quarterly Portfolio Review">
+    Regular portfolio analysis:
+    1. Export full portfolio as CSV
+    2. Open in Excel or Google Sheets
+    3. Add formulas for performance analysis
+    4. Create custom charts and reports
+  </Accordion>
+</AccordionGroup>
+
+## Mobile Export
+
+Export from mobile devices:
+
+- Full export functionality on mobile
+- PDF and CSV options available
+- Save to device or share directly
+- Email exports to yourself
+- Upload to cloud storage
+
+<Card title="Mobile Tip" icon="mobile">
+  Mobile exports are saved to your Downloads folder by default. Use the Share button to send directly to cloud storage or email.
+</Card>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Export Before Major Changes">
+    Before reorganizing collections or deleting items, export a backup of the current state.
+  </Accordion>
+
+  <Accordion title="Use Consistent Naming">
+    Name export files consistently with dates and descriptions (e.g., "Portfolio_Annual_2024-12-31.pdf").
+  </Accordion>
+
+  <Accordion title="Test Imports">
+    If exporting for import elsewhere, test with a small sample first to verify formatting.
+  </Accordion>
+
+  <Accordion title="Secure Storage">
+    Store exports in encrypted locations. They contain valuable information about your assets.
+  </Accordion>
+
+  <Accordion title="Multiple Formats">
+    Keep both PDF (readable) and CSV (data) versions for maximum flexibility.
+  </Accordion>
+
+  <Accordion title="Regular Schedule">
+    Set calendar reminders to generate exports on a regular schedule for backups and documentation.
+  </Accordion>
+</AccordionGroup>
+
+## Related Resources
+
+<CardGroup cols={2}>
+  <Card title="Viewing Items" icon="eye" href="/portfolio/viewing-items">
+    Learn about viewing your portfolio items
+  </Card>
+
+  <Card title="Valuation & Pricing" icon="dollar-sign" href="/portfolio/valuation-pricing">
+    Understand portfolio valuations
+  </Card>
+
+  <Card title="Sharing" icon="share" href="/features/sharing">
+    Share portfolio access with others
+  </Card>
+
+  <Card title="Collections" icon="folder" href="/features/collections">
+    Organize items for easier exporting
+  </Card>
+</CardGroup>

@@ -1,0 +1,643 @@
+---
+title: "Account Security"
+description: "Keep your Storehouses account secure with best practices, encryption, and privacy controls"
+---
+
+## Overview
+
+Storehouses is built with security and privacy as core principles. Your portfolio contains sensitive information about valuable assets, and we take protecting that data seriously. This guide covers security best practices, privacy features, and how to keep your account secure.
+
+<Card title="Privacy First" icon="shield-halved">
+  Storehouses is designed from the ground up to protect your privacy. We don't require identity verification, don't collect phone numbers, and never sell your data.
+</Card>
+
+## Account Security Best Practices
+
+### Strong Passwords
+
+Your password is the first line of defense for your account.
+
+<Card title="Password Requirements" icon="key">
+  Storehouses requires passwords that meet these minimum standards:
+  - At least 8 characters
+  - One uppercase letter
+  - One lowercase letter
+  - One number
+  - Special characters recommended
+</Card>
+
+**Best practices for passwords:**
+
+<CardGroup cols={2}>
+  <Card title="Use Unique Passwords" icon="fingerprint">
+    Never reuse passwords across different services. If one service is compromised, unique passwords protect your other accounts.
+  </Card>
+
+  <Card title="Password Manager" icon="vault">
+    Use a password manager like 1Password, Bitwarden, or LastPass to generate and store complex passwords securely.
+  </Card>
+
+  <Card title="Long & Complex" icon="shuffle">
+    Longer passwords are exponentially more secure. Consider passphrases: 4-5 random words (e.g., "correct-horse-battery-staple").
+  </Card>
+
+  <Card title="Change Regularly" icon="clock-rotate-left">
+    Change your password periodically, especially if you suspect compromise or after using public computers.
+  </Card>
+</CardGroup>
+
+### Recommended Password Managers
+
+<Tip>
+  Popular password managers that work great with Storehouses:
+  - **1Password** - Cross-platform with family sharing
+  - **Bitwarden** - Open-source and free tier available
+  - **LastPass** - User-friendly with browser extensions
+  - **Dashlane** - Includes VPN and dark web monitoring
+  - **Apple Keychain** - Built-in for Apple users
+</Tip>
+
+## Email Security
+
+### Email Verification
+
+Storehouses requires email verification to ensure account security:
+
+<Steps>
+  <Step title="Registration">
+    When you sign up, a verification email is sent
+  </Step>
+  <Step title="Check Inbox">
+    Look for verification email from Storehouses
+  </Step>
+  <Step title="Click Link">
+    Click the verification link in the email
+  </Step>
+  <Step title="Account Activated">
+    Your account is verified and fully activated
+  </Step>
+</Steps>
+
+<Warning>
+  Verification links expire after 24 hours. Request a new verification email if yours has expired.
+</Warning>
+
+### Email as Your Identity
+
+Your email address is your primary identifier:
+
+- Used for login authentication
+- Receives security notifications
+- Required for password resets
+- Cannot be changed without verification
+
+<Card title="Email Best Practices" icon="envelope">
+  - Use a secure email provider (Gmail, ProtonMail, Outlook, etc.)
+  - Enable two-factor authentication on your email account
+  - Never share your email password
+  - Use a dedicated email for financial accounts
+  - Regularly check for suspicious activity
+</Card>
+
+### Changing Your Email
+
+When changing your email address:
+
+<Steps>
+  <Step title="Go to Account Settings">
+    Navigate to your account settings
+  </Step>
+  <Step title="Update Email">
+    Enter your new email address
+  </Step>
+  <Step title="Verify New Email">
+    Check the new email inbox for verification link
+  </Step>
+  <Step title="Confirm Change">
+    Click verification link to complete the change
+  </Step>
+  <Step title="Old Email Notified">
+    Your old email receives notification of the change
+  </Step>
+</Steps>
+
+<Warning>
+  If you receive an email notification about an email change you didn't initiate, [contact support immediately](https://storehouses.app/dashboard?support=true) to secure your account.
+</Warning>
+
+## Password Management
+
+### Changing Your Password
+
+Regularly update your password to maintain security:
+
+<Steps>
+  <Step title="Navigate to Settings">
+    Go to [storehouses.app/account](https://storehouses.app/account)
+  </Step>
+  <Step title="Find Password Section">
+    Locate "Change Password" section
+  </Step>
+  <Step title="Enter Current Password">
+    Provide your existing password for verification
+  </Step>
+  <Step title="Enter New Password">
+    Create a new password meeting security requirements
+  </Step>
+  <Step title="Confirm">
+    Re-enter new password to confirm
+  </Step>
+  <Step title="Save">
+    Click "Update Password"
+  </Step>
+</Steps>
+
+<Note>
+  After changing your password, you'll be logged out of all devices and need to sign in again with the new password.
+</Note>
+
+### Password Reset Process
+
+If you forget your password:
+
+<Steps>
+  <Step title="Go to Login">
+    Navigate to [storehouses.app/login](https://storehouses.app/login)
+  </Step>
+  <Step title="Click Forgot Password">
+    Select "Forgot Password" link
+  </Step>
+  <Step title="Enter Email">
+    Provide your account email address
+  </Step>
+  <Step title="Check Email">
+    Look for password reset email from Storehouses
+  </Step>
+  <Step title="Click Reset Link">
+    Click the secure reset link in the email
+  </Step>
+  <Step title="Create New Password">
+    Enter and confirm your new password
+  </Step>
+  <Step title="Sign In">
+    Log in with your new password
+  </Step>
+</Steps>
+
+<Warning>
+  Password reset links expire after 1 hour for security. If your link has expired, request a new one.
+</Warning>
+
+### What If I Don't Receive Reset Email?
+
+<AccordionGroup>
+  <Accordion title="Check Spam Folder" icon="filter">
+    Password reset emails may be filtered to spam or junk folders. Check there first.
+  </Accordion>
+
+  <Accordion title="Verify Email Address" icon="envelope">
+    Ensure you're entering the correct email address associated with your Storehouses account.
+  </Accordion>
+
+  <Accordion title="Wait a Few Minutes" icon="clock">
+    Email delivery can sometimes take a few minutes. Wait 5-10 minutes before requesting another reset.
+  </Accordion>
+
+  <Accordion title="Contact Support" icon="headset">
+    If you still don't receive the reset email, [contact support](https://storehouses.app/dashboard?support=true) for assistance.
+  </Accordion>
+</AccordionGroup>
+
+## Session Management
+
+### Active Sessions
+
+Storehouses tracks active sessions across your devices for security monitoring:
+
+<ParamField path="Session Duration" type="string">
+  Sessions remain active for 30 days of inactivity
+</ParamField>
+
+<ParamField path="Automatic Logout" type="string">
+  Inactive sessions automatically expire after 30 days
+</ParamField>
+
+<ParamField path="Manual Logout" type="string">
+  You can manually sign out of any session at any time
+</ParamField>
+
+### Viewing Active Sessions
+
+See where you're logged in:
+
+<Steps>
+  <Step title="Go to Account Settings">
+    Navigate to your account settings
+  </Step>
+  <Step title="Find Sessions">
+    Locate "Active Sessions" or "Devices" section
+  </Step>
+  <Step title="Review List">
+    See all active sessions with:
+    - Device type (mobile, desktop, tablet)
+    - Browser/app used
+    - Last active timestamp
+    - IP address (optional)
+  </Step>
+</Steps>
+
+### Signing Out of Sessions
+
+<CardGroup cols={2}>
+  <Card title="Sign Out of One Device" icon="mobile">
+    Select a specific session and click "Sign Out" to log out that device only
+  </Card>
+
+  <Card title="Sign Out of All Devices" icon="power-off">
+    Click "Sign Out Everywhere" to log out of all sessions except your current one
+  </Card>
+</CardGroup>
+
+<Tip>
+  If you see unfamiliar sessions, sign out of all devices immediately, change your password, and contact support.
+</Tip>
+
+## Data Encryption
+
+### Client-Side Encryption (Beta)
+
+<Card title="Pro & Lifetime Feature" icon="lock">
+  Storehouses is developing client-side encryption for Pro and Lifetime users, adding an extra layer of security where your data is encrypted on your device before being sent to servers.
+</Card>
+
+**How client-side encryption works:**
+
+<Steps>
+  <Step title="Data Encrypted on Device">
+    Your portfolio data is encrypted on your device using your encryption key
+  </Step>
+  <Step title="Encrypted Data Sent to Server">
+    Only encrypted data is transmitted and stored on Storehouses servers
+  </Step>
+  <Step title="Decrypted on Access">
+    Data is decrypted on your device when you access it
+  </Step>
+  <Step title="Zero-Knowledge">
+    Storehouses servers never have access to your unencrypted data
+  </Step>
+</Steps>
+
+<Note>
+  Client-side encryption is currently in beta testing for Pro and Lifetime users. General availability coming soon.
+</Note>
+
+### Transport Encryption
+
+All data transmitted between your device and Storehouses is encrypted:
+
+<Card title="TLS/SSL Encryption" icon="shield-check">
+  - All connections use HTTPS with TLS 1.3
+  - 256-bit encryption for data in transit
+  - Modern cipher suites for maximum security
+  - Certificate pinning for mobile apps
+</Card>
+
+### Database Encryption
+
+Your portfolio data is encrypted at rest:
+
+<ParamField path="Encryption Standard" type="string">
+  AES-256 encryption for all stored data
+</ParamField>
+
+<ParamField path="Key Management" type="string">
+  Encryption keys managed by secure key management systems
+</ParamField>
+
+<ParamField path="Backup Encryption" type="string">
+  All database backups are also encrypted
+</ParamField>
+
+## Privacy & Data Collection
+
+### What Storehouses Collects
+
+<Card title="Minimal Data Collection" icon="database">
+  Storehouses only collects data necessary for service functionality:
+  - **Email address** - For authentication and account recovery
+  - **Password hash** - Securely hashed, never stored in plain text
+  - **Portfolio data** - Items, collections, locations you create
+  - **Usage analytics** - Anonymous feature usage for product improvement
+  - **Billing information** - Processed and stored by Stripe, not Storehouses
+</Card>
+
+### What Storehouses Doesn't Collect
+
+<Card title="Privacy by Design" icon="shield-halved">
+  Storehouses intentionally does NOT collect:
+  - **Phone numbers** - Not required for any feature
+  - **Identity verification** - No KYC or ID documents
+  - **Social security numbers** - Never requested
+  - **Physical addresses** - Optional for location tracking only
+  - **Browsing history** - No tracking across other websites
+  - **Third-party cookies** - No advertising or tracking cookies
+</Card>
+
+<Tip>
+  Your privacy is paramount. Storehouses doesn't sell your data, share it with advertisers, or use it for any purpose other than providing the service you signed up for.
+</Tip>
+
+### No Identity Verification Required
+
+Unlike financial platforms, Storehouses:
+- Doesn't require government ID
+- Doesn't perform KYC (Know Your Customer) checks
+- Doesn't verify your identity
+- Doesn't ask for proof of residence
+- Allows pseudonymous usage (any email works)
+
+<Card title="Why No Identity Verification?" icon="circle-question">
+  Storehouses is a portfolio management tool, not a financial institution. You're tracking assets you already own. We believe requiring identity verification would be invasive and unnecessary for the service we provide.
+</Card>
+
+## Data Protection & Privacy Regulations
+
+### GDPR Compliance (EU Users)
+
+Storehouses complies with the General Data Protection Regulation (GDPR) for European users:
+
+<CardGroup cols={2}>
+  <Card title="Right to Access" icon="folder-open">
+    You can export all your data at any time in CSV or PDF format
+  </Card>
+
+  <Card title="Right to Erasure" icon="trash">
+    You can delete your account and all associated data permanently
+  </Card>
+
+  <Card title="Right to Rectification" icon="pen-to-square">
+    You can edit, update, or correct your data at any time
+  </Card>
+
+  <Card title="Right to Portability" icon="file-export">
+    Export your data in standard formats for migration to other services
+  </Card>
+
+  <Card title="Data Minimization" icon="minus">
+    We only collect data necessary for service functionality
+  </Card>
+
+  <Card title="Consent" icon="hand-point-up">
+    Clear consent for data collection and processing
+  </Card>
+</CardGroup>
+
+### CCPA Compliance (California Users)
+
+For California residents, Storehouses complies with the California Consumer Privacy Act (CCPA):
+
+- Right to know what data is collected
+- Right to delete personal information
+- Right to opt-out of data sales (we don't sell data)
+- Right to non-discrimination for exercising privacy rights
+
+### Data Retention
+
+<ParamField path="Active Accounts" type="string">
+  Data retained as long as your account is active
+</ParamField>
+
+<ParamField path="Deleted Accounts" type="string">
+  Data permanently deleted within 30 days of account deletion
+</ParamField>
+
+<ParamField path="Backups" type="string">
+  Backup data purged within 90 days of account deletion
+</ParamField>
+
+## Heir Access Security (Pro)
+
+### Secure Emergency Access
+
+Heir Access allows designated beneficiaries to access your portfolio in emergencies:
+
+<Card title="Security Features" icon="users">
+  - Time-delayed activation (24-72 hours)
+  - Email verification for heirs
+  - Notification sent to you when access is requested
+  - You can cancel access requests
+  - Read-only access for heirs (cannot modify)
+  - Automatic expiration after set period
+</Card>
+
+[Learn more about Heir Access →](/advanced/heir-access)
+
+### Best Practices for Heir Access
+
+<Steps>
+  <Step title="Choose Trusted Heirs">
+    Only designate people you completely trust
+  </Step>
+  <Step title="Inform Your Heirs">
+    Tell your heirs about the system and how to use it
+  </Step>
+  <Step title="Set Appropriate Delays">
+    Configure time delays that balance security and accessibility
+  </Step>
+  <Step title="Review Periodically">
+    Check and update heir designations regularly
+  </Step>
+</Steps>
+
+## Sharing Security
+
+### Secure Portfolio Sharing
+
+When sharing your portfolio with advisors or family:
+
+<Card title="Share Link Security" icon="share-nodes">
+  - Unique, hard-to-guess URLs
+  - Optional password protection
+  - Configurable expiration dates
+  - Revocable at any time
+  - Read-only access (recipients cannot edit)
+  - Track when links are accessed
+</Card>
+
+<Warning>
+  Anyone with a share link can view your portfolio. Only share links with trusted individuals and use password protection for sensitive portfolios.
+</Warning>
+
+[Learn more about Portfolio Sharing →](/advanced/sharing)
+
+## Suspicious Activity Monitoring
+
+### Account Security Notifications
+
+Storehouses automatically monitors for suspicious activity and notifies you:
+
+<CardGroup cols={2}>
+  <Card title="Login from New Device" icon="laptop-mobile">
+    Email notification when you log in from a device not previously used
+  </Card>
+
+  <Card title="Password Changes" icon="key">
+    Immediate notification when your password is changed
+  </Card>
+
+  <Card title="Email Changes" icon="envelope">
+    Notification to old email when email address is updated
+  </Card>
+
+  <Card title="Failed Login Attempts" icon="shield-exclamation">
+    Alerts after multiple failed login attempts
+  </Card>
+</CardGroup>
+
+<Warning>
+  If you receive a security notification for activity you didn't perform, take immediate action:
+  1. Change your password immediately
+  2. Sign out of all devices
+  3. [Contact support immediately](https://storehouses.app/dashboard?support=true)
+</Warning>
+
+## Security Incident Response
+
+### If Your Account Is Compromised
+
+If you suspect your account has been compromised:
+
+<Steps>
+  <Step title="Change Password Immediately">
+    Use password reset to create a new, strong password
+  </Step>
+  <Step title="Sign Out All Devices">
+    Log out of all sessions from account settings
+  </Step>
+  <Step title="Review Account Activity">
+    Check for unauthorized changes to items, collections, or settings
+  </Step>
+  <Step title="Update Email">
+    If your email was compromised, update to a new, secure email address
+  </Step>
+  <Step title="Contact Support">
+    [Contact support immediately](https://storehouses.app/dashboard?support=true) with details of the compromise
+  </Step>
+  <Step title="Review Payment Methods">
+    Check billing settings for unauthorized payment changes
+  </Step>
+</Steps>
+
+### Storehouses Security Team
+
+In case of security concerns:
+
+<Card title="Report Security Issues" icon="shield-halved" href="https://storehouses.app/dashboard?support=true">
+  Report urgent security issues via dashboard support for immediate assistance
+</Card>
+
+## Third-Party Security
+
+### Stripe Payment Security
+
+Payment processing is handled by Stripe:
+
+<Card title="Stripe Security" icon="stripe">
+  - PCI DSS Level 1 certified (highest security standard)
+  - Credit card data never touches Storehouses servers
+  - Tokenized payment methods
+  - 3D Secure authentication
+  - Fraud detection and prevention
+  - SOC 1 and SOC 2 compliance
+</Card>
+
+### Supabase Data Security
+
+Storehouses uses Supabase for database and authentication:
+
+<Card title="Supabase Security" icon="database">
+  - PostgreSQL with row-level security
+  - Automatic backups with encryption
+  - ISO 27001 compliant infrastructure
+  - SOC 2 Type II certified
+  - Regular security audits
+</Card>
+
+## Security Best Practices Summary
+
+<Card title="Your Security Checklist" icon="list-check">
+  - [ ] Use a strong, unique password with a password manager
+  - [ ] Enable 2FA on your email account
+  - [ ] Regularly review active sessions
+  - [ ] Keep your email address secure and up-to-date
+  - [ ] Export your data regularly as a backup
+  - [ ] Only share portfolio links with trusted individuals
+  - [ ] Review heir access settings periodically
+  - [ ] Monitor email for security notifications
+  - [ ] Sign out of public or shared computers
+  - [ ] Report suspicious activity immediately
+</Card>
+
+## Security FAQs
+
+<AccordionGroup>
+  <Accordion title="Does Storehouses offer two-factor authentication (2FA)?" icon="shield">
+    Currently, Storehouses doesn't offer native 2FA, but we recommend enabling 2FA on your email account as it's used for authentication. Native 2FA is on our roadmap for future implementation.
+  </Accordion>
+
+  <Accordion title="How secure is my portfolio data?" icon="lock">
+    Your data is encrypted in transit (TLS 1.3) and at rest (AES-256). We use industry-standard security practices and regularly audit our security measures.
+  </Accordion>
+
+  <Accordion title="Can Storehouses employees see my portfolio?" icon="eye">
+    Storehouses employees can only access your data when necessary for support requests or system maintenance. All access is logged and audited. With client-side encryption (coming soon), even this access will be impossible.
+  </Accordion>
+
+  <Accordion title="What happens to my data if Storehouses shuts down?" icon="server">
+    In the unlikely event Storehouses ceases operations, we'll provide advance notice and allow all users to export their complete portfolio data before service termination.
+  </Accordion>
+
+  <Accordion title="Is Storehouses open source?" icon="code">
+    Storehouses is not currently open source, but we're considering open-sourcing parts of the platform in the future to improve transparency and community contributions.
+  </Accordion>
+</AccordionGroup>
+
+## Additional Resources
+
+<CardGroup cols={2}>
+  <Card title="Privacy Policy" icon="file-contract" href="https://storehouses.app/privacy">
+    Read our complete privacy policy
+  </Card>
+
+  <Card title="Terms of Service" icon="file-lines" href="https://storehouses.app/terms">
+    Review our terms of service
+  </Card>
+
+  <Card title="Data Processing Agreement" icon="handshake" href="https://storehouses.app/dpa">
+    For GDPR compliance and enterprise users
+  </Card>
+
+  <Card title="Contact Support" icon="headset" href="https://storehouses.app/dashboard?support=true">
+    Questions about security? Contact our team
+  </Card>
+</CardGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Account Settings" icon="user" href="/account/settings">
+    Manage your account and privacy settings
+  </Card>
+
+  <Card title="Export Your Data" icon="file-export" href="/portfolio/export-reporting">
+    Create backups of your portfolio
+  </Card>
+
+  <Card title="Heir Access Setup" icon="users" href="/advanced/heir-access">
+    Configure emergency access for beneficiaries
+  </Card>
+
+  <Card title="Sharing Best Practices" icon="share-nodes" href="/advanced/sharing">
+    Learn how to securely share your portfolio
+  </Card>
+</CardGroup>

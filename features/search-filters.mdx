@@ -1,0 +1,370 @@
+---
+title: "Search & Filters"
+description: "Find and filter items in your Storehouses portfolio"
+---
+
+## Overview
+
+Storehouses provides powerful search and filtering capabilities to help you quickly find specific items or groups of assets in your portfolio.
+
+## Quick Search
+
+Use the global search bar available on most pages to find items instantly.
+
+### How to Search
+
+<Steps>
+  <Step title="Click Search Bar">
+    Click the search icon or press `/` on your keyboard
+  </Step>
+
+  <Step title="Enter Query">
+    Type your search term
+  </Step>
+
+  <Step title="View Results">
+    Results appear instantly as you type
+  </Step>
+</Steps>
+
+### What You Can Search
+
+The search function looks through:
+
+- **Item titles** - The name you gave the item
+- **Descriptions** - Item description field
+- **Category-specific fields** - Brand names, metal types, artist names, etc.
+- **Notes** - Your private notes
+- **Collection names** - Items in named collections
+- **Location names** - Items at specific locations
+
+### Search Examples
+
+```
+gold eagle          → Finds all American Gold Eagle coins
+rolex submariner    → Finds Rolex Submariner watches
+2015 bordeaux       → Finds Bordeaux wines from 2015
+picasso             → Finds artwork by Picasso
+silver bars         → Finds silver bullion bars
+```
+
+## Advanced Filters
+
+Access advanced filtering from the Items page or Dashboard.
+
+### Filter by Category
+
+<Steps>
+  <Step title="Open Category Filter">
+    Click the "Category" dropdown
+  </Step>
+
+  <Step title="Select Categories">
+    Choose one or more asset categories:
+    - Precious Metals
+    - Luxury Watches
+    - Gems & Jewelry
+    - Fine Jewelry
+    - Wine
+    - Spirits
+    - Fine Art
+    - Arms & Armor
+    - Other Collectibles
+  </Step>
+
+  <Step title="Apply">
+    View filtered results
+  </Step>
+</Steps>
+
+### Filter by Location
+
+Show only items stored at specific locations:
+
+1. Click "Location" filter
+2. Select one or more locations
+3. View items only from those locations
+
+**Use case**: "Show me everything in my home safe"
+
+### Filter by Collection
+
+View items from specific collections:
+
+1. Click "Collection" filter
+2. Select collections
+3. See only items in those collections
+
+**Use case**: "Show me only my investment gold coins"
+
+### Filter by Value Range
+
+Find items within a specific value range:
+
+<ParamField path="min_value" type="currency">
+  Minimum item value
+</ParamField>
+
+<ParamField path="max_value" type="currency">
+  Maximum item value
+</ParamField>
+
+**Use case**: "Show me all items worth over $10,000"
+
+### Filter by Date Added
+
+Show items added within a date range:
+
+<ParamField path="start_date" type="date">
+  Start date
+</ParamField>
+
+<ParamField path="end_date" type="date">
+  End date
+</ParamField>
+
+**Use case**: "Show me everything I added in 2024"
+
+### Filter by Purchase Date
+
+Find items acquired within a specific time period:
+
+**Use case**: "Show me all items I bought last year"
+
+## Precious Metals Specific Filters
+
+For precious metals, additional filters include:
+
+### Metal Type
+
+Filter by specific metals:
+- Gold
+- Silver
+- Platinum
+- Palladium
+- Rhodium
+
+### Weight Range
+
+<ParamField path="min_weight_oz" type="number">
+  Minimum weight in troy ounces
+</ParamField>
+
+<ParamField path="max_weight_oz" type="number">
+  Maximum weight in troy ounces
+</ParamField>
+
+**Use case**: "Show me all gold items over 5 oz"
+
+### Purity
+
+Filter by purity/fineness:
+- .999+ (Pure)
+- .900-.999 (Sterling/High purity)
+- Below .900
+
+## Combining Filters
+
+Apply multiple filters simultaneously for precise results:
+
+**Example 1**: Investment Gold
+```
+Category: Precious Metals
+Metal: Gold
+Weight: > 1 oz
+Location: Bank Vault
+```
+
+**Example 2**: Recent Watch Purchases
+```
+Category: Luxury Watches
+Date Added: Last 6 months
+Value: > $5,000
+```
+
+**Example 3**: Collection Review
+```
+Collection: Bordeaux Wines
+Vintage: 2009-2010
+Value: > $100/bottle
+```
+
+## Sorting Results
+
+Sort filtered results by:
+
+<Tabs>
+  <Tab title="Name">
+    - Alphabetical (A-Z)
+    - Reverse alphabetical (Z-A)
+  </Tab>
+
+  <Tab title="Value">
+    - Highest to lowest
+    - Lowest to highest
+  </Tab>
+
+  <Tab title="Date">
+    - Most recently added
+    - Oldest first
+    - Most recently updated
+  </Tab>
+
+  <Tab title="Purchase Date">
+    - Most recent acquisition
+    - Oldest acquisition
+  </Tab>
+</Tabs>
+
+## Saved Searches (Pro)
+
+Save frequently used filter combinations:
+
+<Steps>
+  <Step title="Apply Filters">
+    Set up your desired filters
+  </Step>
+
+  <Step title="Click 'Save Search'">
+    Click the save icon
+  </Step>
+
+  <Step title="Name Your Search">
+    Give it a descriptive name
+
+    **Examples**:
+    - "High-value Gold (>$10k)"
+    - "Recently Added Watches"
+    - "Bank Vault Inventory"
+  </Step>
+
+  <Step title="Quick Access">
+    Access saved searches from the sidebar
+  </Step>
+</Steps>
+
+<Note>
+  Saved searches are available on Pro and Lifetime plans.
+</Note>
+
+## Export Filtered Results
+
+Export your filtered search results:
+
+1. Apply desired filters
+2. Click "Export"
+3. Choose format (CSV or PDF)
+4. Download filtered results
+
+**Use case**: Create specific reports like "All items in home safe" for insurance
+
+[Learn more about exports →](/portfolio/export-reporting)
+
+## Search Tips
+
+<AccordionGroup>
+  <Accordion title="Use Specific Terms" icon="magnifying-glass">
+    Be specific in your searches:
+    - ✅ "american gold eagle 1oz"
+    - ❌ "coin"
+
+    More specific terms return better results.
+  </Accordion>
+
+  <Accordion title="Partial Matches Work" icon="text">
+    Storehouses finds partial matches:
+    - "sub" finds "Rolex Submariner"
+    - "bord" finds "Bordeaux" wines
+    - "2015" finds all 2015 items
+  </Accordion>
+
+  <Accordion title="Search is Case-Insensitive" icon="font">
+    No need to worry about capitalization:
+    - "rolex" = "ROLEX" = "Rolex"
+  </Accordion>
+
+  <Accordion title="Use Filters for Precision" icon="filter">
+    For complex searches, use filters instead of trying to craft the perfect search term.
+
+    **Instead of searching**: "gold over 5oz in vault"
+    **Use filters**:
+    - Category: Precious Metals
+    - Metal: Gold
+    - Weight: > 5 oz
+    - Location: Vault
+  </Accordion>
+</AccordionGroup>
+
+## Mobile Search
+
+On mobile devices:
+
+- Tap the search icon in the header
+- Full-screen search interface
+- Same filtering capabilities
+- Swipe to access filter menu
+- Results optimized for mobile viewing
+
+## Keyboard Shortcuts
+
+Speed up your search with keyboard shortcuts:
+
+| Shortcut | Action |
+|----------|--------|
+| `/` | Open search |
+| `Esc` | Close search |
+| `↓` `↑` | Navigate results |
+| `Enter` | Open selected item |
+| `Ctrl/Cmd + F` | Focus search |
+
+## Search Performance
+
+<Tip>
+  Storehouses search is optimized for large portfolios. Even with thousands of items, search results appear instantly.
+</Tip>
+
+## Common Search Scenarios
+
+### Find All Items in a Specific Year
+
+1. Use "Date Added" filter
+2. Set year range (e.g., Jan 1 2024 - Dec 31 2024)
+3. Or search for "2024" in purchase date field
+
+### Find Items Without Locations
+
+1. Apply "Location" filter
+2. Select "No Location"
+3. View unassigned items
+
+### Find High-Value Items
+
+1. Use "Value Range" filter
+2. Set minimum value (e.g., $10,000)
+3. Sort by value (highest first)
+
+### Find Items Without Photos
+
+1. Apply "Has Photos" filter
+2. Select "No"
+3. View items needing documentation
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="View Items" icon="eye" href="/portfolio/viewing-items">
+    Browse your full portfolio
+  </Card>
+
+  <Card title="Create Collections" icon="folder" href="/features/collections">
+    Organize items for easier filtering
+  </Card>
+
+  <Card title="Export Results" icon="file-export" href="/portfolio/export-reporting">
+    Export filtered data
+  </Card>
+
+  <Card title="Dashboard" icon="chart-line" href="/features/dashboard">
+    Back to dashboard
+  </Card>
+</CardGroup>

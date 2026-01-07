@@ -1,0 +1,560 @@
+---
+title: "Offline Mode"
+description: "Use Storehouses as a Progressive Web App with offline functionality"
+---
+
+## Overview
+
+Storehouses is built as a Progressive Web App (PWA), enabling you to access your portfolio even without an internet connection. Install the app on your devices for a native app-like experience with offline capabilities, faster loading, and home screen access.
+
+## What is Offline Mode?
+
+Offline mode allows Storehouses to function when you don't have internet connectivity. The app caches essential data locally on your device, so you can view your portfolio, browse items, and access information even when you're offline.
+
+### Benefits of PWA Offline Mode
+
+<CardGroup cols={2}>
+  <Card title="Work Anywhere" icon="plane">
+    Access portfolio during flights or in areas without connectivity
+  </Card>
+
+  <Card title="Faster Loading" icon="bolt">
+    Cached data loads instantly without network delay
+  </Card>
+
+  <Card title="Reliability" icon="shield-check">
+    Never lose access due to poor internet connection
+  </Card>
+
+  <Card title="Native Feel" icon="mobile-screen">
+    App-like experience with home screen icon and full-screen mode
+  </Card>
+
+  <Card title="Reduced Data Usage" icon="wifi">
+    Less bandwidth consumption with cached content
+  </Card>
+
+  <Card title="Privacy" icon="user-lock">
+    View sensitive portfolio data without active internet connection
+  </Card>
+</CardGroup>
+
+## How Offline Mode Works
+
+### Service Worker Technology
+
+Storehouses uses a service worker (Serwist) to enable offline functionality:
+
+<Steps>
+  <Step title="Initial Visit">
+    When you first visit Storehouses, the service worker installs in your browser
+  </Step>
+
+  <Step title="Data Caching">
+    App assets and your portfolio data are cached locally on your device
+  </Step>
+
+  <Step title="Offline Access">
+    When offline, the app serves cached data instead of requesting from servers
+  </Step>
+
+  <Step title="Background Sync">
+    When connection returns, changes sync automatically to the cloud
+  </Step>
+</Steps>
+
+### What Gets Cached
+
+The app caches:
+
+- **App shell**: UI components, navigation, layouts
+- **Static assets**: Images, icons, fonts, stylesheets
+- **Portfolio data**: Items, collections, locations
+- **Item images**: Thumbnails and full-resolution images
+- **Spot prices**: Last fetched precious metals prices
+- **User preferences**: Settings and configurations
+
+## Installing as PWA
+
+### On Desktop (Chrome, Edge, Brave)
+
+<Steps>
+  <Step title="Visit Storehouses">
+    Navigate to [storehouses.app](https://storehouses.app)
+  </Step>
+
+  <Step title="Look for Install Prompt">
+    Click the install icon in the address bar (usually a computer/phone icon)
+
+    Or: Click the three-dot menu → "Install Storehouses"
+  </Step>
+
+  <Step title="Confirm Installation">
+    Click "Install" in the popup dialog
+  </Step>
+
+  <Step title="Launch App">
+    The app opens in its own window
+
+    Desktop shortcut is created automatically
+  </Step>
+</Steps>
+
+### On iPhone/iPad (Safari)
+
+<Steps>
+  <Step title="Open in Safari">
+    Navigate to [storehouses.app](https://storehouses.app) in Safari
+  </Step>
+
+  <Step title="Tap Share Button">
+    Tap the Share button (square with arrow pointing up)
+  </Step>
+
+  <Step title="Add to Home Screen">
+    Scroll down and tap "Add to Home Screen"
+  </Step>
+
+  <Step title="Name the App">
+    Confirm or edit the app name
+  </Step>
+
+  <Step title="Add">
+    Tap "Add" to create the home screen icon
+  </Step>
+
+  <Step title="Launch">
+    Tap the Storehouses icon on your home screen
+  </Step>
+</Steps>
+
+<Note>
+  On iOS, PWAs must be added from Safari. Chrome and other browsers on iOS don't support PWA installation.
+</Note>
+
+### On Android (Chrome, Edge)
+
+<Steps>
+  <Step title="Open in Chrome">
+    Navigate to [storehouses.app](https://storehouses.app)
+  </Step>
+
+  <Step title="Tap Menu">
+    Tap the three-dot menu in the top right
+  </Step>
+
+  <Step title="Add to Home Screen">
+    Select "Add to Home screen" or "Install app"
+  </Step>
+
+  <Step title="Confirm">
+    Tap "Add" in the confirmation dialog
+  </Step>
+
+  <Step title="Launch">
+    Tap the Storehouses icon from your app drawer or home screen
+  </Step>
+</Steps>
+
+## What Works Offline
+
+When you're offline, you can:
+
+<AccordionGroup>
+  <Accordion title="View Portfolio" icon="layer-group">
+    - Browse all items in your portfolio
+    - View item details and images
+    - See collections and organization
+    - Check locations
+    - View cached portfolio value
+  </Accordion>
+
+  <Accordion title="Navigate App" icon="compass">
+    - Access all main navigation sections
+    - Switch between views
+    - Use search (on cached data)
+    - Apply filters and sorting
+  </Accordion>
+
+  <Accordion title="View Data" icon="eye">
+    - Item descriptions and notes
+    - Purchase and market values
+    - Category-specific metadata
+    - Images and uploaded documents
+    - Collection membership
+  </Accordion>
+
+  <Accordion title="Read Information" icon="book">
+    - View dashboard statistics
+    - See allocation charts
+    - Check item counts
+    - Review organization structure
+  </Accordion>
+</AccordionGroup>
+
+## What Doesn't Work Offline
+
+When offline, you cannot:
+
+<Warning>
+  The following features require an internet connection:
+</Warning>
+
+- **Add or edit items**: Creating new items or updating existing ones
+- **Delete items**: Removing items from portfolio
+- **Create collections**: Adding new collections or locations
+- **Upload images**: Adding new photos or documents
+- **Real-time spot prices**: Current precious metals pricing
+- **Price alerts**: Alert monitoring and notifications
+- **Export features**: Generating PDF or CSV exports
+- **Sharing**: Creating or managing share links
+- **Account settings**: Updating email, password, or preferences
+- **Billing**: Managing subscription or payment methods
+- **Authentication**: Logging in or out
+- **Sync changes**: Changes made offline won't save
+
+<Tip>
+  The app displays a banner when you're offline to remind you of limited functionality.
+</Tip>
+
+## Data Syncing
+
+### Automatic Sync When Online
+
+When your connection returns:
+
+1. **Detection**: App automatically detects connectivity
+2. **Refresh**: Latest data is fetched from servers
+3. **Update**: Cached data is updated with current information
+4. **Notification**: Visual indicator shows sync is complete
+
+<Note>
+  Storehouses uses a "server-first" approach. Data edited online by you or other devices takes precedence over cached data.
+</Note>
+
+### Manual Refresh
+
+To force a data refresh when online:
+
+1. Pull down on the dashboard (mobile)
+2. Click the refresh button (desktop)
+3. Navigate away and back to a page
+
+<Tip>
+  Refresh your data before going offline to ensure you have the latest portfolio information.
+</Tip>
+
+## Storage Management
+
+### How Much Storage is Used?
+
+PWA cache size depends on your portfolio:
+
+- **Small portfolio** (< 50 items): ~5-10 MB
+- **Medium portfolio** (50-200 items): ~10-30 MB
+- **Large portfolio** (200+ items): ~30-100 MB
+- **Images**: Largest contributor to cache size
+
+### Checking Storage Usage
+
+**Desktop (Chrome)**:
+1. Open DevTools (F12)
+2. Go to Application tab
+3. Click "Storage" in sidebar
+4. View usage under site storage
+
+**Mobile**:
+- Storage is managed automatically by the browser
+- Typically not accessible to users directly
+
+### Clearing PWA Cache
+
+If you need to clear cached data:
+
+**Desktop**:
+1. Visit Storehouses
+2. Open browser settings
+3. Navigate to site settings for storehouses.app
+4. Click "Clear data" or "Clear storage"
+
+**iOS**:
+1. Go to Settings → Safari
+2. Advanced → Website Data
+3. Find storehouses.app
+4. Swipe to delete
+
+**Android**:
+1. Go to Settings → Apps
+2. Find Chrome (or your browser)
+3. Storage → Manage Space
+4. Find storehouses.app
+5. Clear data
+
+<Warning>
+  Clearing cache requires re-downloading all data when you next visit online.
+</Warning>
+
+## PWA Features
+
+### Home Screen Icon
+
+After installation, Storehouses appears as:
+
+- Desktop shortcut (Windows, Mac, Linux)
+- Home screen icon (iOS, Android)
+- App drawer entry (Android)
+- Dock icon (Mac, when pinned)
+
+### Standalone Mode
+
+The PWA runs in standalone mode:
+
+- No browser address bar
+- Full-screen app experience
+- Native-like window (desktop)
+- Immersive full-screen (mobile)
+- System back button support (Android)
+
+### Splash Screen
+
+On mobile devices:
+
+- Custom splash screen displays on launch
+- Storehouses branding
+- Smooth loading experience
+- Native app feel
+
+### Notifications (Future)
+
+PWA framework supports push notifications:
+
+- Currently used for heir access requests
+- Future: Price alert notifications
+- Future: Portfolio update reminders
+- Requires user permission
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Refresh Before Going Offline" icon="arrow-rotate-right">
+    - Open Storehouses while online
+    - Navigate through your portfolio
+    - View items you'll need offline
+    - Ensure all images are loaded
+    - This refreshes your cache with latest data
+  </Accordion>
+
+  <Accordion title="Install on All Devices" icon="mobile-screen-button">
+    - Install PWA on phone, tablet, and desktop
+    - Each installation maintains its own cache
+    - Access portfolio from any device offline
+    - Consistent experience across platforms
+  </Accordion>
+
+  <Accordion title="Manage Image Uploads" icon="images">
+    - Large image files increase cache size
+    - Compress images before uploading
+    - Limit resolution to reasonable size
+    - Remove unnecessary images periodically
+  </Accordion>
+
+  <Accordion title="Understand Limitations" icon="triangle-exclamation">
+    - Don't expect to add items offline
+    - Spot prices won't update offline
+    - Plan ahead for export needs
+    - Work online for full functionality
+  </Accordion>
+
+  <Accordion title="Update Regularly" icon="clock-rotate-left">
+    - Open app online periodically
+    - Allow cache to refresh
+    - Ensure you have latest features
+    - Sync any server-side changes
+  </Accordion>
+</AccordionGroup>
+
+## Security & Privacy
+
+### Offline Data Security
+
+<Card title="Your Cached Data is Secure" icon="shield-halved">
+  - Cached data stored in browser's secure storage
+  - Isolated from other websites
+  - Protected by device-level security (passcode, biometrics)
+  - Not accessible to other apps
+  - Cleared when app data is cleared
+</Card>
+
+### Privacy Considerations
+
+<AccordionGroup>
+  <Accordion title="Shared Devices" icon="users">
+    On shared computers or devices:
+    - Anyone with device access can open the app
+    - Consider logging out when not in use
+    - Use device-level lock screens
+    - Clear cache on public/shared devices
+  </Accordion>
+
+  <Accordion title="Lost or Stolen Devices" icon="mobile">
+    If device is lost:
+    - Cached data remains on device
+    - Use device tracking to remote wipe
+    - Change password from another device
+    - Revoke sessions in account settings
+    - Cache eventually expires without updates
+  </Accordion>
+
+  <Accordion title="Public WiFi" icon="wifi">
+    Benefits of offline mode on public networks:
+    - View portfolio without connecting to WiFi
+    - Reduce exposure on unsecured networks
+    - Load from cache instead of public network
+    - More private viewing experience
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Offline Mode Not Working" icon="circle-xmark">
+    If offline mode doesn't function:
+
+    - **Check service worker**: Open online first to install
+    - **Browser support**: Ensure browser supports PWAs
+    - **Storage**: Verify sufficient device storage
+    - **Private mode**: Disable private/incognito browsing
+    - **Clear and reload**: Clear cache, reload online
+
+    Supported browsers: Chrome 45+, Edge 17+, Safari 11.1+, Firefox 44+
+  </Accordion>
+
+  <Accordion title="Data Not Updating" icon="rotate">
+    If cached data seems outdated:
+
+    - Pull to refresh (mobile)
+    - Click refresh button (desktop)
+    - Close and reopen app while online
+    - Clear cache and reload
+    - Check internet connection
+  </Accordion>
+
+  <Accordion title="Can't Install PWA" icon="download">
+    If installation doesn't work:
+
+    **Desktop**:
+    - Use Chrome, Edge, or Brave
+    - Ensure you're on HTTPS site
+    - Clear browser cache
+    - Try incognito window
+
+    **iOS**:
+    - Must use Safari browser
+    - Follow iOS-specific steps above
+    - Ensure iOS 11.1 or later
+
+    **Android**:
+    - Use Chrome or Edge
+    - Enable "Add to Home screen" in browser settings
+    - Ensure sufficient storage space
+  </Accordion>
+
+  <Accordion title="Images Not Loading Offline" icon="image">
+    If images don't appear offline:
+
+    - Images load only if previously viewed online
+    - Large images may not cache automatically
+    - View all important images while online
+    - Check available storage space
+    - Consider reducing image file sizes
+  </Accordion>
+
+  <Accordion title="App Not Updating" icon="circle-up">
+    If app doesn't show latest features:
+
+    - Close and reopen app while online
+    - Clear browser cache
+    - Uninstall and reinstall PWA
+    - Check browser is up to date
+    - Force refresh with Cmd/Ctrl + Shift + R
+  </Accordion>
+</AccordionGroup>
+
+## Technical Details
+
+### Browser Support
+
+| Browser | Desktop | Mobile | Offline Mode | Install PWA |
+|---------|---------|--------|--------------|-------------|
+| Chrome | ✓ | ✓ | ✓ | ✓ |
+| Edge | ✓ | ✓ | ✓ | ✓ |
+| Safari | ✓ | ✓ | ✓ | ✓ (iOS only) |
+| Firefox | ✓ | ✓ | ✓ | ✗ |
+| Brave | ✓ | ✓ | ✓ | ✓ |
+| Opera | ✓ | ✓ | ✓ | ✓ |
+
+### Service Worker
+
+Storehouses uses [Serwist](https://serwist.dev) for PWA functionality:
+
+- Automatic caching strategies
+- Background sync capability
+- Offline fallback pages
+- Cache versioning and updates
+- Precaching of critical assets
+
+### Cache Strategies
+
+Different caching strategies for different content:
+
+- **App shell**: Cache-first (instant loading)
+- **Portfolio data**: Network-first (freshest data)
+- **Images**: Cache-first (reduce bandwidth)
+- **Spot prices**: Network-only (always fresh when online)
+
+## Offline vs Desktop Apps
+
+| Feature | Storehouses PWA | Native Desktop App |
+|---------|-----------------|-------------------|
+| Installation | Browser-based | Full OS install |
+| Updates | Automatic | Manual or auto-update |
+| Storage | Browser storage | File system |
+| Platform | Cross-platform | Platform-specific |
+| Size | Minimal (~10-50 MB) | Larger (~100+ MB) |
+| Offline | Full offline support | Full offline support |
+| Security | Browser sandbox | OS-level permissions |
+
+<Tip>
+  The PWA approach provides app-like experience without large downloads or OS-specific builds.
+</Tip>
+
+## Future Enhancements
+
+Planned offline mode improvements:
+
+- **Offline editing**: Queue changes to sync when online
+- **Conflict resolution**: Handle edits made on multiple devices
+- **Selective sync**: Choose which collections to cache
+- **Background sync**: Automatic syncing when connection returns
+- **Push notifications**: Offline-aware notifications
+- **Larger cache**: Support for bigger portfolios offline
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Install PWA" icon="download" href="https://storehouses.app">
+    Install Storehouses on your device
+  </Card>
+
+  <Card title="View Dashboard" icon="chart-line" href="/features/dashboard">
+    Explore your portfolio
+  </Card>
+
+  <Card title="Mobile Experience" icon="mobile-screen" href="/quickstart">
+    Optimize mobile usage
+  </Card>
+
+  <Card title="Export Data" icon="file-export" href="/portfolio/export-reporting">
+    Backup portfolio data
+  </Card>
+</CardGroup>

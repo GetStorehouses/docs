@@ -1,0 +1,529 @@
+---
+title: "Heir Access"
+description: "Emergency access system for designated beneficiaries and heirs"
+---
+
+## Overview
+
+Heir Access is an emergency access feature that allows you to designate trusted contacts who can request access to your portfolio in case of incapacitation or death. This ensures your valuable asset records aren't lost and your beneficiaries can access important information when needed.
+
+<Note>
+  Heir Access is a Pro feature designed for estate planning and emergency preparedness. [Learn more about Pro →](https://storehouses.app/pricing)
+</Note>
+
+## What is Heir Access?
+
+Heir Access provides a secure, time-delayed mechanism for designated individuals to request access to your portfolio. This feature balances security with emergency access needs, ensuring your asset records can be recovered by trusted parties if you become unable to access your account.
+
+### Why Heir Access Matters
+
+<CardGroup cols={2}>
+  <Card title="Estate Planning" icon="file-contract">
+    Ensure beneficiaries can access asset records for estate settlement
+  </Card>
+
+  <Card title="Emergency Preparedness" icon="truck-medical">
+    Family members can access important records if you're incapacitated
+  </Card>
+
+  <Card title="Digital Legacy" icon="vault">
+    Prevent valuable portfolio data from being permanently lost
+  </Card>
+
+  <Card title="Insurance Claims" icon="shield-check">
+    Heirs can access records needed for insurance or probate
+  </Card>
+</CardGroup>
+
+## How Heir Access Works
+
+### The Emergency Access Process
+
+<Steps>
+  <Step title="You Designate Heirs">
+    Set up one or more trusted contacts with their email addresses
+  </Step>
+
+  <Step title="Heir Requests Access">
+    If needed, your designated heir initiates an access request through Storehouses
+  </Step>
+
+  <Step title="Waiting Period Begins">
+    A security waiting period starts (default: 30 days)
+  </Step>
+
+  <Step title="You're Notified">
+    You receive multiple email notifications during the waiting period
+  </Step>
+
+  <Step title="You Can Deny Request">
+    If you're able, you can immediately deny the request
+  </Step>
+
+  <Step title="Access Granted or Denied">
+    After the waiting period, if not denied, heir receives read-only access
+  </Step>
+</Steps>
+
+### Security Features
+
+<AccordionGroup>
+  <Accordion title="Time-Delayed Access" icon="clock">
+    - Default 30-day waiting period prevents unauthorized access
+    - You receive notifications throughout the waiting period
+    - Sufficient time to deny requests if you're still active
+  </Accordion>
+
+  <Accordion title="Email Notifications" icon="envelope">
+    - Notification when access request is initiated
+    - Reminders at 7, 14, and 21 days into waiting period
+    - Final notification 24 hours before access is granted
+    - Notifications include link to immediately deny request
+  </Accordion>
+
+  <Accordion title="Read-Only Access" icon="eye">
+    - Heirs receive view-only access to your portfolio
+    - Cannot modify, delete, or add items
+    - Cannot change account settings
+    - Can view all items, values, and export data
+  </Accordion>
+</AccordionGroup>
+
+## Setting Up Heir Access
+
+### Accessing Heir Settings
+
+Navigate to [storehouses.app/heir](https://storehouses.app/heir) or:
+
+1. Go to Account Settings
+2. Click "Heir Access" in the sidebar
+3. View the Heir Access configuration page
+
+### Adding a Designated Heir
+
+<Steps>
+  <Step title="Click 'Add Heir'">
+    Click the "Add Designated Heir" button
+  </Step>
+
+  <Step title="Enter Contact Information">
+    Provide the heir's details:
+    - Full name
+    - Email address
+    - Relationship (optional: spouse, child, sibling, etc.)
+    - Notes (optional: why you're designating them)
+  </Step>
+
+  <Step title="Set Waiting Period">
+    Choose the emergency access waiting period:
+    - 14 days (minimum)
+    - 30 days (recommended)
+    - 60 days
+    - 90 days (maximum)
+  </Step>
+
+  <Step title="Save Configuration">
+    Click "Add Heir" to save
+  </Step>
+
+  <Step title="Confirm via Email">
+    You'll receive a confirmation email about the new heir designation
+  </Step>
+</Steps>
+
+<Tip>
+  The heir does not receive any notification when you designate them. They only receive communication if they initiate an access request.
+</Tip>
+
+### Multiple Heirs
+
+You can designate multiple heirs:
+
+- Each heir is independent
+- Each has their own waiting period
+- Each can initiate separate access requests
+- No limit on number of designated heirs (Pro feature)
+
+**Common Configurations**:
+
+```
+Primary: Spouse (30-day waiting period)
+Secondary: Adult Child (30-day waiting period)
+Tertiary: Executor/Attorney (60-day waiting period)
+```
+
+## Managing Designated Heirs
+
+### View Current Heirs
+
+Your Heir Access page displays:
+
+<ParamField path="Name" type="string">
+  Full name of the designated heir
+</ParamField>
+
+<ParamField path="Email" type="string">
+  Contact email address
+</ParamField>
+
+<ParamField path="Relationship" type="string">
+  Their relationship to you
+</ParamField>
+
+<ParamField path="Waiting Period" type="number">
+  Configured emergency access delay (in days)
+</ParamField>
+
+<ParamField path="Status" type="string">
+  Active, Access Requested, or Access Granted
+</ParamField>
+
+<ParamField path="Added Date" type="date">
+  When they were designated
+</ParamField>
+
+### Edit Heir Information
+
+To update an heir's details:
+
+1. Find the heir in your list
+2. Click the edit icon
+3. Update name, email, relationship, or waiting period
+4. Save changes
+
+<Note>
+  Changing the waiting period only affects future access requests, not pending ones.
+</Note>
+
+### Remove a Designated Heir
+
+To revoke heir designation:
+
+1. Find the heir
+2. Click the delete/remove icon
+3. Confirm removal
+
+<Warning>
+  If an heir has an active access request, removing them immediately cancels the request.
+</Warning>
+
+## The Access Request Process
+
+### How Heirs Request Access
+
+When a designated heir needs access:
+
+1. They visit [storehouses.app/heir](https://storehouses.app/heir)
+2. Click "Request Emergency Access"
+3. Enter your email address (the account holder)
+4. Enter their email address (must match designation)
+5. Submit the request
+
+### What Happens After Request
+
+**Day 0: Request Initiated**
+- You receive immediate email notification
+- Heir receives confirmation their request is processing
+- Waiting period begins
+
+**Days 1-30: Waiting Period**
+- You receive reminder emails at intervals
+- Each email includes "Deny Access" button
+- Heir receives periodic status updates
+
+**Day 30: Access Decision**
+- If you haven't denied: Heir receives read-only access
+- If you denied: Request is canceled, heir is notified
+
+### Denying an Access Request
+
+If you receive an heir access request notification and you're able to respond:
+
+1. Click the "Deny Access" link in any notification email
+2. Confirm the denial
+3. The request is immediately canceled
+4. The heir is notified their request was denied
+5. A new waiting period is required for any future requests
+
+<Tip>
+  You can also deny requests from your account settings at any time during the waiting period.
+</Tip>
+
+## Heir Access Privileges
+
+### What Heirs Can Access
+
+When access is granted, heirs receive read-only access to:
+
+<AccordionGroup>
+  <Accordion title="Portfolio Items" icon="layer-group">
+    - View all items in the portfolio
+    - See item details, descriptions, and notes
+    - View uploaded images and documents
+    - Access category-specific metadata
+  </Accordion>
+
+  <Accordion title="Values & Pricing" icon="dollar-sign">
+    - Current portfolio value
+    - Purchase prices
+    - Market values
+    - Insurance values
+    - Historical precious metals prices
+  </Accordion>
+
+  <Accordion title="Organization" icon="folder-tree">
+    - Collections and their contents
+    - Storage locations
+    - Item organization structure
+  </Accordion>
+
+  <Accordion title="Export & Reports" icon="file-export">
+    - Export portfolio to PDF
+    - Export data to CSV
+    - Generate printed reports
+    - Download all data
+  </Accordion>
+</AccordionGroup>
+
+### What Heirs Cannot Access
+
+Heirs with emergency access cannot:
+
+- Add, edit, or delete items
+- Modify account settings
+- Change email or password
+- Access billing information
+- Set up or modify alerts
+- Delete the account
+- Modify collections or locations
+- Invite other users
+- Revoke their own access
+
+### Access Duration
+
+Once granted, heir access remains until:
+
+- You revoke it manually
+- You delete your account
+- The heir voluntarily relinquishes access
+- 180 days pass (automatic expiration)
+
+<Note>
+  Access automatically expires after 180 days to prevent indefinite access. Heirs can request renewal if still needed.
+</Note>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Choose Trusted Individuals" icon="user-shield">
+    - Select people you absolutely trust
+    - Consider their technical capability
+    - Ensure they understand their role
+    - Discuss your wishes beforehand
+  </Accordion>
+
+  <Accordion title="Inform Your Heirs" icon="comment">
+    - Let them know they're designated
+    - Explain how to request access if needed
+    - Provide them with your account email
+    - Document the process in estate plans
+  </Accordion>
+
+  <Accordion title="Use Appropriate Waiting Periods" icon="hourglass">
+    - **30 days**: Recommended for most users
+    - **14 days**: If you have frequent portfolio access
+    - **60-90 days**: If you travel extensively or have irregular access
+  </Accordion>
+
+  <Accordion title="Designate Multiple Heirs" icon="users">
+    - Primary: Spouse or closest family member
+    - Secondary: Adult child or trusted family member
+    - Tertiary: Estate executor or attorney
+    - Each provides backup if others cannot access
+  </Accordion>
+
+  <Accordion title="Review Regularly" icon="calendar-check">
+    - Review designations annually
+    - Update contact information as needed
+    - Remove heirs who are no longer appropriate
+    - Adjust waiting periods based on life changes
+  </Accordion>
+
+  <Accordion title="Document in Estate Plan" icon="scroll">
+    - Include Heir Access info in will or trust
+    - Inform executor about the feature
+    - Document your account email
+    - Explain the access request process
+  </Accordion>
+</AccordionGroup>
+
+## Estate Planning Integration
+
+### How Heir Access Supports Estate Settlement
+
+<Steps>
+  <Step title="Asset Discovery">
+    Heirs can identify all assets in your collection
+  </Step>
+
+  <Step title="Valuation">
+    Access current and historical values for probate
+  </Step>
+
+  <Step title="Location Information">
+    Find where physical assets are stored
+  </Step>
+
+  <Step title="Documentation">
+    Export records for estate inventory
+  </Step>
+
+  <Step title="Distribution">
+    Use collection organization to understand your intent
+  </Step>
+</Steps>
+
+### Working with Estate Professionals
+
+Your designated heirs can share exported data with:
+
+- Estate attorneys
+- Accountants and tax professionals
+- Insurance agents
+- Appraisers
+- Auction houses
+
+<Tip>
+  Export data to PDF or CSV format for easy sharing with estate professionals.
+</Tip>
+
+## Privacy & Security
+
+<Card title="Your Security is Protected" icon="shield-halved">
+  - Waiting periods prevent immediate unauthorized access
+  - Multiple email notifications ensure you're aware
+  - One-click denial stops any request instantly
+  - Read-only access prevents portfolio modification
+  - No passwords are shared with heirs
+  - Access automatically expires after 180 days
+</Card>
+
+### Security Considerations
+
+<AccordionGroup>
+  <Accordion title="Choose Strong Passwords" icon="key">
+    - Use unique, strong passwords for your account
+    - Enable two-factor authentication if available
+    - Don't share passwords with designated heirs
+  </Accordion>
+
+  <Accordion title="Monitor Email" icon="envelope-open-text">
+    - Keep your email account secure
+    - Regularly check for access request notifications
+    - Respond promptly to any unexpected requests
+  </Accordion>
+
+  <Accordion title="Review Access Logs" icon="list-check">
+    - Check active heir access in your settings
+    - Revoke access when no longer needed
+    - Monitor who has requested access
+  </Accordion>
+</AccordionGroup>
+
+## Revoking Access
+
+### Revoking an Active Access Request
+
+During the waiting period:
+
+1. Click "Deny Access" in any notification email, or
+2. Go to Heir Access settings
+3. Find the pending request
+4. Click "Deny Request"
+5. Confirm denial
+
+### Revoking Granted Access
+
+If an heir has already received access:
+
+1. Go to Heir Access settings
+2. Find the heir with "Access Granted" status
+3. Click "Revoke Access"
+4. Confirm revocation
+5. The heir immediately loses portfolio access
+
+<Note>
+  Revoking access doesn't remove the heir designation. They can still request access again in the future.
+</Note>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Heir Can't Request Access" icon="circle-xmark">
+    Common issues:
+    - Email address doesn't match designation
+    - Your account email is incorrect
+    - Heir is not actually designated
+    - Previous request is still pending
+
+    Solution: Verify heir's email in your settings and confirm they're using the correct account email.
+  </Accordion>
+
+  <Accordion title="Not Receiving Notifications" icon="envelope-slash">
+    If you don't receive access request emails:
+    - Check spam/junk folders
+    - Verify your account email is correct
+    - Add noreply@storehouses.app to contacts
+    - Check email settings in your account
+
+    Contact support immediately if you suspect an unauthorized request.
+  </Accordion>
+
+  <Accordion title="Can't Deny Request" icon="hand">
+    If denial links aren't working:
+    - Log into your account directly
+    - Navigate to Heir Access settings
+    - Manually deny from the dashboard
+    - Contact support if issues persist
+  </Accordion>
+
+  <Accordion title="Heir Has Access Issues" icon="user-xmark">
+    If a legitimate heir cannot access after approval:
+    - Verify the waiting period has fully elapsed
+    - Check their email for access instructions
+    - Ensure they're logging in correctly
+    - Contact support for assistance
+  </Accordion>
+</AccordionGroup>
+
+## Comparison with Other Access Methods
+
+| Feature | Heir Access | Sharing | Account Transfer |
+|---------|-------------|---------|------------------|
+| Purpose | Emergency access | Temporary viewing | Permanent transfer |
+| Access Type | Read-only | Read-only | Full control |
+| Waiting Period | Yes (14-90 days) | None | Immediate |
+| Requires Request | Yes | No | No |
+| Revocable | Yes | Yes | No |
+| Duration | 180 days max | Custom | Permanent |
+| Best For | Estate planning | Advisors, family | Selling account |
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Set Up Heirs" icon="user-plus" href="https://storehouses.app/heir">
+    Designate your trusted contacts
+  </Card>
+
+  <Card title="Upgrade to Pro" icon="crown" href="https://storehouses.app/pricing">
+    Unlock Heir Access feature
+  </Card>
+
+  <Card title="Share Portfolio" icon="share" href="/advanced/sharing">
+    Create temporary share links
+  </Card>
+
+  <Card title="Export Data" icon="download" href="/portfolio/export-reporting">
+    Backup your portfolio
+  </Card>
+</CardGroup>

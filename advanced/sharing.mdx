@@ -1,0 +1,634 @@
+---
+title: "Portfolio Sharing"
+description: "Create secure share links to provide read-only access to your portfolio"
+---
+
+## Overview
+
+Portfolio Sharing allows you to create secure, read-only links to share your portfolio with trusted individuals such as financial advisors, family members, insurance agents, or accountants. Share your entire portfolio or specific collections with customizable access settings.
+
+## What is Portfolio Sharing?
+
+Portfolio sharing generates unique, secure URLs that grant read-only access to your portfolio data without requiring the recipient to create a Storehouses account. You maintain complete control over what's shared and can revoke access at any time.
+
+### Common Use Cases
+
+<CardGroup cols={2}>
+  <Card title="Financial Advisors" icon="chart-line">
+    Share portfolio data with wealth managers and financial planners
+  </Card>
+
+  <Card title="Insurance Purposes" icon="shield-halved">
+    Provide insurance agents with asset inventories and valuations
+  </Card>
+
+  <Card title="Family Members" icon="users">
+    Share collections with spouses or family members
+  </Card>
+
+  <Card title="Accountants & Tax Pros" icon="calculator">
+    Share valuations for tax reporting and compliance
+  </Card>
+
+  <Card title="Appraisers" icon="magnifying-glass">
+    Share specific collections for valuation purposes
+  </Card>
+
+  <Card title="Estate Planning" icon="file-contract">
+    Share with executors and estate attorneys
+  </Card>
+</CardGroup>
+
+## Accessing Share Settings
+
+Navigate to [storehouses.app/share](https://storehouses.app/share) or:
+
+1. Go to Dashboard
+2. Click "Share" in the navigation menu
+3. View your active share links
+
+## Creating a Share Link
+
+<Steps>
+  <Step title="Open Share Page">
+    Navigate to the Share Portfolio page
+  </Step>
+
+  <Step title="Click 'Create Share Link'">
+    Click the "New Share Link" button
+  </Step>
+
+  <Step title="Configure Access">
+    Set up your share link parameters
+  </Step>
+
+  <Step title="Choose What to Share">
+    Select full portfolio or specific collections
+  </Step>
+
+  <Step title="Set Expiration">
+    Choose temporary or permanent link duration
+  </Step>
+
+  <Step title="Generate Link">
+    Click "Create" to generate the secure URL
+  </Step>
+
+  <Step title="Share URL">
+    Copy and send the link to your intended recipient
+  </Step>
+</Steps>
+
+## Share Link Configuration
+
+### What to Share
+
+<AccordionGroup>
+  <Accordion title="Full Portfolio" icon="layer-group">
+    Share your entire portfolio including:
+    - All items across all categories
+    - All collections
+    - Total portfolio value
+    - All locations
+    - Complete item details and images
+
+    **Best for**: Financial advisors, comprehensive insurance coverage, estate planning
+  </Accordion>
+
+  <Accordion title="Specific Collections" icon="folder">
+    Share selected collections only:
+    - Choose one or more collections
+    - Only items in selected collections are visible
+    - Collection names and organization shown
+    - Other portfolio data remains private
+
+    **Best for**: Partial inventories, specific insurance policies, selective sharing
+  </Accordion>
+
+  <Accordion title="Individual Categories" icon="filter">
+    Share by asset category:
+    - Precious metals only
+    - Watches only
+    - Wine collection only
+    - Any specific category
+
+    **Best for**: Category-specific appraisals, specialized advisors, focused sharing
+  </Accordion>
+</AccordionGroup>
+
+### Expiration Settings
+
+<Tabs>
+  <Tab title="Temporary Links">
+    Links that automatically expire after a set period:
+
+    **Duration Options**:
+    - 24 hours
+    - 7 days (1 week)
+    - 30 days (1 month)
+    - 90 days (3 months)
+
+    **Best for**:
+    - One-time consultations
+    - Temporary advisor access
+    - Time-limited sharing
+    - Enhanced security needs
+
+    ```
+    Example: Share with appraiser for 7 days while evaluation is conducted
+    ```
+  </Tab>
+
+  <Tab title="Permanent Links">
+    Links that remain active indefinitely until manually revoked:
+
+    **Characteristics**:
+    - No automatic expiration
+    - Requires manual revocation
+    - Link remains valid until you delete it
+    - Data updates in real-time
+
+    **Best for**:
+    - Ongoing advisor relationships
+    - Long-term family sharing
+    - Regular insurance updates
+    - Continuous collaboration
+
+    ```
+    Example: Share with financial advisor for ongoing portfolio management
+    ```
+  </Tab>
+</Tabs>
+
+<Tip>
+  For security, use temporary links when possible. Only create permanent links for trusted, long-term relationships.
+</Tip>
+
+## What Recipients Can See
+
+### Included Information
+
+Recipients with a share link can view:
+
+<ParamField path="Portfolio Overview" type="section">
+  - Total portfolio value
+  - Asset category breakdown
+  - Number of items
+  - Value allocation charts
+</ParamField>
+
+<ParamField path="Item Details" type="section">
+  - Item names and descriptions
+  - Category-specific metadata
+  - Purchase and current values
+  - Images and documents
+  - Locations (if enabled)
+  - Notes and descriptions
+</ParamField>
+
+<ParamField path="Collections" type="section">
+  - Collection names and organization
+  - Items within shared collections
+  - Collection-level statistics
+</ParamField>
+
+<ParamField path="Reports" type="section">
+  - Ability to export shared data to PDF
+  - Print-friendly views
+  - Summary reports
+</ParamField>
+
+### Excluded Information
+
+Recipients cannot see:
+
+- Account settings or personal information
+- Billing and subscription details
+- Email address or contact information
+- Items or collections not included in share
+- Edit or modification capabilities
+- Alert configurations
+- Heir access settings
+- Other share links
+
+<Note>
+  All shared access is completely read-only. Recipients cannot modify, add, or delete any data.
+</Note>
+
+## Managing Share Links
+
+### View Active Links
+
+Your Share page displays all active links:
+
+<ParamField path="Link Name" type="string">
+  Descriptive name you assigned (e.g., "Financial Advisor Access")
+</ParamField>
+
+<ParamField path="Access Level" type="string">
+  What's included (Full Portfolio, Specific Collections, Category)
+</ParamField>
+
+<ParamField path="Created Date" type="date">
+  When the link was generated
+</ParamField>
+
+<ParamField path="Expiration" type="string">
+  When link expires, or "Never" for permanent links
+</ParamField>
+
+<ParamField path="Status" type="string">
+  Active, Expired, or Revoked
+</ParamField>
+
+<ParamField path="Last Accessed" type="date">
+  Most recent view by recipient (if tracked)
+</ParamField>
+
+### Edit Share Link
+
+To modify an existing share link:
+
+1. Find the link in your list
+2. Click the edit icon
+3. Update name, expiration, or included collections
+4. Save changes
+
+<Note>
+  The URL remains the same when editing. Recipients don't need a new link.
+</Note>
+
+### Copy Share URL
+
+To share the link:
+
+1. Find the link in your list
+2. Click "Copy Link"
+3. Paste and send via your preferred method:
+   - Email
+   - Secure message
+   - Password manager (for long-term storage)
+   - Document sharing platform
+
+<Warning>
+  Treat share links like passwords. Anyone with the link can view the shared data.
+</Warning>
+
+### Revoke Share Link
+
+To immediately disable a share link:
+
+1. Find the link in your list
+2. Click "Revoke" or the delete icon
+3. Confirm revocation
+
+**What happens**:
+- Link immediately becomes invalid
+- Recipients lose access instantly
+- Existing open sessions are terminated
+- Link cannot be reactivated (create new one if needed)
+
+<Tip>
+  Revoke links immediately when they're no longer needed to maintain portfolio security.
+</Tip>
+
+## Security Features
+
+<Card title="Secure by Design" icon="lock">
+  - **Unique URLs**: Each link is cryptographically secure and unique
+  - **No Account Required**: Recipients don't need passwords or accounts
+  - **Read-Only Access**: No modification capabilities
+  - **Instant Revocation**: Disable access immediately at any time
+  - **Expiration Options**: Automatic time-based access removal
+  - **Privacy First**: No tracking of recipient identity
+</Card>
+
+### Best Security Practices
+
+<AccordionGroup>
+  <Accordion title="Use Temporary Links" icon="clock">
+    - Set expiration dates when possible
+    - Choose shortest appropriate duration
+    - Review and clean up expired links
+    - Create new links for repeat access
+  </Accordion>
+
+  <Accordion title="Limit Shared Data" icon="filter">
+    - Only share what's necessary
+    - Use collection-based sharing for partial access
+    - Exclude sensitive collections if possible
+    - Consider creating specific collections for sharing
+  </Accordion>
+
+  <Accordion title="Share Securely" icon="envelope-circle-check">
+    - Send links via secure channels
+    - Don't post links publicly
+    - Verify recipient before sharing
+    - Consider password-protecting emails containing links
+  </Accordion>
+
+  <Accordion title="Monitor Active Links" icon="eye">
+    - Regularly review active share links
+    - Revoke unused or outdated links
+    - Check last accessed dates
+    - Limit number of simultaneous active links
+  </Accordion>
+
+  <Accordion title="Revoke When Done" icon="xmark">
+    - Revoke links after use
+    - Don't leave expired links active
+    - Revoke if recipient no longer needs access
+    - Revoke if link may have been compromised
+  </Accordion>
+</AccordionGroup>
+
+## Share Link Scenarios
+
+### Financial Advisor Access
+
+**Setup**:
+```
+Name: "Smith Financial Advisors"
+Access: Full Portfolio
+Expiration: Never (permanent)
+Purpose: Ongoing portfolio management
+```
+
+**Rationale**: Permanent link for trusted, ongoing relationship with real-time portfolio updates
+
+### Insurance Appraisal
+
+**Setup**:
+```
+Name: "2026 Insurance Appraisal"
+Access: High-Value Collections
+Expiration: 30 days
+Purpose: Annual insurance renewal
+```
+
+**Rationale**: Temporary access for specific collections during appraisal period
+
+### Estate Attorney Review
+
+**Setup**:
+```
+Name: "Estate Planning Review"
+Access: Full Portfolio
+Expiration: 90 days
+Purpose: Estate documentation
+```
+
+**Rationale**: Extended temporary access for comprehensive estate planning work
+
+### Family Member Viewing
+
+**Setup**:
+```
+Name: "Share with Spouse"
+Access: Full Portfolio
+Expiration: Never (permanent)
+Purpose: Joint portfolio awareness
+```
+
+**Rationale**: Permanent family access for transparency and joint planning
+
+### Watch Collection Appraisal
+
+**Setup**:
+```
+Name: "Watch Appraisal - Christie's"
+Access: Luxury Watches Collection Only
+Expiration: 7 days
+Purpose: Auction valuation
+```
+
+**Rationale**: Short-term, category-specific sharing for specialized appraisal
+
+## Real-Time Updates
+
+Share links display real-time data:
+
+- Current portfolio values
+- Latest spot prices for precious metals
+- Recently added items
+- Updated valuations
+- Current collection organization
+
+<Tip>
+  Recipients see the same data you see in your dashboard, updated in real-time.
+</Tip>
+
+## Recipient Experience
+
+### What Recipients See
+
+When someone opens your share link:
+
+1. **Portfolio Overview**
+   - Landing page with portfolio summary
+   - Total value and statistics
+   - Category breakdown charts
+
+2. **Item List**
+   - Browsable list of shared items
+   - Thumbnail images
+   - Key details for each item
+
+3. **Item Details**
+   - Click any item for full details
+   - View all images and documents
+   - See complete metadata
+
+4. **Export Options**
+   - Export to PDF button
+   - Print-friendly view
+   - Summary report generation
+
+### Recipient Limitations
+
+Recipients cannot:
+- Edit or add items
+- Delete anything
+- See account owner information
+- Access account settings
+- Create their own share links
+- View other share links
+- Change view settings permanently
+
+## Viewing Shared Portfolios
+
+### Items Shared With You
+
+If someone shares their portfolio with you:
+
+1. Open the share link they provided
+2. View the shared portfolio
+3. Browse items and collections
+4. Export or print if needed
+
+Access your received shares at [storehouses.app/shared-with-me](https://storehouses.app/shared-with-me)
+
+<Note>
+  This feature shows portfolios others have shared with you (if they used your email address for tracking).
+</Note>
+
+## Export from Shared View
+
+Recipients can export shared data:
+
+### PDF Export
+- Complete portfolio report
+- Formatted for printing
+- Includes images and values
+- Professional layout
+
+### Print View
+- Printer-optimized layout
+- Clean formatting
+- Item details and images
+- Summary statistics
+
+[Learn more about exports →](/portfolio/export-reporting)
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Name Links Descriptively" icon="tag">
+    Use clear names that indicate purpose and recipient:
+
+    **Good Examples**:
+    - "Morgan Stanley Advisor - John Smith"
+    - "Insurance Renewal 2026"
+    - "Estate Attorney Review"
+
+    **Poor Examples**:
+    - "Link 1"
+    - "Share"
+    - "Temp"
+  </Accordion>
+
+  <Accordion title="Regular Link Audits" icon="list-check">
+    Review your active share links regularly:
+    - Monthly review of permanent links
+    - Clean up expired links
+    - Revoke unused links
+    - Update expiration dates as needed
+  </Accordion>
+
+  <Accordion title="Create Purpose-Specific Collections" icon="folder-plus">
+    Before sharing, organize items into appropriate collections:
+    - Create "Insurance Items" collection for agent access
+    - Create "High Value" collection for appraisers
+    - Use collections to control shared data granularly
+  </Accordion>
+
+  <Accordion title="Inform Recipients" icon="comment">
+    When sharing, provide context:
+    - Explain what they can see
+    - Note that access is read-only
+    - Mention expiration date
+    - Provide your contact info for questions
+  </Accordion>
+
+  <Accordion title="Document Shared Links" icon="file-text">
+    Keep records of active shares:
+    - Who has access
+    - What they can see
+    - Why access was granted
+    - When to review or revoke
+  </Accordion>
+</AccordionGroup>
+
+## Privacy Considerations
+
+<Card title="Your Privacy is Protected" icon="user-shield">
+  - Recipients don't see your email or personal information
+  - Account settings remain completely private
+  - Only explicitly shared collections are visible
+  - No recipient tracking or analytics
+  - Links can be revoked instantly
+  - No data is shared with third parties
+</Card>
+
+### What's Not Shared
+
+Even with full portfolio sharing:
+- Account email address
+- Password or login credentials
+- Billing information
+- Subscription status
+- Account creation date
+- Other users' information
+- Alert configurations
+- Heir access settings
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Link Not Working" icon="link-slash">
+    If a share link isn't working:
+    - Verify the complete URL was copied
+    - Check if link has expired
+    - Confirm link wasn't revoked
+    - Try opening in different browser
+    - Check for URL encoding issues
+  </Accordion>
+
+  <Accordion title="Recipient Can't See Items" icon="eye-slash">
+    If shared items aren't visible:
+    - Verify items are in shared collections
+    - Confirm access level includes those items
+    - Check that items aren't hidden
+    - Ensure share link is active
+  </Accordion>
+
+  <Accordion title="Values Not Updating" icon="refresh">
+    If recipient sees outdated values:
+    - Have them refresh the page
+    - Verify your portfolio is updated
+    - Check for browser caching issues
+    - Confirm link is active (not expired)
+  </Accordion>
+
+  <Accordion title="Can't Revoke Link" icon="ban">
+    If you can't revoke a link:
+    - Refresh your share management page
+    - Try from different device
+    - Contact support if issue persists
+    - As workaround, let temporary links expire
+  </Accordion>
+</AccordionGroup>
+
+## Comparison with Heir Access
+
+| Feature | Portfolio Sharing | Heir Access |
+|---------|------------------|-------------|
+| Purpose | Voluntary sharing | Emergency access |
+| Access Request | Not required | Required with waiting period |
+| Duration | Custom (temp or permanent) | Up to 180 days |
+| Revocation | Instant | Instant |
+| Setup | Create & share link | Designate heir in advance |
+| Notifications | None | Multiple during waiting period |
+| Best For | Advisors, professionals | Estate planning, emergencies |
+
+[Learn more about Heir Access →](/advanced/heir-access)
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Create Share Link" icon="share-nodes" href="https://storehouses.app/share">
+    Start sharing your portfolio
+  </Card>
+
+  <Card title="Organize Collections" icon="folder-tree" href="/features/collections">
+    Set up collections for sharing
+  </Card>
+
+  <Card title="Export Data" icon="file-export" href="/portfolio/export-reporting">
+    Generate reports
+  </Card>
+
+  <Card title="Set Up Heir Access" icon="users" href="/advanced/heir-access">
+    Configure emergency access
+  </Card>
+</CardGroup>

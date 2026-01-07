@@ -1,0 +1,492 @@
+---
+title: "Editing Items"
+description: "Complete guide to updating and modifying items in your Storehouses portfolio"
+---
+
+## Overview
+
+Keep your portfolio accurate and up-to-date by editing item details, updating valuations, managing photos, and organizing items into collections and locations. Storehouses tracks all changes for complete audit trails.
+
+## How to Edit an Item
+
+<Steps>
+  <Step title="Open Item Details">
+    Navigate to your dashboard and click on the item you want to edit
+  </Step>
+
+  <Step title="Click Edit Button">
+    Click the **Edit** button in the top right corner of the item detail page
+  </Step>
+
+  <Step title="Modify Fields">
+    Update any field you want to change
+  </Step>
+
+  <Step title="Save Changes">
+    Click **Save Changes** to update the item
+  </Step>
+</Steps>
+
+<Tip>
+All edits are tracked in the item's edit history, so you can always see what changed and when.
+</Tip>
+
+## Editable Fields
+
+### Basic Information
+
+<ParamField path="title" type="string" required>
+  Item name or title
+
+  **Example**: Change "Rolex Watch" to "Rolex Submariner Date 116610LN"
+</ParamField>
+
+<ParamField path="description" type="textarea">
+  Additional details or notes
+
+  **Use case**: Add condition notes, serial numbers, or provenance information
+</ParamField>
+
+<ParamField path="quantity" type="number">
+  Number of identical units
+
+  **Example**: Update from 10 to 12 when you purchase 2 more identical silver coins
+</ParamField>
+
+### Valuation Updates
+
+<CardGroup cols={2}>
+  <Card title="Purchase Information" icon="receipt">
+    - Purchase price
+    - Purchase date
+    - Seller/source
+
+    **Note**: Typically set once and not changed
+  </Card>
+
+  <Card title="Current Values" icon="chart-line">
+    - Market value
+    - Insurance value
+
+    **Note**: Update regularly to track value changes
+  </Card>
+</CardGroup>
+
+<Warning>
+For precious metals, market value updates automatically based on spot prices. Manual updates will be overridden by automatic pricing.
+</Warning>
+
+### Category-Specific Fields
+
+Update specialized fields based on your asset type:
+
+**Precious Metals**
+- Metal type, weight, purity
+- Form (coin, bar, round)
+- Mint, series, year
+
+**Luxury Watches**
+- Brand, model, reference number
+- Movement type, case material
+- Condition, service history
+
+**Gems & Jewelry**
+- Gem type, carat weight
+- Cut, color, clarity
+- Setting details
+
+**Wine & Spirits**
+- Vintage, producer, region
+- Storage conditions
+- Fill level, label condition
+
+**Fine Art**
+- Artist, medium, dimensions
+- Provenance, exhibition history
+- Condition assessment
+
+**Arms & Armor**
+- Type, era, manufacturer
+- Condition rating
+- Matching numbers status
+
+### Location & Organization
+
+<ParamField path="location" type="select">
+  Physical storage location
+
+  **Options**: Select from your saved locations or create a new one
+
+  **Example**: Move item from "Home Safe" to "Bank Vault"
+</ParamField>
+
+<ParamField path="collections" type="multi-select">
+  Collections this item belongs to
+
+  **Options**: Select one or more collections
+
+  **Use case**: Add an item to both "Investment Coins" and "Gold Holdings" collections
+</ParamField>
+
+<ParamField path="tags" type="tags">
+  Custom labels for flexible organization
+
+  **Example**: Add tags like "needs-appraisal", "insured", "for-sale"
+</ParamField>
+
+## Managing Photos
+
+### Adding Photos
+
+<Steps>
+  <Step title="Open Edit Mode">
+    Click **Edit** on the item detail page
+  </Step>
+
+  <Step title="Click Add Photos">
+    Click the **Add Photos** button in the photos section
+  </Step>
+
+  <Step title="Select Images">
+    Choose one or more photos from your device
+  </Step>
+
+  <Step title="Upload">
+    Photos upload automatically and appear in the gallery
+  </Step>
+</Steps>
+
+**Supported formats**: JPG, PNG, HEIC, WebP
+
+**Maximum size**: 10 MB per photo
+
+**Recommended**: Use well-lit, clear photos showing important details
+
+### Reordering Photos
+
+Change which photo appears as the primary image:
+
+1. In edit mode, drag and drop photos to reorder
+2. The first photo becomes the primary/cover image
+3. Primary photo shows in grid view and thumbnails
+
+### Removing Photos
+
+1. In edit mode, hover over a photo
+2. Click the **X** button in the corner
+3. Confirm deletion
+
+<Warning>
+Deleted photos cannot be recovered. Download important photos before removing them if you want to keep copies.
+</Warning>
+
+### Photo Best Practices
+
+<AccordionGroup>
+  <Accordion title="Use High-Quality Images">
+    Clear, well-lit photos help with identification and insurance claims. Take photos in natural light when possible.
+  </Accordion>
+
+  <Accordion title="Capture Multiple Angles">
+    For valuable items, include photos of:
+    - Front/obverse
+    - Back/reverse
+    - Hallmarks, signatures, or maker's marks
+    - Serial numbers or certifications
+    - Any damage or unique characteristics
+  </Accordion>
+
+  <Accordion title="Keep Photos Updated">
+    If an item's condition changes (wear, damage, restoration), add updated photos and note the date in the description.
+  </Accordion>
+
+  <Accordion title="Privacy Consideration">
+    Photos are stored securely and never shared without your permission. However, avoid including identifiable background details if sharing items publicly.
+  </Accordion>
+</AccordionGroup>
+
+## Bulk Editing
+
+Update multiple items at once:
+
+<Steps>
+  <Step title="Select Multiple Items">
+    On your dashboard, click the **Select** button and check items to edit
+  </Step>
+
+  <Step title="Click Bulk Edit">
+    Click the **Bulk Edit** button that appears
+  </Step>
+
+  <Step title="Choose Fields to Update">
+    Select which field you want to modify for all selected items
+  </Step>
+
+  <Step title="Enter New Value">
+    Provide the new value to apply to all selected items
+  </Step>
+
+  <Step title="Confirm Changes">
+    Review the changes and click **Apply** to update all items
+  </Step>
+</Steps>
+
+### Bulk Editable Fields
+
+- **Location** - Move multiple items to a new location
+- **Collection** - Add items to a collection
+- **Tags** - Apply tags to multiple items
+- **Insurance Value** - Update insurance values by percentage or amount
+
+<Tip>
+Bulk editing is perfect for updating insurance values after an appraisal, or moving an entire collection to a new storage location.
+</Tip>
+
+## Updating Valuations
+
+### Manual Market Value Updates
+
+For items without automatic pricing:
+
+1. Open the item in edit mode
+2. Update the **Market Value** field
+3. Add a note in the description about the valuation source
+4. Save changes
+
+The new value immediately affects:
+- Individual item valuation
+- Portfolio total value
+- Collection values
+- Location inventory values
+
+### Insurance Value Updates
+
+Update insurance values when:
+- Getting new appraisals
+- Coverage amounts change
+- Market conditions shift significantly
+
+<Card title="Insurance Value vs Market Value" icon="shield">
+  **Insurance Value**: The amount your insurance company agrees to cover
+
+  **Market Value**: Current estimated selling price
+
+  These can differ. Insurance value is often higher to cover replacement costs.
+</Card>
+
+### Tracking Value Changes
+
+After updating values, view the impact:
+- **Item detail page** shows percentage change from purchase price
+- **Valuation history** chart shows value over time
+- **Dashboard** reflects new portfolio total
+- **Wealth Garden** updates to show growth trends
+
+## Changing Locations
+
+Move items between storage locations:
+
+### Single Item
+
+1. Edit the item
+2. Change the **Location** field
+3. Save changes
+
+### Multiple Items
+
+1. Use bulk edit to move several items at once
+2. Or use the **Move** quick action from the item detail page
+
+<Tip>
+Track items you're moving between locations by creating a temporary collection called "In Transit" until they reach their destination.
+</Tip>
+
+## Adding to Collections
+
+Organize items by adding them to one or more collections:
+
+1. Edit the item
+2. In the **Collections** field, check the collections to add the item to
+3. Save changes
+
+An item can belong to multiple collections simultaneously.
+
+**Example**: A vintage Rolex could be in both "Investment Watches" and "Everyday Wear" collections.
+
+Learn more in the [Collections guide](/features/collections).
+
+## Edit History & Audit Trail
+
+Storehouses maintains a complete record of all changes:
+
+### Viewing Edit History
+
+1. Open an item's detail page
+2. Scroll to the **Edit History** section
+3. See chronological list of all modifications
+
+### What's Tracked
+
+Each edit record shows:
+- Date and time of change
+- Field(s) modified
+- Previous value
+- New value
+- User who made the change (for shared portfolios)
+
+### Use Cases for Edit History
+
+<CardGroup cols={2}>
+  <Card title="Insurance Claims" icon="file-invoice">
+    Prove when you updated values or reported damage
+  </Card>
+
+  <Card title="Tax Records" icon="receipt">
+    Document purchase prices and holding periods
+  </Card>
+
+  <Card title="Provenance" icon="book">
+    Track ownership and condition history
+  </Card>
+
+  <Card title="Accountability" icon="users">
+    See who modified shared portfolio items
+  </Card>
+</CardGroup>
+
+<Warning>
+Edit history cannot be deleted or modified. This ensures the integrity of your records for insurance and tax purposes.
+</Warning>
+
+## Quick Edit Actions
+
+Access common editing tasks quickly:
+
+### From Item Detail Page
+
+- **Edit** - Full editing mode
+- **Update Value** - Quick value update dialog
+- **Move** - Change location without full edit
+- **Add to Collection** - Quick collection assignment
+
+### From Dashboard
+
+- **Right-click menu** (desktop) or **long-press** (mobile) on any item card
+- Access quick actions without opening the detail page
+
+## Common Editing Scenarios
+
+<AccordionGroup>
+  <Accordion title="Updating After Appraisal">
+    After getting items professionally appraised:
+    1. Update the **Insurance Value** to match appraisal
+    2. Update **Market Value** if provided
+    3. Add appraisal date and appraiser to **Description**
+    4. Upload appraisal certificate photos
+  </Accordion>
+
+  <Accordion title="Recording Condition Changes">
+    If an item is damaged or restored:
+    1. Add detailed notes to **Description**
+    2. Upload photos showing the change
+    3. Update **Market Value** if affected
+    4. Add tags like "damaged" or "restored"
+  </Accordion>
+
+  <Accordion title="Tracking Service History">
+    For watches, vehicles, or equipment:
+    1. Add service dates and details to **Description**
+    2. Update condition-related fields
+    3. Upload service receipts or certificates
+    4. Note any parts replaced or repairs made
+  </Accordion>
+
+  <Accordion title="Reorganizing Storage">
+    When reorganizing your storage:
+    1. Use bulk edit to move groups of items
+    2. Update location names if needed
+    3. Consider creating new collections for the reorganized layout
+  </Accordion>
+
+  <Accordion title="Preparing for Sale">
+    Before selling items:
+    1. Update to current market value
+    2. Add detailed condition notes
+    3. Upload high-quality photos
+    4. Tag with "for-sale"
+    5. Export item details for listing
+  </Accordion>
+</AccordionGroup>
+
+## Validation & Error Prevention
+
+Storehouses validates edits to prevent errors:
+
+- **Required fields** must have values before saving
+- **Numeric fields** only accept valid numbers
+- **Dates** must be in proper format
+- **Currency** values are formatted correctly
+- **Photo uploads** check file size and type
+
+If validation fails, you'll see a clear error message explaining what needs to be fixed.
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Make Regular Updates">
+    Schedule quarterly reviews to update market values, check condition, and ensure all information remains accurate.
+  </Accordion>
+
+  <Accordion title="Document Changes">
+    When making significant edits, add a note in the description explaining why. This helps future you understand the context.
+  </Accordion>
+
+  <Accordion title="Keep Photos Current">
+    Update photos if condition changes. Consider annual photo updates for high-value items to document wear patterns.
+  </Accordion>
+
+  <Accordion title="Use Bulk Edit Wisely">
+    Double-check your selection before bulk editing. It's easy to accidentally update the wrong items.
+  </Accordion>
+
+  <Accordion title="Verify Automatic Updates">
+    For precious metals with automatic pricing, periodically verify the spot price is updating correctly.
+  </Accordion>
+
+  <Accordion title="Back Up Before Major Changes">
+    Before reorganizing collections or locations, export your portfolio as a backup in case you want to reference the old structure.
+  </Accordion>
+</AccordionGroup>
+
+## Mobile Editing
+
+Edit items on the go with the mobile app:
+
+- Full editing capabilities on mobile
+- Photo uploads from camera or gallery
+- Touch-optimized form fields
+- Offline edits sync when connection returns
+
+<Card title="Offline Editing" icon="wifi">
+  Edits made offline are saved locally and automatically sync to the server when your device reconnects to the internet.
+</Card>
+
+## Related Resources
+
+<CardGroup cols={2}>
+  <Card title="Viewing Items" icon="eye" href="/portfolio/viewing-items">
+    Learn how to view and browse your items
+  </Card>
+
+  <Card title="Valuation & Pricing" icon="dollar-sign" href="/portfolio/valuation-pricing">
+    Understand how valuations work
+  </Card>
+
+  <Card title="Adding Items" icon="plus" href="/features/adding-items">
+    Add new items to your portfolio
+  </Card>
+
+  <Card title="Collections" icon="folder" href="/features/collections">
+    Organize items into collections
+  </Card>
+</CardGroup>

@@ -1,0 +1,856 @@
+---
+title: "Gems & Gemstones"
+description: "Complete guide to tracking loose gemstones with 4Cs, certifications, and professional grading in Storehouses"
+---
+
+## Overview
+
+Track your loose gemstone collection with detailed fields for the 4Cs (Carat, Cut, Color, Clarity), certifications, treatments, and professional grading. Perfect for gem collectors, investors, and jewelers managing unmounted stones.
+
+<Note>
+  This category is for **loose, unmounted gemstones**. For gems set in jewelry, use the [Fine Jewelry category](/asset-types/jewelry).
+</Note>
+
+## Adding a Gemstone
+
+<Steps>
+  <Step title="Navigate to Add Item">
+    Click "Add Item" from your dashboard or go to [storehouses.app/add](https://storehouses.app/add)
+  </Step>
+
+  <Step title="Select Gems & Jewelry">
+    Choose "Gems & Jewelry (Gems)" as the category
+  </Step>
+
+  <Step title="Enter Gem Details">
+    Fill in the 4Cs, gem type, and specifications
+  </Step>
+
+  <Step title="Add Certification">
+    Include certificate number and grading organization
+  </Step>
+
+  <Step title="Upload Documentation">
+    Add photos of gem and certification documents
+  </Step>
+
+  <Step title="Save">
+    Click "Save Item" to add to your collection
+  </Step>
+</Steps>
+
+## The 4Cs of Gemstones
+
+The four most important factors in gemstone valuation:
+
+<CardGroup cols={2}>
+  <Card title="Carat Weight" icon="weight-scale">
+    The weight of the gemstone measured in carats
+    - 1 carat = 0.2 grams = 200 milligrams
+    - Heavier stones are exponentially more valuable
+  </Card>
+
+  <Card title="Cut" icon="gem">
+    The quality and style of how the stone is faceted
+    - Affects brilliance and appearance
+    - Cut grade and shape
+  </Card>
+
+  <Card title="Color" icon="palette">
+    The hue, tone, and saturation of the gemstone
+    - Most critical factor for colored stones
+    - Graded on letter or descriptive scales
+  </Card>
+
+  <Card title="Clarity" icon="eye">
+    The presence of internal inclusions or external blemishes
+    - Flawless to Included grading scale
+    - Affects transparency and value
+  </Card>
+</CardGroup>
+
+## Gemstone Fields
+
+### Stone Identification
+
+<ParamField path="gem_type" type="string" required>
+  Type of gemstone
+
+  **Precious stones:**
+  - Diamond
+  - Ruby
+  - Sapphire
+  - Emerald
+
+  **Semi-precious stones:**
+  - Amethyst
+  - Aquamarine
+  - Citrine
+  - Garnet
+  - Opal
+  - Peridot
+  - Tanzanite
+  - Topaz
+  - Tourmaline
+  - Turquoise
+  - And many more
+
+  <Tip>
+    Use the specific variety name (e.g., "Blue Sapphire" not just "Sapphire")
+  </Tip>
+</ParamField>
+
+<ParamField path="variety" type="string">
+  Specific variety or trade name
+
+  **Examples:**
+  - Padparadscha (for pink-orange sapphire)
+  - Paraíba (for neon blue-green tourmaline)
+  - Kashmir (for premium sapphire origin)
+  - Pigeon's Blood (for finest red ruby)
+  - Mozambique Ruby
+  - Colombian Emerald
+</ParamField>
+
+### The 4Cs in Detail
+
+<ParamField path="carat_weight" type="number" required>
+  Weight in carats
+
+  **Examples:**
+  - 0.50 (half carat)
+  - 1.00 (one carat)
+  - 2.75 (two and three-quarter carats)
+  - 5.00 (five carats)
+
+  **Conversion:**
+  - 1 carat = 0.2 grams
+  - 1 carat = 200 milligrams
+  - 5 carats = 1 gram
+
+  <Note>
+    Larger stones are exponentially more valuable per carat
+  </Note>
+</ParamField>
+
+<ParamField path="cut" type="string">
+  Cut grade and/or shape
+
+  **Cut grades (for diamonds):**
+  - Excellent
+  - Very Good
+  - Good
+  - Fair
+  - Poor
+
+  **Common shapes:**
+  - Round Brilliant
+  - Princess
+  - Cushion
+  - Emerald Cut
+  - Oval
+  - Pear
+  - Marquise
+  - Asscher
+  - Radiant
+  - Heart
+
+  **Example entries:**
+  - "Excellent Round Brilliant"
+  - "Princess Cut"
+  - "Cushion Modified Brilliant"
+  - "Oval Mixed Cut"
+</ParamField>
+
+<ParamField path="color" type="string">
+  Color grade or description
+
+  **For diamonds (colorless scale):**
+  - D-E-F: Colorless
+  - G-H-I-J: Near Colorless
+  - K-L-M: Faint Color
+  - N-R: Very Light Color
+  - S-Z: Light Color
+
+  **For colored stones:**
+  - Describe hue, tone, saturation
+  - Examples: "Vivid Blue", "Deep Red", "Medium Green"
+  - Use GIA color descriptors when available
+
+  **For fancy colored diamonds:**
+  - Fancy Light, Fancy, Fancy Intense, Fancy Vivid, Fancy Deep
+  - Include hue: "Fancy Vivid Yellow", "Fancy Intense Blue"
+</ParamField>
+
+<ParamField path="clarity" type="string">
+  Clarity grade
+
+  **GIA clarity scale (most common):**
+  - **FL** - Flawless
+  - **IF** - Internally Flawless
+  - **VVS1, VVS2** - Very Very Slightly Included
+  - **VS1, VS2** - Very Slightly Included
+  - **SI1, SI2** - Slightly Included
+  - **I1, I2, I3** - Included
+
+  **Type classifications:**
+  - Type I: Eye-clean clarity expected (aquamarine, citrine)
+  - Type II: Typically included (ruby, sapphire, garnet)
+  - Type III: Almost always included (emerald, tourmaline)
+
+  <Note>
+    Clarity expectations vary by gem type. Emeralds are typically included.
+  </Note>
+</ParamField>
+
+### Certification and Grading
+
+<ParamField path="certification" type="string">
+  Grading laboratory or certification body
+
+  **Major laboratories:**
+  - **GIA** - Gemological Institute of America (most recognized)
+  - **AGS** - American Gem Society
+  - **IGI** - International Gemological Institute
+  - **EGL** - European Gemological Laboratory
+  - **HRD** - Hoge Raad voor Diamant (Antwerp)
+  - **AGL** - American Gemological Laboratories (colored stones)
+  - **GRS** - GemResearch Swisslab (colored stones)
+  - **Gübelin** - Gübelin Gem Lab (prestigious for colored stones)
+  - **SSEF** - Swiss Gemmological Institute
+
+  <Tip>
+    GIA, Gübelin, and SSEF are considered the most stringent and respected
+  </Tip>
+</ParamField>
+
+<ParamField path="certificate_number" type="string">
+  Certificate or report number
+
+  **Examples:**
+  - GIA: 2185438976
+  - AGS: 104091654012
+  - IGI: J2Y83847
+
+  **Use:** Verify authenticity online through lab's database
+
+  <Note>
+    Keep certificate number private - it can be used to verify your stone's authenticity
+  </Note>
+</ParamField>
+
+<ParamField path="certificate_date" type="date">
+  Date the certificate was issued
+
+  **Use:**
+  - Track age of certification
+  - May need re-certification for insurance
+  - Some certifications expire after time
+</ParamField>
+
+### Treatment and Origin
+
+<ParamField path="treatment" type="string">
+  Any treatments or enhancements applied
+
+  **Common treatments:**
+  - **None/Natural** - No treatment (most valuable)
+  - **Heat** - Heat treatment (common for sapphires, rubies)
+  - **Oil** - Oil/resin filling (standard for emeralds)
+  - **Irradiation** - Radiation treatment (topaz, some diamonds)
+  - **Fracture Filling** - Glass/resin filling of fractures
+  - **HPHT** - High Pressure High Temperature (diamonds)
+  - **Diffusion** - Surface or bulk diffusion treatment
+  - **Coating** - Surface coating for color
+  - **Synthetic** - Lab-created/manufactured
+
+  <Warning>
+    Undisclosed treatments can significantly affect value. Always document treatments.
+  </Warning>
+</ParamField>
+
+<ParamField path="origin" type="string">
+  Geographic origin of the gemstone
+
+  **Notable origins:**
+  - **Colombian Emeralds** - Most prized
+  - **Kashmir Sapphires** - Legendary blue sapphires
+  - **Burma (Myanmar) Rubies** - "Pigeon's blood" rubies
+  - **Mozambique Rubies** - Fine quality rubies
+  - **Sri Lankan Sapphires** - Various colors
+  - **Madagascar** - Various gems
+  - **Brazilian** - Various gems, Paraíba tourmaline
+  - **African** - Various origins
+
+  <Note>
+    Origin can significantly affect value. Top labs include origin on certificates.
+  </Note>
+</ParamField>
+
+## Gemstone Types
+
+### Precious Stones (The "Big Four")
+
+<AccordionGroup>
+  <Accordion title="Diamond" icon="gem">
+    **Characteristics:**
+    - Hardest natural material (Mohs 10)
+    - High refractive index and dispersion
+    - Various colors (colorless, yellow, brown, pink, blue, etc.)
+
+    **Grading focus:**
+    - Cut quality critical for brilliance
+    - Color: D (colorless) to Z (light yellow/brown)
+    - Clarity: FL to I3
+    - Carat weight
+
+    **Price factors:**
+    - Cut quality (biggest impact on beauty)
+    - Color (colorless more valuable)
+    - Clarity (eye-clean SI1-SI2 good value)
+    - Fancy colors can be extremely valuable
+  </Accordion>
+
+  <Accordion title="Ruby" icon="heart">
+    **Characteristics:**
+    - Red variety of corundum (Mohs 9)
+    - Color from chromium
+    - "Pigeon's Blood" red most prized
+
+    **Origins:**
+    - Burma (Myanmar): Most prestigious
+    - Mozambique: Excellent quality
+    - Thailand, Sri Lanka, Madagascar
+
+    **Treatments:**
+    - Heat treatment very common and accepted
+    - Unheated rubies command premium
+
+    **Clarity:**
+    - Type II stone (inclusions expected)
+    - Eye-clean very valuable
+    - Silk inclusions can create star effect
+  </Accordion>
+
+  <Accordion title="Sapphire" icon="shield">
+    **Characteristics:**
+    - All colors of corundum except red (Mohs 9)
+    - Blue most popular, but many colors exist
+    - Can show asterism (star sapphires)
+
+    **Colors:**
+    - Blue: Most common and valuable
+    - Pink, yellow, orange, green, purple
+    - Padparadscha: Pink-orange (very rare)
+    - White/colorless: Diamond alternative
+
+    **Origins:**
+    - Kashmir: Legendary (very rare)
+    - Burma: Fine quality
+    - Sri Lanka: Various colors
+    - Madagascar, Australia, Montana
+
+    **Treatments:**
+    - Heat treatment very common
+    - Unheated Kashmir sapphires most valuable
+  </Accordion>
+
+  <Accordion title="Emerald" icon="clover">
+    **Characteristics:**
+    - Green variety of beryl (Mohs 7.5-8)
+    - Color from chromium and/or vanadium
+    - Almost always included ("jardin")
+
+    **Origins:**
+    - Colombia: Most prized (Muzo, Chivor)
+    - Zambia: Good quality, slightly bluish
+    - Brazil, Afghanistan, others
+
+    **Treatments:**
+    - Oil/resin filling standard and accepted
+    - "Minor" oil treatment most desirable
+    - Untreated emeralds extremely rare
+
+    **Clarity:**
+    - Type III (almost always included)
+    - Visible inclusions expected and accepted
+    - Eye-clean emeralds very valuable
+  </Accordion>
+</AccordionGroup>
+
+### Popular Semi-Precious Stones
+
+<AccordionGroup>
+  <Accordion title="Tanzanite" icon="gem">
+    - Blue-violet variety of zoisite
+    - Only found in Tanzania
+    - Heat treated to develop blue color
+    - Mohs 6.5-7 (requires careful wear)
+    - Larger sizes more valuable per carat
+  </Accordion>
+
+  <Accordion title="Aquamarine" icon="droplet">
+    - Blue variety of beryl
+    - Mohs 7.5-8 (durable)
+    - Usually eye-clean (Type I)
+    - Heat treatment common
+    - Larger stones available at reasonable prices
+  </Accordion>
+
+  <Accordion title="Tourmaline" icon="rainbow">
+    - Many colors available
+    - Paraíba (neon blue-green) most valuable
+    - Pink, green, watermelon popular
+    - Mohs 7-7.5
+    - Generally eye-clean
+  </Accordion>
+
+  <Accordion title="Spinel" icon="star">
+    - Often confused with ruby/sapphire historically
+    - Many colors (red, pink, blue, orange)
+    - Mohs 8 (very durable)
+    - No treatments typically
+    - Increasing in value and recognition
+  </Accordion>
+
+  <Accordion title="Topaz" icon="sun">
+    - Colorless, blue, pink, yellow varieties
+    - Imperial topaz (orange-pink) most valuable
+    - Mohs 8 (hard but can cleave)
+    - Blue topaz is irradiated and heat treated
+  </Accordion>
+
+  <Accordion title="Garnet" icon="circle">
+    - Many species and varieties
+    - Tsavorite (green) and demantoid most valuable
+    - Red pyrope, almandine common
+    - Generally affordable
+    - Usually untreated
+  </Accordion>
+</AccordionGroup>
+
+## Tracking Examples
+
+### Example 1: GIA Certified Diamond
+
+<ParamField path="title" type="string">
+  1.50ct Round Brilliant Diamond - E VS1
+</ParamField>
+
+<ParamField path="gem_type" type="string">
+  Diamond
+</ParamField>
+
+<ParamField path="carat_weight" type="number">
+  1.50
+</ParamField>
+
+<ParamField path="cut" type="string">
+  Excellent Round Brilliant
+</ParamField>
+
+<ParamField path="color" type="string">
+  E (Colorless)
+</ParamField>
+
+<ParamField path="clarity" type="string">
+  VS1
+</ParamField>
+
+<ParamField path="certification" type="string">
+  GIA
+</ParamField>
+
+<ParamField path="certificate_number" type="string">
+  2185438976
+</ParamField>
+
+<ParamField path="treatment" type="string">
+  None
+</ParamField>
+
+<ParamField path="purchase_price" type="currency">
+  $15,750
+</ParamField>
+
+<ParamField path="market_value" type="currency">
+  $16,200
+</ParamField>
+
+---
+
+### Example 2: Unheated Burma Ruby
+
+<ParamField path="title" type="string">
+  2.03ct Pigeon's Blood Ruby - Unheated Burma
+</ParamField>
+
+<ParamField path="gem_type" type="string">
+  Ruby
+</ParamField>
+
+<ParamField path="variety" type="string">
+  Pigeon's Blood (Vivid Red)
+</ParamField>
+
+<ParamField path="carat_weight" type="number">
+  2.03
+</ParamField>
+
+<ParamField path="cut" type="string">
+  Oval Mixed Cut
+</ParamField>
+
+<ParamField path="color" type="string">
+  Vivid Red (Pigeon's Blood)
+</ParamField>
+
+<ParamField path="clarity" type="string">
+  VS (Eye-clean)
+</ParamField>
+
+<ParamField path="certification" type="string">
+  Gübelin
+</ParamField>
+
+<ParamField path="certificate_number" type="string">
+  [Certificate number]
+</ParamField>
+
+<ParamField path="treatment" type="string">
+  None (No Heat)
+</ParamField>
+
+<ParamField path="origin" type="string">
+  Burma (Myanmar) - Mogok
+</ParamField>
+
+<ParamField path="purchase_price" type="currency">
+  $42,000
+</ParamField>
+
+---
+
+### Example 3: Colombian Emerald
+
+<ParamField path="title" type="string">
+  3.15ct Colombian Emerald - Minor Oil
+</ParamField>
+
+<ParamField path="gem_type" type="string">
+  Emerald
+</ParamField>
+
+<ParamField path="carat_weight" type="number">
+  3.15
+</ParamField>
+
+<ParamField path="cut" type="string">
+  Emerald Cut (Step Cut)
+</ParamField>
+
+<ParamField path="color" type="string">
+  Vivid Green
+</ParamField>
+
+<ParamField path="clarity" type="string">
+  VS (Minor inclusions visible)
+</ParamField>
+
+<ParamField path="certification" type="string">
+  AGL (American Gemological Laboratories)
+</ParamField>
+
+<ParamField path="treatment" type="string">
+  Minor Oil (F1 - Insignificant)
+</ParamField>
+
+<ParamField path="origin" type="string">
+  Colombia - Muzo
+</ParamField>
+
+<ParamField path="purchase_price" type="currency">
+  $28,500
+</ParamField>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Always Get Certified" icon="certificate">
+    **For valuable stones, certification is essential:**
+    - Provides independent verification
+    - Documents authenticity
+    - Records treatments
+    - Aids in insurance and resale
+    - Protects against fraud
+
+    **When to certify:**
+    - Diamonds over 0.50ct
+    - Any ruby, sapphire, emerald over 1.00ct
+    - Expensive colored stones
+    - Any stone over $1,000 value
+
+    **Recommended labs:**
+    - GIA (general, diamonds)
+    - Gübelin (colored stones, prestigious)
+    - SSEF (colored stones)
+    - AGL (colored stones, U.S.)
+
+    <Tip>
+      For very valuable stones, get certification from top labs (GIA, Gübelin, SSEF)
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Document Everything" icon="file-text">
+    **Maintain complete records:**
+    - Original certificate/report
+    - Purchase receipt
+    - Seller information
+    - Any appraisals
+    - Treatment disclosure
+    - Origin documentation
+
+    **Upload to Storehouses:**
+    - Certificate images (front and back)
+    - Plotting diagram
+    - Purchase documentation
+    - Photos of the stone
+  </Accordion>
+
+  <Accordion title="Photograph Properly" icon="camera">
+    **Essential photos:**
+    - Stone from multiple angles
+    - In different lighting (daylight, indoor)
+    - Close-up of any inclusions
+    - Next to certificate for matching
+    - On white background
+    - With scale reference (ruler/coin)
+
+    **Photography tips:**
+    - Natural daylight best for color accuracy
+    - Use macro mode for small stones
+    - Clean stone before photographing
+    - Show true color (no color correction)
+  </Accordion>
+
+  <Accordion title="Understand Treatments" icon="flask">
+    **Common treatments and their impact:**
+
+    **Acceptable/Standard:**
+    - Heat treatment (ruby, sapphire) - minimal value impact
+    - Minor oil (emerald) - standard practice
+    - Irradiation (topaz, some quartz)
+
+    **Moderate impact:**
+    - Significant oil/resin (emerald) - reduces value
+    - HPHT (diamond) - less valuable than natural color
+    - Diffusion treatment - significantly less valuable
+
+    **Major impact:**
+    - Fracture filling (diamond) - much less valuable
+    - Coating - temporary, low value
+    - Undisclosed treatments - fraud
+
+    <Warning>
+      Always disclose treatments. Undisclosed treatments can void insurance and affect resale.
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Store Safely" icon="vault">
+    **Proper storage:**
+    - Individual soft pouches or boxes
+    - Separate from other gems (avoid scratching)
+    - Cool, dry location
+    - Away from direct sunlight (some gems fade)
+    - In safe or secure location
+
+    **Hardness considerations:**
+    - Diamond (Mohs 10) can scratch everything
+    - Corundum (ruby, sapphire, Mohs 9) can scratch most gems
+    - Separate harder from softer stones
+
+    <Tip>
+      Store certificates separately from stones for security
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Regular Appraisals" icon="dollar-sign">
+    **Update valuations periodically:**
+    - Every 2-3 years for insurance
+    - When market prices change significantly
+    - After major market events
+    - Before selling
+
+    **Factors affecting value:**
+    - Market demand trends
+    - Origin discovery/depletion
+    - New treatments or synthetics
+    - Economic conditions
+  </Accordion>
+
+  <Accordion title="Insurance Considerations" icon="shield">
+    **Protect valuable gems:**
+    - Specialized jewelry/gem insurance
+    - Scheduled items on valuable articles policy
+    - Keep certificates and appraisals updated
+    - Document with photos
+
+    **Insurance documentation:**
+    - Certificate from recognized lab
+    - Recent appraisal (within 2-3 years)
+    - Purchase receipt
+    - Photos
+    - Storehouses export as backup
+
+    <Note>
+      Many insurers require certification from GIA, AGS, or similar for valuable stones
+    </Note>
+  </Accordion>
+</AccordionGroup>
+
+## Understanding Gem Certificates
+
+### What's Included in a Certificate
+
+<Card title="Typical Certificate Contents" icon="file-certificate">
+  **Identification:**
+  - Certificate number
+  - Date of issue
+  - Stone type and variety
+
+  **Measurements:**
+  - Dimensions (length × width × depth)
+  - Carat weight
+
+  **The 4Cs:**
+  - Cut (grade and shape)
+  - Color (grade or description)
+  - Clarity (grade)
+  - Carat weight
+
+  **Additional Information:**
+  - Treatment disclosure
+  - Origin (if determined)
+  - Comments about the stone
+  - Photo of the stone
+  - Plotting diagram (showing inclusions)
+</Card>
+
+### Online Verification
+
+Most major labs allow online verification:
+- **GIA:** www.gia.edu/report-check
+- **AGS:** verify on AGS website
+- **IGI:** verify on IGI website
+
+<Tip>
+  Always verify certificate authenticity online before major purchases
+</Tip>
+
+## Common Questions
+
+<AccordionGroup>
+  <Accordion title="Do I need a certificate for every gem?" icon="question">
+    **Certification recommended for:**
+    - Diamonds over 0.50ct
+    - Valuable colored stones (ruby, sapphire, emerald) over 1ct
+    - Any stone over $1,000-$2,000 value
+    - Stones for insurance purposes
+    - Investment-grade gems
+
+    **May skip for:**
+    - Very small stones (under 0.25ct)
+    - Inexpensive semi-precious stones
+    - Stones under $500-$1,000 value
+
+    Certification costs $50-$300+ depending on lab and stone.
+  </Accordion>
+
+  <Accordion title="Natural vs. synthetic - how to tell?" icon="flask">
+    **Lab-created (synthetic) gems:**
+    - Have same physical properties as natural
+    - Require testing to distinguish
+    - Much less expensive than natural
+    - Should be disclosed and certificated as such
+
+    **Identification:**
+    - Only gemologists with proper equipment can definitively test
+    - Certificates will indicate "Laboratory-Grown" or "Synthetic"
+    - Inclusions patterns differ
+
+    <Warning>
+      Always buy from reputable dealers who disclose synthetic/natural status
+    </Warning>
+  </Accordion>
+
+  <Accordion title="What does 'eye-clean' mean?" icon="eye">
+    **Eye-clean definition:**
+    - No inclusions visible to naked eye (without magnification)
+    - Typically VS2 or better for diamonds
+    - Varies by gem type
+
+    **Value impact:**
+    - Eye-clean stones more valuable
+    - For Type III gems (emerald), eye-clean is very rare/valuable
+    - For Type I gems (aquamarine), eye-clean is expected
+
+    <Note>
+      For most gems, eye-clean clarity offers best value - looks clean but costs less than flawless
+    </Note>
+  </Accordion>
+
+  <Accordion title="How do treatments affect value?" icon="dollar-sign">
+    **Treatment value impacts:**
+
+    **Minimal impact (accepted):**
+    - Heat treatment: 0-10% value reduction
+    - Minor oil (emerald): Expected/standard
+
+    **Moderate impact:**
+    - Moderate/significant oil: 20-40% reduction
+    - HPHT diamond: 20-30% less than natural color
+
+    **Significant impact:**
+    - Diffusion: 50-70% reduction
+    - Fracture filling: 60-80% reduction
+    - Coating: 70-90% reduction
+
+    **Untreated premium:**
+    - Unheated ruby/sapphire: 20-50% premium
+    - Unheated, fine origin: 50-200%+ premium
+  </Accordion>
+
+  <Accordion title="Should I track mounted or unmounted separately?" icon="ring">
+    **Track separately:**
+    - **Loose gems:** Use "Gems & Jewelry (Gems)" category
+    - **Mounted gems:** Use "Fine Jewelry" category
+
+    **Benefits:**
+    - Different valuation methods
+    - Different insurance needs
+    - Clear inventory separation
+    - Better for estate planning
+
+    **Exception:** If you have the certification for the center stone in jewelry, you can note it in the jewelry item's description.
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Add Your Gems" icon="plus" href="https://storehouses.app/add">
+    Start tracking your gemstone collection
+  </Card>
+
+  <Card title="Fine Jewelry Guide" icon="ring" href="/asset-types/jewelry">
+    Learn about tracking mounted gems
+  </Card>
+
+  <Card title="View Collection" icon="eye" href="/portfolio/viewing-items">
+    Browse your gems
+  </Card>
+
+  <Card title="Export Inventory" icon="file-export" href="/portfolio/export-reporting">
+    Generate gem reports for insurance
+  </Card>
+</CardGroup>

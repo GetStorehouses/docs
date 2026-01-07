@@ -1,0 +1,1016 @@
+---
+title: "Spirits"
+description: "Complete guide to tracking whiskey, bourbon, scotch, cognac, and rare spirits collections in Storehouses"
+---
+
+## Overview
+
+Track your spirits collection with detailed fields for distillery, age statements, ABV, bottle numbers, and limited editions. Perfect for whiskey collectors, bourbon enthusiasts, and rare spirits investors.
+
+<Card title="Spirits Tracking Features" icon="whiskey-glass">
+  - Spirit type and category
+  - Distillery and brand tracking
+  - Age statements
+  - ABV (alcohol by volume)
+  - Limited editions and bottle numbers
+  - Cask information
+  - Provenance and purchase history
+  - Collection organization
+</Card>
+
+## Adding Spirits
+
+<Steps>
+  <Step title="Navigate to Add Item">
+    Click "Add Item" from your dashboard or go to [storehouses.app/add](https://storehouses.app/add)
+  </Step>
+
+  <Step title="Select Spirits">
+    Choose "Spirits" as the category
+  </Step>
+
+  <Step title="Enter Spirit Details">
+    Fill in distillery, type, age, and specifications
+  </Step>
+
+  <Step title="Document Bottle">
+    Add bottle number, limited edition details, packaging
+  </Step>
+
+  <Step title="Upload Photos">
+    Add photos of bottle, label, box, and documentation
+  </Step>
+
+  <Step title="Save">
+    Click "Save Item" to add to your collection
+  </Step>
+</Steps>
+
+## Spirits Fields
+
+### Distillery and Brand
+
+<ParamField path="distillery" type="string" required>
+  Distillery or producer name
+
+  **Scotch examples:**
+  - Macallan
+  - Glenfiddich
+  - Lagavulin
+  - Ardbeg
+  - Highland Park
+
+  **Bourbon/American examples:**
+  - Buffalo Trace
+  - Heaven Hill
+  - Jim Beam
+  - Wild Turkey
+  - Four Roses
+
+  **Japanese examples:**
+  - Yamazaki
+  - Hibiki
+  - Nikka
+
+  **Other:**
+  - Hennessy (Cognac)
+  - Rémy Martin (Cognac)
+  - Mount Gay (Rum)
+
+  <Tip>
+    Use the official distillery name for consistency
+  </Tip>
+</ParamField>
+
+<ParamField path="brand" type="string">
+  Brand or expression name
+
+  **Examples:**
+  - Macallan 18 Year Sherry Oak
+  - Pappy Van Winkle's Family Reserve
+  - Blanton's Single Barrel
+  - Lagavulin 16 Year
+  - Don Julio 1942
+
+  **Format:** Include age statement and special designations
+</ParamField>
+
+### Spirit Type and Category
+
+<ParamField path="spirit_type" type="string" required>
+  Type of spirit
+
+  **Main categories:**
+  - **Scotch Whisky** (Single Malt, Blended)
+  - **Bourbon** (Kentucky Straight Bourbon, etc.)
+  - **Rye Whiskey**
+  - **Irish Whiskey**
+  - **Japanese Whisky**
+  - **Tennessee Whiskey**
+  - **Canadian Whisky**
+  - **Cognac**
+  - **Armagnac**
+  - **Rum** (Dark, Light, Aged, etc.)
+  - **Tequila** (Blanco, Reposado, Añejo, Extra Añejo)
+  - **Mezcal**
+  - **Gin**
+  - **Vodka**
+  - **Other Spirits**
+
+  <Note>
+    Be specific - include style when relevant (e.g., "Single Malt Scotch" vs just "Scotch")
+  </Note>
+</ParamField>
+
+<ParamField path="subcategory" type="string">
+  Subcategory or style
+
+  **Scotch subcategories:**
+  - Single Malt
+  - Single Grain
+  - Blended Malt
+  - Blended Scotch
+
+  **Scotch regions:**
+  - Islay (peated, maritime)
+  - Speyside (elegant, fruity)
+  - Highland (diverse styles)
+  - Lowland (light, floral)
+  - Campbeltown (maritime, complex)
+  - Islands (varied)
+
+  **Bourbon styles:**
+  - Straight Bourbon
+  - Wheated Bourbon
+  - High Rye Bourbon
+  - Bottled in Bond
+
+  **Rum styles:**
+  - Agricole
+  - Jamaican
+  - Barbados
+  - Demerara
+</ParamField>
+
+### Age and Specifications
+
+<ParamField path="age_statement" type="string">
+  Age statement or maturation period
+
+  **Format examples:**
+  - "18 Year"
+  - "12 Years Old"
+  - "25 Year Old"
+  - "NAS" (No Age Statement)
+  - "21 Años"
+
+  **Multiple ages:**
+  - Some blends: "Aged 12-25 Years"
+  - Solera systems: "Solera 23"
+
+  **Important notes:**
+  - Age = time in barrel (not bottle)
+  - Younger for some spirits (rum, tequila)
+  - NAS can be excellent (focus on quality)
+
+  <Tip>
+    Age doesn't always equal quality, but affects value significantly
+  </Tip>
+</ParamField>
+
+<ParamField path="abv" type="number">
+  Alcohol by volume (percentage)
+
+  **Examples:**
+  - 40.0 (standard strength)
+  - 43.0 (common premium)
+  - 46.0 (non-chill filtered common)
+  - 50.0 (100 proof)
+  - 57.1 (cask strength example)
+  - 60.5 (barrel proof example)
+
+  **Categories:**
+  - 40-43%: Standard strength
+  - 45-50%: Higher proof
+  - 50-60%+: Cask/barrel strength
+
+  <Note>
+    Higher ABV often indicates cask strength or barrel proof - no water added
+  </Note>
+</ParamField>
+
+<ParamField path="proof" type="number">
+  Proof (U.S. standard)
+
+  **Conversion:** Proof = ABV × 2
+
+  **Examples:**
+  - 80 proof = 40% ABV
+  - 90 proof = 45% ABV
+  - 100 proof = 50% ABV (Bottled in Bond)
+  - 120 proof = 60% ABV
+
+  <Tip>
+    Either ABV or proof is sufficient - they convert directly
+  </Tip>
+</ParamField>
+
+### Limited Editions and Numbering
+
+<ParamField path="bottle_number" type="string">
+  Bottle number for limited releases
+
+  **Format examples:**
+  - "Bottle 523 of 5,000"
+  - "#1234/10000"
+  - "Barrel 17-B-38"
+  - "Cask #4582"
+
+  **Use for:**
+  - Single barrel selections
+  - Limited edition releases
+  - Single cask bottlings
+  - Numbered series
+
+  <Note>
+    Low bottle numbers (especially #1) can command premiums
+  </Note>
+</ParamField>
+
+<ParamField path="edition_type" type="string">
+  Edition or release type
+
+  **Examples:**
+  - "Limited Edition"
+  - "Single Barrel"
+  - "Single Cask"
+  - "Cask Strength"
+  - "Barrel Proof"
+  - "Store Pick"
+  - "Private Barrel Selection"
+  - "Master Distiller's Reserve"
+  - "Anniversary Release"
+
+  **Special releases:**
+  - Annual releases (e.g., George T. Stagg)
+  - Commemorative editions
+  - Experimental/finished casks
+</ParamField>
+
+### Cask and Maturation
+
+<ParamField path="cask_type" type="string">
+  Cask type or finish
+
+  **Common casks:**
+  - **Bourbon Cask** (Ex-bourbon barrel)
+  - **Sherry Cask** (Oloroso, Pedro Ximénez)
+  - **Port Cask**
+  - **Wine Cask** (Sauternes, Bordeaux)
+  - **Rum Cask**
+  - **Virgin Oak** (New charred oak)
+  - **Mizunara Oak** (Japanese oak)
+
+  **Multiple casks:**
+  - "Double Cask" (matured in two cask types)
+  - "Triple Cask"
+  - "Finished in [type]" (e.g., "Sherry Finish")
+
+  **Example:**
+  - "Matured in Ex-Bourbon and Oloroso Sherry Casks"
+  - "PX Sherry Cask Finish"
+
+  <Tip>
+    Cask type significantly affects flavor profile and collector interest
+  </Tip>
+</ParamField>
+
+### Packaging and Condition
+
+<ParamField path="bottle_size" type="string">
+  Bottle size
+
+  **Standard sizes:**
+  - **Miniature** (50ml)
+  - **Half Bottle** (375ml)
+  - **Standard** (750ml) - Most common
+  - **Liter** (1000ml)
+  - **Magnum** (1500ml) - Rare
+
+  **Note:** Most spirits sold in 750ml
+</ParamField>
+
+<ParamField path="packaging" type="string">
+  Original packaging included
+
+  **Options:**
+  - **Full Set** - Bottle, box, certificate, everything
+  - **Box and Certificate**
+  - **Box Only**
+  - **Bottle Only**
+
+  **Luxury packaging:**
+  - Wooden presentation box
+  - Leather case
+  - Crystal decanter
+  - Display case
+  - Certificate of authenticity
+
+  <Note>
+    Original packaging, especially for rare releases, adds significant value
+  </Note>
+</ParamField>
+
+<ParamField path="bottle_condition" type="string">
+  Condition of bottle and contents
+
+  **Bottle:**
+  - Pristine (perfect, sealed)
+  - Excellent (minimal wear)
+  - Very Good (light wear)
+  - Good (some wear, intact)
+
+  **Fill level:**
+  - Full (perfect)
+  - High Shoulder
+  - Mid Shoulder (concern for old bottles)
+
+  **Seal:**
+  - Intact/Sealed
+  - Broken/Opened
+  - Resealed
+
+  <Warning>
+    Opened bottles lose most collector value but can still be tracked for personal inventory
+  </Warning>
+</ParamField>
+
+### Provenance
+
+<ParamField path="provenance" type="textarea">
+  Purchase history and source
+
+  **Include:**
+  - Where purchased
+  - Purchase date
+  - Original release date
+  - Allocation/lottery info
+  - Previous ownership (if known)
+
+  **Examples:**
+  - "Purchased from distillery visitor center May 2023"
+  - "Won in state lottery allocation 2022"
+  - "Single barrel store pick - Total Wine"
+  - "Purchased at auction, Sotheby's 2021"
+  - "Direct allocation from distillery mailing list"
+
+  <Tip>
+    Provenance especially important for rare allocated bottles (Pappy, BTAC, etc.)
+  </Tip>
+</ParamField>
+
+## Spirit Categories
+
+### Whiskey
+
+<AccordionGroup>
+  <Accordion title="Scotch Whisky" icon="flag">
+    **Single Malt:**
+    - One distillery, malted barley only
+    - Regional characteristics
+    - Age statements common
+    - Most collectible category
+
+    **Regions:**
+    - **Islay:** Peated, smoky (Lagavulin, Ardbeg, Laphroaig)
+    - **Speyside:** Elegant, fruity (Macallan, Glenfiddich, Balvenie)
+    - **Highland:** Diverse (Dalmore, Glenmorangie)
+    - **Lowland:** Light, floral (Auchentoshan)
+
+    **Investment:** Older expressions (18+, 25+, 30+ year)
+  </Accordion>
+
+  <Accordion title="Bourbon" icon="flag-usa">
+    **Requirements:**
+    - 51%+ corn in mash bill
+    - Aged in new charred oak barrels
+    - Produced in USA (mostly Kentucky)
+
+    **Allocated/Rare:**
+    - Pappy Van Winkle (all ages)
+    - Buffalo Trace Antique Collection (BTAC)
+    - E.H. Taylor lineup
+    - William Larue Weller
+    - George T. Stagg
+
+    **Single Barrel:** Often store picks, unique flavor profiles
+
+    **Bottled in Bond:** 100 proof, 4+ years, single distillery/season
+  </Accordion>
+
+  <Accordion title="Rye Whiskey" icon="wheat">
+    - 51%+ rye grain
+    - Spicier, drier than bourbon
+    - Growing collector interest
+
+    **Notable:** WhistlePig, Thomas H. Handy (BTAC), Michter's
+  </Accordion>
+
+  <Accordion title="Japanese Whisky" icon="mountain">
+    **Top distilleries:**
+    - Yamazaki, Hakushu (Suntory)
+    - Yoichi, Miyagikyo (Nikka)
+    - Hibiki (blend)
+
+    **Characteristics:**
+    - Influenced by Scotch tradition
+    - Refined, delicate flavors
+    - Limited availability
+    - Premium pricing
+
+    **Investment:** Age-stated Yamazaki, limited editions
+  </Accordion>
+
+  <Accordion title="Irish Whiskey" icon="clover">
+    - Triple distilled (typically)
+    - Smooth, approachable
+    - Growing premium segment
+
+    **Notable:** Redbreast, Green Spot, Midleton Very Rare
+  </Accordion>
+</AccordionGroup>
+
+### Brandy
+
+<AccordionGroup>
+  <Accordion title="Cognac" icon="grapes">
+    **Designations (age):**
+    - **VS** (Very Special) - Minimum 2 years
+    - **VSOP** (Very Superior Old Pale) - Minimum 4 years
+    - **XO** (Extra Old) - Minimum 10 years
+    - **XXO** - Minimum 14 years
+
+    **Top houses:**
+    - Hennessy, Rémy Martin, Martell, Courvoisier
+    - Louis XIII (extremely premium)
+
+    **Grades:**
+    - Grande Champagne (finest)
+    - Petite Champagne
+    - Borderies, Fins Bois
+  </Accordion>
+
+  <Accordion title="Armagnac" icon="wine-glass">
+    - Older tradition than Cognac
+    - Single distillation
+    - Often vintage dated
+    - Excellent value vs. Cognac
+  </Accordion>
+</AccordionGroup>
+
+### Other Spirits
+
+<AccordionGroup>
+  <Accordion title="Rum" icon="ship">
+    **Categories:**
+    - **Aged Rum:** Dark, premium aged
+    - **Rhum Agricole:** French Caribbean, cane juice
+    - **Jamaican:** Funky, ester-forward
+    - **Barbados:** Elegant (Mount Gay, Foursquare)
+    - **Demerara:** Rich (El Dorado)
+
+    **Collectible:** Vintage rums, limited releases, independently bottled
+  </Accordion>
+
+  <Accordion title="Tequila & Mezcal" icon="cactus">
+    **Tequila categories:**
+    - **Blanco/Silver:** Unaged
+    - **Reposado:** 2-12 months aged
+    - **Añejo:** 1-3 years
+    - **Extra Añejo:** 3+ years
+
+    **Premium brands:** Don Julio, Clase Azul, Patrón
+
+    **Mezcal:** Artisanal, smoky, diverse agave varieties
+  </Accordion>
+</AccordionGroup>
+
+## Tracking Examples
+
+### Example 1: Rare Allocated Bourbon
+
+<ParamField path="title" type="string">
+  2023 Pappy Van Winkle's Family Reserve 23 Year
+</ParamField>
+
+<ParamField path="distillery" type="string">
+  Buffalo Trace Distillery
+</ParamField>
+
+<ParamField path="brand" type="string">
+  Pappy Van Winkle's Family Reserve 23 Year
+</ParamField>
+
+<ParamField path="spirit_type" type="string">
+  Kentucky Straight Bourbon Whiskey
+</ParamField>
+
+<ParamField path="age_statement" type="string">
+  23 Years
+</ParamField>
+
+<ParamField path="abv" type="number">
+  47.8
+</ParamField>
+
+<ParamField path="proof" type="number">
+  95.6
+</ParamField>
+
+<ParamField path="bottle_size" type="string">
+  750ml
+</ParamField>
+
+<ParamField path="packaging" type="string">
+  Full Set - Box and Certificate
+</ParamField>
+
+<ParamField path="bottle_condition" type="string">
+  Pristine - Sealed
+</ParamField>
+
+<ParamField path="provenance" type="textarea">
+  Won in Kentucky state lottery allocation, November 2023. Original purchaser, never opened.
+</ParamField>
+
+<ParamField path="purchase_price" type="currency">
+  $299.99
+</ParamField>
+
+<ParamField path="market_value" type="currency">
+  $5,500
+</ParamField>
+
+---
+
+### Example 2: Single Cask Scotch
+
+<ParamField path="title" type="string">
+  Macallan 18 Year Sherry Oak Single Malt
+</ParamField>
+
+<ParamField path="distillery" type="string">
+  Macallan
+</ParamField>
+
+<ParamField path="spirit_type" type="string">
+  Single Malt Scotch Whisky
+</ParamField>
+
+<ParamField path="subcategory" type="string">
+  Speyside
+</ParamField>
+
+<ParamField path="age_statement" type="string">
+  18 Years
+</ParamField>
+
+<ParamField path="abv" type="number">
+  43.0
+</ParamField>
+
+<ParamField path="cask_type" type="string">
+  Oloroso Sherry Casks
+</ParamField>
+
+<ParamField path="bottle_size" type="string">
+  750ml
+</ParamField>
+
+<ParamField path="packaging" type="string">
+  Full Set - Presentation Box
+</ParamField>
+
+<ParamField path="purchase_price" type="currency">
+  $350
+</ParamField>
+
+<ParamField path="market_value" type="currency">
+  $380
+</ParamField>
+
+---
+
+### Example 3: Limited Edition Japanese Whisky
+
+<ParamField path="title" type="string">
+  Yamazaki 25 Year Single Malt
+</ParamField>
+
+<ParamField path="distillery" type="string">
+  Yamazaki (Suntory)
+</ParamField>
+
+<ParamField path="spirit_type" type="string">
+  Japanese Single Malt Whisky
+</ParamField>
+
+<ParamField path="age_statement" type="string">
+  25 Years
+</ParamField>
+
+<ParamField path="abv" type="number">
+  43.0
+</ParamField>
+
+<ParamField path="cask_type" type="string">
+  Mizunara Oak and Sherry Casks
+</ParamField>
+
+<ParamField path="bottle_size" type="string">
+  700ml
+</ParamField>
+
+<ParamField path="packaging" type="string">
+  Full Set - Wooden Box and Certificate
+</ParamField>
+
+<ParamField path="bottle_condition" type="string">
+  Pristine
+</ParamField>
+
+<ParamField path="purchase_price" type="currency">
+  $3,200
+</ParamField>
+
+<ParamField path="market_value" type="currency">
+  $4,500
+</ParamField>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Document Provenance" icon="file-text">
+    **Why provenance matters:**
+    - Proves authenticity (counterfeits exist)
+    - Documents allocation/lottery wins
+    - Increases resale value
+    - Important for rare bottles
+
+    **What to document:**
+    - Purchase location and date
+    - Receipt/invoice
+    - Lottery confirmation (if applicable)
+    - Store pick details
+    - Original owner (if secondary)
+
+    **Upload to Storehouses:**
+    - Purchase receipts
+    - Allocation confirmations
+    - Certificates of authenticity
+    - Photos of purchase/allocation
+
+    <Tip>
+      For allocated bottles (Pappy, BTAC), save lottery confirmation and original receipt
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Store Properly" icon="temperature-half">
+    **Optimal storage:**
+    - **Upright** (not on side like wine)
+    - **Cool temperature** (60-70°F)
+    - **Away from sunlight** (UV degrades spirits)
+    - **Stable temperature** (avoid fluctuations)
+    - **Low humidity** (preserves labels)
+
+    **Why upright:**
+    - High-proof spirits degrade corks
+    - Prevents cork taint
+    - Preserves seal integrity
+
+    **Long-term storage:**
+    - Consider parafilm on cork/cap seal
+    - Climate-controlled space
+    - Away from heat sources
+
+    <Warning>
+      Direct sunlight and heat can degrade spirits and fade labels
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Photograph Thoroughly" icon="camera">
+    **Essential photos:**
+    - Front label (clear, readable)
+    - Back label (proof, details)
+    - Top of bottle (seal condition)
+    - Bottle number (if numbered)
+    - Original box/packaging
+    - Certificate of authenticity
+    - Fill level (for old bottles)
+    - Any damage or issues
+
+    **For investment bottles:**
+    - Multiple angles
+    - Close-ups of important details
+    - Serial/bottle numbers
+    - Proof of provenance
+    - Seal condition
+
+    <Tip>
+      Photograph upon receipt - documents condition at purchase
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Track Market Values" icon="chart-line">
+    **Resources for valuation:**
+    - Secondary market (Facebook groups, Reddit)
+    - Auction results (Sotheby's, Acker)
+    - Online retailers (Caskers, ReserveBar)
+    - Local stores (for current retail)
+
+    **High-value categories:**
+    - Pappy Van Winkle (all ages)
+    - Buffalo Trace Antique Collection
+    - Japanese whisky (age-stated)
+    - Old/rare Scotch (25+ years)
+    - Single barrels/limited editions
+
+    **Update regularly:**
+    - Allocated bottles can appreciate quickly
+    - Annual updates for collection
+    - Before selling
+
+    <Note>
+      Secondary market prices can be 10-20x retail for allocated bourbon
+    </Note>
+  </Accordion>
+
+  <Accordion title="Organize Your Collection" icon="folder">
+    **Use Storehouses collections:**
+    - **By type:** "Bourbon", "Scotch", "Japanese Whisky"
+    - **By status:** "Sealed Investment", "Open for Drinking"
+    - **By value:** "Daily Drinkers", "Special Occasions", "Investment"
+    - **By distillery:** "Buffalo Trace Products", "Macallan"
+    - **By storage:** "Home Bar", "Cellar", "Safe"
+
+    **Track location:**
+    - Specific shelf or cabinet
+    - Home bar vs. storage
+    - Easy retrieval
+
+    <Tip>
+      Separate investment bottles from drinking bottles in your organization
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Insurance for Valuable Bottles" icon="shield">
+    **Consider insurance for:**
+    - Bottles over $500-1,000
+    - Allocated bottles (Pappy, BTAC)
+    - Collections over $10,000
+    - Rare/discontinued expressions
+
+    **Coverage options:**
+    - Valuable articles rider (homeowner's)
+    - Collectibles insurance
+    - Specific spirits insurance
+
+    **Documentation needed:**
+    - Purchase receipts
+    - Photos of bottles
+    - Current market values
+    - Provenance documentation
+    - Storehouses export
+
+    <Note>
+      Market value often much higher than purchase price for allocated bottles
+    </Note>
+  </Accordion>
+
+  <Accordion title="Handle Opened Bottles" icon="bottle-droplet">
+    **Once opened:**
+    - Value drops significantly (not "collectible")
+    - Still useful to track for personal inventory
+    - Update status in Storehouses
+
+    **Preservation:**
+    - Consume within 1-2 years for best quality
+    - Store upright, sealed
+    - Keep away from light and heat
+    - Consider smaller bottles for long-term (reduce oxidation)
+
+    **Note in Storehouses:**
+    - Update bottle condition to "Opened"
+    - Adjust value (personal consumption value)
+    - Track fill level if monitoring consumption
+
+    <Warning>
+      Never represent opened bottles as sealed if selling - this is fraud
+    </Warning>
+  </Accordion>
+</AccordionGroup>
+
+## Investment Considerations
+
+<Card title="Spirits as Investments" icon="chart-line">
+  **High-appreciation potential:**
+  - Pappy Van Winkle (all ages)
+  - Buffalo Trace Antique Collection
+  - Japanese whisky (age-stated, limited)
+  - Very old Scotch (25-50+ years)
+  - Single cask rarities
+
+  **Factors affecting value:**
+  - Rarity and limited availability
+  - Age statement (older = more valuable)
+  - Distillery reputation
+  - Original packaging completeness
+  - Provenance documentation
+  - Bottle condition/seal integrity
+
+  **Risks:**
+  - Market can be volatile
+  - Counterfeits (especially high-value)
+  - Storage/handling damage
+  - Legal restrictions on resale (varies by state)
+  - Costs of storage and insurance
+
+  **Best practices:**
+  - Buy from reputable sources
+  - Document everything
+  - Store properly
+  - Insure valuable bottles
+  - Track market trends
+</Card>
+
+## Common Questions
+
+<AccordionGroup>
+  <Accordion title="How do I know if my bottle is valuable?" icon="dollar-sign">
+    **Check these factors:**
+    - **Rarity:** Limited releases, discontinued
+    - **Allocation:** Was it allocated/lottery item?
+    - **Age:** Older age statements more valuable
+    - **Distillery:** Prestigious names command premiums
+    - **Condition:** Sealed, pristine condition essential
+
+    **Research value:**
+    - Secondary market groups (Facebook, Reddit)
+    - Completed auction results
+    - Online spirits retailers
+    - Collector communities
+
+    **Most valuable:**
+    - Pappy Van Winkle (any age)
+    - BTAC releases
+    - Old Japanese whisky (Yamazaki 25+)
+    - Very old Scotch (30+ years)
+    - Rare single barrels
+  </Accordion>
+
+  <Accordion title="Should I open or keep sealed?" icon="bottle">
+    **Keep sealed if:**
+    - Rare/allocated bottle
+    - Investment purpose
+    - High secondary market value
+    - You have duplicates (drink one, keep one)
+
+    **Open if:**
+    - Want to enjoy it (spirits made for drinking!)
+    - Not particularly rare
+    - Have multiple bottles
+    - Personal consumption collection
+
+    **Middle ground:**
+    - Buy two: one to drink, one to keep
+    - Open lower-value bottles
+    - Keep rare/allocated sealed
+
+    <Note>
+      Remember: spirits are made to be enjoyed. Balance collecting with drinking.
+    </Note>
+  </Accordion>
+
+  <Accordion title="How should I store spirits long-term?" icon="box">
+    **Best practices:**
+    - **Upright** (always, never on side)
+    - Cool (60-70°F), stable temperature
+    - Dark (away from sunlight/UV)
+    - Low humidity (preserves labels)
+    - Secure location
+
+    **For very long-term:**
+    - Parafilm around cap/cork seal
+    - Original box if available
+    - Climate-controlled space
+    - Inventory tracking
+
+    **Avoid:**
+    - Direct sunlight
+    - Temperature extremes
+    - High humidity (damages labels)
+    - Storing on side (damages cork)
+
+    <Warning>
+      Poor storage can damage seals and degrade spirits over decades
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Are there counterfeit spirits?" icon="shield-exclamation">
+    **Yes, counterfeits exist, especially for:**
+    - Pappy Van Winkle
+    - Buffalo Trace Antique Collection
+    - Old rare Scotch
+    - Japanese whisky
+    - High-value bottles
+
+    **Protection:**
+    - Buy from reputable sources only
+    - Check seals and labels carefully
+    - Verify bottle details (weight, glass, printing)
+    - Document provenance
+    - Be wary of "too good to be true" deals
+
+    **Red flags:**
+    - Suspiciously low prices
+    - Private sales without provenance
+    - Poor label quality
+    - Incorrect details (proof, age, etc.)
+    - Seller reluctance to provide details
+
+    <Warning>
+      Only buy rare/expensive bottles from authorized retailers, reputable auctions, or proven collectors
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Can spirits go bad?" icon="question">
+    **Short answer:** Sealed spirits don't spoil
+
+    **Unopened bottles:**
+    - Stable indefinitely if stored properly
+    - High alcohol content preserves liquid
+    - May lose some volume over decades (evaporation)
+    - Corks can dry/degrade (very old bottles)
+
+    **Opened bottles:**
+    - Oxidation begins
+    - Best consumed within 1-2 years
+    - Won't "spoil" but flavor degrades
+    - Low-proof spirits (liqueurs) more susceptible
+
+    **Issues:**
+    - Cork disintegration (very old bottles)
+    - Evaporation through seal (decades)
+    - Label degradation (cosmetic only)
+
+    <Note>
+      Unlike wine, spirits don't mature in bottle - won't improve over time
+    </Note>
+  </Accordion>
+
+  <Accordion title="What about bottle numbers - do they matter?" icon="hashtag">
+    **Low numbers more valuable:**
+    - Bottle #1 - significant premium
+    - Bottles #1-100 - modest premium
+    - Bottles #1-10 - noticeable premium
+
+    **Other special numbers:**
+    - #007 (for Bond fans)
+    - Matching sets (same number, different bottles)
+    - Last bottle in series
+
+    **When it matters:**
+    - Single barrel releases
+    - Small batch limited editions
+    - Commemorative releases
+
+    **When it doesn't:**
+    - Very large releases (10,000+ bottles)
+    - Standard age-stated releases
+    - Regularly available bottles
+
+    <Tip>
+      For true collectibles, low bottle numbers (#1-50) can add 10-20% to value
+    </Tip>
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Add Your Spirits" icon="plus" href="https://storehouses.app/add">
+    Start tracking your spirits collection
+  </Card>
+
+  <Card title="Wine Guide" icon="wine-glass" href="/asset-types/wine">
+    Track your wine cellar
+  </Card>
+
+  <Card title="View Collection" icon="eye" href="/portfolio/viewing-items">
+    Browse your spirits
+  </Card>
+
+  <Card title="Export Inventory" icon="file-export" href="/portfolio/export-reporting">
+    Generate spirits inventory
+  </Card>
+</CardGroup>

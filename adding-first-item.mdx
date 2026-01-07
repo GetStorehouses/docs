@@ -1,0 +1,254 @@
+---
+title: "Adding Your First Item"
+description: "Learn how to add your first asset to your Storehouses portfolio"
+---
+
+## Overview
+
+Adding items to Storehouses is straightforward. Each asset type has specific fields to capture the most relevant information for that category.
+
+## Accessing the Add Item Page
+
+<Steps>
+  <Step title="From Dashboard">
+    Click the "Add Item" button on your dashboard
+  </Step>
+  <Step title="Or Direct Navigation">
+    Navigate to [storehouses.app/add](https://storehouses.app/add)
+  </Step>
+</Steps>
+
+## Choose Your Asset Category
+
+Select the category that best matches your item:
+
+<CardGroup cols={3}>
+  <Card title="Precious Metals" icon="coins">
+    Gold, silver, platinum, palladium, rhodium
+  </Card>
+  <Card title="Luxury Watches" icon="clock">
+    High-end timepieces
+  </Card>
+  <Card title="Gems & Jewelry" icon="gem">
+    Loose gemstones
+  </Card>
+  <Card title="Fine Jewelry" icon="ring">
+    Jewelry pieces
+  </Card>
+  <Card title="Wine" icon="wine-glass">
+    Wine bottles and collections
+  </Card>
+  <Card title="Spirits" icon="whiskey-glass">
+    Whiskey, cognac, and other spirits
+  </Card>
+  <Card title="Fine Art" icon="palette">
+    Paintings, sculptures, prints
+  </Card>
+  <Card title="Arms & Armor" icon="shield">
+    Historical weapons and armor
+  </Card>
+  <Card title="Other Collectibles" icon="box">
+    Everything else
+  </Card>
+</CardGroup>
+
+## Example: Adding a Precious Metal Item
+
+Let's walk through adding a gold coin:
+
+### Step 1: Basic Information
+
+<Steps>
+  <Step title="Title">
+    Give your item a descriptive name
+
+    ```
+    Example: American Gold Eagle 1 oz
+    ```
+  </Step>
+
+  <Step title="Description (Optional)">
+    Add any additional details
+
+    ```
+    Example: 2023 $50 American Gold Eagle coin, uncirculated condition
+    ```
+  </Step>
+</Steps>
+
+### Step 2: Metal Details
+
+For precious metals, provide specific details:
+
+<ParamField path="metal" type="select" required>
+  Metal type: Gold, Silver, Platinum, Palladium, or Rhodium
+</ParamField>
+
+<ParamField path="weight_oz" type="number" required>
+  Weight in troy ounces (e.g., 1.0 for a 1 oz coin)
+</ParamField>
+
+<ParamField path="purity" type="text" required>
+  Purity (e.g., ".9999", "24K", "999")
+</ParamField>
+
+<ParamField path="product_name" type="text">
+  Product name (e.g., "American Gold Eagle", "Canadian Maple Leaf")
+</ParamField>
+
+<Tip>
+  Storehouses automatically calculates the spot value based on current precious metals prices, weight, and purity.
+</Tip>
+
+### Step 3: Valuation (Optional)
+
+<ParamField path="purchase_price" type="number">
+  What you paid for the item
+</ParamField>
+
+<ParamField path="purchase_date" type="date">
+  When you acquired it
+</ParamField>
+
+<ParamField path="seller" type="text">
+  Where you bought it from
+</ParamField>
+
+<ParamField path="market_value" type="number">
+  Current estimated market value (if different from spot price)
+</ParamField>
+
+<ParamField path="insurance_value" type="number">
+  Insured value for insurance purposes
+</ParamField>
+
+### Step 4: Organization
+
+<ParamField path="location" type="select">
+  Physical storage location
+
+  Choose from your saved locations or add a new one:
+  - Home Safe
+  - Bank Safe Deposit Box
+  - Brinks Vault
+  - Wine Cellar
+  - Custom location
+</ParamField>
+
+<ParamField path="collection" type="select">
+  Assign to a collection (optional)
+
+  Collections help organize related items (e.g., "Gold Coins", "Investment Metals")
+</ParamField>
+
+### Step 5: Additional Information
+
+<ParamField path="quantity" type="number">
+  Number of units (default: 1)
+</ParamField>
+
+<ParamField path="notes" type="textarea">
+  Any additional notes or comments about the item
+</ParamField>
+
+<ParamField path="photos" type="file">
+  Upload photos of your item (optional)
+</ParamField>
+
+### Step 6: Save
+
+Click "Save Item" to add it to your portfolio. You'll be redirected to the item detail page where you can view all the information and make edits if needed.
+
+## What Happens After Adding an Item?
+
+<AccordionGroup>
+  <Accordion title="Dashboard Updates" icon="chart-line">
+    Your dashboard automatically updates to reflect:
+    - New total portfolio value
+    - Updated allocation charts
+    - The item appears in your recent items list
+  </Accordion>
+
+  <Accordion title="Automatic Valuation" icon="dollar-sign">
+    For precious metals, Storehouses:
+    - Fetches current spot prices
+    - Calculates value based on weight and purity
+    - Updates daily as spot prices change
+  </Accordion>
+
+  <Accordion title="Item Detail Page" icon="file">
+    Each item has a dedicated page showing:
+    - All metadata
+    - Photos
+    - Valuation history
+    - Edit and delete options
+  </Accordion>
+</AccordionGroup>
+
+## Tips for Better Organization
+
+<CardGroup cols={2}>
+  <Card title="Use Collections" icon="folder">
+    Group similar items together (e.g., "Silver Coins", "Vintage Watches")
+  </Card>
+  <Card title="Set Locations" icon="location-dot">
+    Track where items are stored for insurance and retrieval
+  </Card>
+  <Card title="Add Photos" icon="camera">
+    Visual documentation helps with insurance claims
+  </Card>
+  <Card title="Include Details" icon="file-lines">
+    The more information you add, the more valuable your records
+  </Card>
+</CardGroup>
+
+## Category-Specific Guides
+
+Each asset type has unique fields. See detailed guides for:
+
+<CardGroup cols={3}>
+  <Card title="Precious Metals" icon="coins" href="/asset-types/precious-metals">
+    Metal-specific tracking
+  </Card>
+  <Card title="Watches" icon="clock" href="/asset-types/watches">
+    Brand, model, reference
+  </Card>
+  <Card title="Gems" icon="gem" href="/asset-types/gems">
+    4Cs and certification
+  </Card>
+  <Card title="Jewelry" icon="ring" href="/asset-types/jewelry">
+    Materials and designer
+  </Card>
+  <Card title="Wine" icon="wine-glass" href="/asset-types/wine">
+    Vintage and region
+  </Card>
+  <Card title="Spirits" icon="whiskey-glass" href="/asset-types/spirits">
+    Age and distillery
+  </Card>
+  <Card title="Fine Art" icon="palette" href="/asset-types/fine-art">
+    Artist and provenance
+  </Card>
+  <Card title="Arms & Armor" icon="shield" href="/asset-types/arms-armor">
+    Era and condition
+  </Card>
+  <Card title="Other" icon="box" href="/asset-types/other-collectibles">
+    General collectibles
+  </Card>
+</CardGroup>
+
+## Next Steps
+
+<Steps>
+  <Step title="Add More Items">
+    Continue building your portfolio with additional assets
+  </Step>
+  <Step title="Organize">
+    Create collections and set up locations
+  </Step>
+  <Step title="Set Alerts">
+    Configure price alerts for precious metals (Pro plan)
+  </Step>
+  <Step title="Export">
+    Generate reports for insurance or tax purposes
+  </Step>
+</Steps>
