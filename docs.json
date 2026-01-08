@@ -61,8 +61,8 @@
             "group": "Advanced Features",
             "pages": [
               "advanced/price-alerts",
-              "advanced/heir-access",
               "advanced/sharing",
+              "advanced/heir-access",
               "advanced/offline-mode"
             ]
           },
