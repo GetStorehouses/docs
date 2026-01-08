@@ -1,0 +1,572 @@
+---
+title: "Share Links & Heir Access FAQ"
+description: "Frequently asked questions about Share Links and Heir Access features"
+---
+
+import Pro from '/snippets/pro.mdx';
+
+<Pro />
+
+## Overview
+
+This page answers common questions about Share Links and Heir Access - two distinct features for sharing and emergency access to your portfolio.
+
+## General Questions
+
+<AccordionGroup>
+  <Accordion title="What's the difference between Share Links and Heir Access?" icon="scale-balanced">
+    **Share Links**:
+    - Purpose: Voluntary portfolio sharing with anyone
+    - Recipient account: NOT required
+    - Pro requirement: Account holder only
+    - Setup: Create link and share it
+    - Access: Immediate
+    - Duration: Customizable (temporary or permanent)
+    - Best for: Financial advisors, appraisers, accountants, professionals
+
+    **Heir Access**:
+    - Purpose: Emergency access for designated beneficiaries
+    - Recipient account: REQUIRED (with Pro subscription)
+    - Pro requirement: BOTH users must have Pro/Lifetime
+    - Setup: Designate heir in advance
+    - Access: Waiting period (14-90 days) OR immediate with pre-approval
+    - Duration: 180 days after approval
+    - Best for: Estate planning, emergency preparedness, beneficiaries
+  </Accordion>
+
+  <Accordion title="Can I use both Share Links and Heir Access?" icon="check-double">
+    Yes! These are completely separate systems designed for different purposes:
+    - Use **Share Links** for sharing with professionals who need temporary or ongoing access
+    - Use **Heir Access** for trusted family members or beneficiaries who need emergency access
+    - The same person can be both a share link recipient AND a designated heir
+  </Accordion>
+
+  <Accordion title="Do I need Pro for both features?" icon="crown">
+    **Share Links**: Only the account holder needs Pro
+    - Recipients don't need Storehouses accounts
+    - No subscription required for recipients
+
+    **Heir Access**: BOTH users need Pro/Lifetime
+    - Account holder must have Pro/Lifetime
+    - Designated heir must also have Pro/Lifetime
+    - If either user downgrades, access is immediately revoked
+  </Accordion>
+</AccordionGroup>
+
+## Share Links FAQ
+
+<AccordionGroup>
+  <Accordion title="Can I name my share links?" icon="tag">
+    Yes! Each share link requires a name when you create it. This helps you:
+    - Identify different links at a glance
+    - Remember who you shared each link with
+    - Search for specific links quickly
+    - See colored avatars with initials from the name
+
+    Example names: "Financial Advisor Access", "Insurance Renewal 2026", "Estate Attorney"
+  </Accordion>
+
+  <Accordion title="How do I search for a specific share link?" icon="magnifying-glass">
+    Use the search box at the top of the Share Links page to filter by:
+    - Link name
+    - URL
+
+    Results update in real-time as you type. The search is case-insensitive.
+  </Accordion>
+
+  <Accordion title="What are the QR codes for?" icon="qrcode">
+    Each share link automatically generates a QR code that:
+    - Makes it easy to share with mobile devices
+    - Can be scanned with any smartphone camera
+    - Is 120x120 pixels for optimal scanning
+    - Is generated locally in your browser for security
+    - Never sent to third-party services
+
+    Simply scan the QR code with a phone camera to open the share link immediately.
+  </Accordion>
+
+  <Accordion title="Can I edit a share link after creating it?" icon="pencil">
+    Yes! Click the dropdown menu (three dots) next to any share link and select "Edit" to modify:
+    - Name
+    - Edit permissions
+    - Expiration date
+    - Max views
+    - Password (leave blank to keep existing password)
+
+    The URL stays the same - recipients don't need a new link.
+  </Accordion>
+
+  <Accordion title="How do I copy a share link?" icon="copy">
+    Two ways to copy:
+
+    1. **Click the URL directly**:
+       - Click anywhere on the link in the gray code block
+       - See "✓ Copied!" confirmation
+
+    2. **Use the dropdown menu**:
+       - Click the three dots (⋮)
+       - Select "Copy"
+       - Link is copied to clipboard
+  </Accordion>
+
+  <Accordion title="What happens when I delete a share link?" icon="trash">
+    When you delete a share link:
+    - The link immediately becomes invalid
+    - Recipients lose access instantly
+    - Any open sessions are terminated
+    - The action cannot be undone
+    - You'll need to create a new link if access is needed again
+
+    You'll see a confirmation modal showing the link name before deletion.
+  </Accordion>
+
+  <Accordion title="Can share link recipients edit my items?" icon="user-pen">
+    Only if you grant "Allow Editing" permission:
+
+    **Read-only (default)**:
+    - View items and collections
+    - Export to PDF
+    - Cannot modify anything
+
+    **Editable**:
+    - Add new items
+    - Edit existing items
+    - Delete items
+    - Modify collections
+
+    ⚠️ Only grant edit access to people you fully trust.
+  </Accordion>
+
+  <Accordion title="How secure are the QR codes?" icon="shield-check">
+    QR codes for share links are very secure:
+    - Generated in your browser using the `qrcode` npm package
+    - Never sent to third-party services
+    - Stored only in your browser session
+    - Regenerated fresh on every page load
+    - No tracking or analytics embedded
+    - Simply encode the share URL for convenience
+  </Accordion>
+
+  <Accordion title="Can I set a password on a share link?" icon="lock">
+    Yes! When creating or editing a share link, you can:
+    - Add password protection
+    - Passwords are encrypted with bcrypt hashing
+    - Recipients must enter the password to view the share
+    - Send the password separately from the link
+    - Change the password by editing the link
+    - Leave password field blank when editing to keep existing password
+  </Accordion>
+
+  <Accordion title="What's the difference between expiration and view limits?" icon="clock">
+    **Expiration Date**:
+    - Link becomes inactive on a specific date
+    - Time-based automatic deactivation
+    - Good for temporary consultations
+
+    **View Limits**:
+    - Link becomes inactive after X views
+    - Count-based automatic deactivation
+    - Good for one-time access
+
+    You can use both together for maximum control.
+  </Accordion>
+
+  <Accordion title="Can I see who viewed my share links?" icon="eye">
+    Share Links show:
+    - Current view count
+    - Maximum views allowed (if set)
+    - Creation date
+    - Expiration date (if set)
+
+    However, Share Links do NOT track:
+    - Who viewed the link (recipient identity)
+    - When specific views occurred
+    - IP addresses or device information
+
+    This privacy-first design means recipients aren't tracked.
+  </Accordion>
+</AccordionGroup>
+
+## Heir Access FAQ
+
+<AccordionGroup>
+  <Accordion title="Why do heirs need their own Pro subscription?" icon="question-circle">
+    The dual Pro subscription requirement:
+    - **Prevents abuse**: Reduces frivolous or malicious access requests
+    - **Validates identity**: Confirms heir has a paid, verified account
+    - **Ensures commitment**: Both parties are serious about the feature
+    - **Sustains service**: Helps maintain the infrastructure for both users
+    - **Security measure**: Additional verification layer for emergency access
+  </Accordion>
+
+  <Accordion title="Does the heir need a Storehouses account?" icon="user-plus">
+    Yes! Heirs must have their own Storehouses account:
+    - Create account at [storehouses.app](https://storehouses.app)
+    - Use the same email address you'll designate them with
+    - Upgrade to Pro or Lifetime subscription
+    - Only then can you add them as a designated heir
+
+    This requirement ensures proper identity verification and access control.
+  </Accordion>
+
+  <Accordion title="Can I grant immediate access without the waiting period?" icon="bolt">
+    Yes! There are two paths to grant heir access:
+
+    **Path 1: Heir-Initiated (with waiting period)**
+    - Heir requests access
+    - Waiting period begins (14-90 days)
+    - You receive multiple notifications
+    - Auto-approves after waiting period if not denied
+
+    **Path 2: Pre-Approval (immediate)**
+    - Click "Grant Access Now" next to any heir
+    - Heir receives immediate access for 180 days
+    - No waiting period
+    - Heir gets instant email notification
+  </Accordion>
+
+  <Accordion title="What happens during the waiting period?" icon="hourglass">
+    During a heir-initiated access request:
+
+    **Day 0**:
+    - You receive immediate notification
+    - One-click denial link included
+
+    **Days 7, 14, 21**:
+    - Reminder emails with denial links
+    - Shows days remaining
+
+    **24 hours before approval**:
+    - Final notice email
+    - Last chance to deny
+
+    **After waiting period**:
+    - Request auto-approves if not denied
+    - Heir receives access for 180 days
+    - You get notification of approval
+  </Accordion>
+
+  <Accordion title="Can I have multiple heirs?" icon="users">
+    Yes! With Pro/Lifetime you can designate unlimited heirs:
+    - Each heir is independent
+    - Each has their own permission level (read-only or edit)
+    - Each can initiate separate access requests
+    - You can pre-approve each one separately
+
+    Common setup:
+    - Primary: Spouse (edit access)
+    - Secondary: Adult child (read-only)
+    - Tertiary: Estate executor (read-only)
+  </Accordion>
+
+  <Accordion title="What if I pass away during the waiting period?" icon="heart-crack">
+    This is the intended behavior:
+    - The request will auto-approve after the waiting period
+    - Even if you cannot respond
+    - This ensures eventual access for legitimate heirs
+    - The waiting period provides security against unauthorized requests
+    - Multiple email notifications give you time to deny if you're able
+  </Accordion>
+
+  <Accordion title="Can I extend the 180-day access period?" icon="calendar-plus">
+    Access cannot be automatically extended, but heirs can renew:
+
+    **Option 1: Heir requests renewal**
+    - Submit new access request (Path 1)
+    - Goes through waiting period again
+
+    **Option 2: You grant new access**
+    - Use "Grant Access Now" (Path 2)
+    - Immediate access for another 180 days
+
+    This ensures both users still have Pro subscriptions.
+  </Accordion>
+
+  <Accordion title="What happens if I downgrade from Pro?" icon="arrow-down">
+    If you downgrade to Free:
+    - All active heir access is **immediately revoked**
+    - Pending requests are **canceled**
+    - Heirs receive notification emails
+    - Heir designations are **preserved** in your account
+    - Access resumes if you re-upgrade to Pro
+
+    This is an automatic security measure.
+  </Accordion>
+
+  <Accordion title="What happens if my heir downgrades from Pro?" icon="user-minus">
+    If the heir downgrades to Free:
+    - Their active access is **immediately revoked**
+    - They **cannot submit** new access requests
+    - You **cannot grant** them immediate access
+    - They must re-upgrade to Pro to regain access
+    - You receive notification of the revocation
+  </Accordion>
+
+  <Accordion title="What's the difference between read-only and edit permissions?" icon="user-lock">
+    **Read-only** (recommended for most heirs):
+    - View all items and collections
+    - See all metadata and images
+    - Export to PDF and CSV
+    - Cannot modify anything
+
+    **Can Edit**:
+    - Everything from read-only
+    - Add new items
+    - Edit existing items
+    - Delete items
+    - Modify collections
+    - Update valuations
+
+    ⚠️ Heirs still cannot access account settings, billing, or password.
+  </Accordion>
+
+  <Accordion title="How do I deny an heir access request?" icon="hand">
+    Two ways to deny:
+
+    **Option 1: Email link**
+    - Open any notification email
+    - Click "Deny Access" button
+    - Confirm on the website
+
+    **Option 2: Dashboard**
+    - Go to [storehouses.app/heir-access](https://storehouses.app/heir-access)
+    - Find heir with "Pending" status
+    - Click "Deny Request"
+    - Confirm denial
+
+    Denial is instant and cannot be undone. Heir must submit new request.
+  </Accordion>
+
+  <Accordion title="Can I revoke access after it's granted?" icon="ban">
+    Yes! Revoke access anytime:
+
+    1. Go to Heir Access page
+    2. Find heir with "Access Granted" badge
+    3. Click "Revoke Access"
+    4. Confirm revocation
+
+    **What happens**:
+    - Access immediately revoked
+    - Heir loses portfolio access instantly
+    - Heir receives notification email
+    - Heir remains in your designated heirs list
+    - They can request access again later
+  </Accordion>
+
+  <Accordion title="What emails do heirs receive?" icon="envelope">
+    Heirs receive emails for:
+
+    1. **Request Confirmation**: When they submit access request (Path 1)
+    2. **Access Granted**: When access auto-approves after waiting period
+    3. **Pre-Approved Access**: When you grant immediate access (Path 2)
+    4. **Access Denied**: When you deny their request
+    5. **Access Revoked**: When you revoke their active access
+
+    All emails come from `heirs@storehouses.app`
+  </Accordion>
+
+  <Accordion title="Can heirs access my account settings or billing?" icon="lock-open">
+    **No!** Even with "Can Edit" permissions, heirs CANNOT:
+    - View or change account settings
+    - Access billing information
+    - Change your email or password
+    - Delete your account
+    - Modify heir access settings
+    - Create new heirs
+    - See your subscription details
+
+    Heirs only access portfolio data (items, collections, locations).
+  </Accordion>
+
+  <Accordion title="What's logged in heir_access_sessions?" icon="list-check">
+    The system logs:
+    - When heirs access your portfolio
+    - Which heir accessed it
+    - Timestamps of access sessions
+
+    This provides:
+    - Security audit trail
+    - Documentation for estate purposes
+    - Monitoring of emergency access usage
+
+    Only you can view these logs (heirs cannot).
+  </Accordion>
+</AccordionGroup>
+
+## Both Features
+
+<AccordionGroup>
+  <Accordion title="Can the same person be both a share link recipient AND a designated heir?" icon="user-group">
+    Yes! These are completely separate systems:
+
+    **Share Links**:
+    - You create a link and share it with anyone
+    - They don't need a Storehouses account
+    - Access is immediate
+    - You control duration and permissions
+
+    **Heir Access**:
+    - You designate them as an heir
+    - They must have Storehouses account with Pro
+    - Access requires request or pre-approval
+    - Designed for emergency situations
+
+    Example: You could create a share link for your financial advisor AND designate them as an heir for emergency access.
+  </Accordion>
+
+  <Accordion title="Which feature should I use for my spouse?" icon="heart">
+    It depends on the use case:
+
+    **Use Share Links if**:
+    - They just need to view your portfolio occasionally
+    - They don't have a Storehouses account
+    - You want to give them permanent viewing access
+    - They don't need Pro subscription
+
+    **Use Heir Access if**:
+    - They need emergency access if something happens to you
+    - They have (or can get) Pro subscription
+    - You want security measures (waiting periods)
+    - They need access for estate settlement
+
+    **Use both!**
+    - Share Link for day-to-day viewing
+    - Heir Access for emergency preparedness
+  </Accordion>
+
+  <Accordion title="What happens to these features when I downgrade from Pro?" icon="level-down">
+    **Share Links**:
+    - All share links immediately stop working
+    - Links become inaccessible
+    - Recipients see error message
+    - Link data is preserved
+    - Links reactivate if you re-upgrade
+
+    **Heir Access**:
+    - All active heir access immediately revoked
+    - Pending requests canceled
+    - Heir designations preserved
+    - Access resumes if you re-upgrade
+    - Heirs receive notification emails
+  </Accordion>
+
+  <Accordion title="Can I use these features on the free plan?" icon="gift">
+    No. Both Share Links and Heir Access are Pro features:
+    - Upgrade to Pro ($12/month or $99/year)
+    - Or get Lifetime access ($349 one-time)
+    - [View pricing →](https://storehouses.app/pricing)
+
+    Free plan users can:
+    - Track up to 50 items
+    - Use basic portfolio features
+    - Upgrade anytime to unlock sharing features
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="My share link isn't working" icon="link-slash">
+    Check these common issues:
+
+    ✅ **Verify the complete URL was copied**
+    - Share links can be long - ensure nothing was cut off
+
+    ✅ **Check expiration date**
+    - See if link has expired on the Share Links page
+
+    ✅ **Check view limit**
+    - See if max views was reached
+
+    ✅ **Confirm link wasn't deleted**
+    - Check your Share Links page to see if it still exists
+
+    ✅ **Try different browser**
+    - Some browser extensions may block links
+
+    If none of these work, try creating a new share link.
+  </Accordion>
+
+  <Accordion title="I can't add a heir" icon="user-slash">
+    Common issues and solutions:
+
+    ❌ **Heir doesn't have Storehouses account**
+    → Have them create account at [storehouses.app](https://storehouses.app)
+
+    ❌ **Heir doesn't have Pro subscription**
+    → They must upgrade to Pro or Lifetime
+
+    ❌ **You don't have Pro subscription**
+    → Upgrade your account to Pro or Lifetime
+
+    ❌ **Email address typo**
+    → Double-check email matches their account exactly
+
+    ❌ **Heir already designated**
+    → Check your heirs list - they may already be added
+
+    ❌ **Trying to add yourself**
+    → You cannot designate yourself as an heir
+  </Accordion>
+
+  <Accordion title="I'm not receiving heir access notifications" icon="envelope-slash">
+    If you don't receive emails:
+
+    1. **Check spam/junk folders**
+       - Look for emails from `heirs@storehouses.app`
+
+    2. **Verify your email address**
+       - Go to Account Settings
+       - Confirm email is correct
+
+    3. **Add to contacts**
+       - Add `heirs@storehouses.app` to your contacts
+
+    4. **Check email filters**
+       - Ensure emails aren't being auto-filtered
+
+    5. **Contact support**
+       - If you suspect unauthorized request
+  </Accordion>
+
+  <Accordion title="QR code won't scan" icon="qrcode">
+    Try these solutions:
+
+    ✅ **Ensure good lighting**
+    - Scan in bright area
+
+    ✅ **Hold phone steady**
+    - Keep camera stable while scanning
+
+    ✅ **Adjust distance**
+    - Try zooming in/out slightly
+
+    ✅ **Use QR scanner app**
+    - Download dedicated QR code reader
+
+    ✅ **Check QR code loaded**
+    - Make sure image fully loaded on screen
+
+    Alternative: Just copy the link URL manually instead.
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Share Links Documentation" icon="link" href="/advanced/sharing">
+    Learn more about Share Links
+  </Card>
+
+  <Card title="Heir Access Documentation" icon="users" href="/advanced/heir-access">
+    Learn more about Heir Access
+  </Card>
+
+  <Card title="Upgrade to Pro" icon="crown" href="https://storehouses.app/pricing">
+    Unlock both features
+  </Card>
+
+  <Card title="View Pricing" icon="dollar-sign" href="/account/subscription-plans">
+    Compare subscription plans
+  </Card>
+</CardGroup>

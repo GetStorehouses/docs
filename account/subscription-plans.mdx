@@ -28,13 +28,15 @@ Storehouses offers three flexible pricing tiers to fit your portfolio management
 | **Live Spot Prices** | No | Yes | Yes |
 | **Storage Locations** | Home only | Multiple | Multiple |
 | **Price & Value Alerts** | No | Yes | Yes |
-| **Heir Access** | No | Yes | Yes |
+| **Heir Access** | No | Yes* | Yes* |
 | **PDF & CSV Export** | No | Yes | Yes |
 | **Share Links** | No | Yes | Yes |
 | **Valuation History** | No | Yes | Yes |
 | **Email Support** | Community | Priority | Priority |
 | **Client-side Encryption** | No | Beta | Beta |
 | **Early Feature Access** | No | No | Yes |
+
+*Heir Access requires both account holder and heir to have Pro/Lifetime subscriptions
 
 ## Free Plan
 
@@ -307,13 +309,22 @@ Set custom alerts for asset prices:
 
 ### Heir Access (Pro & Lifetime)
 
-Emergency access system for beneficiaries:
+Emergency access system for designated heirs:
 
-- Designate up to 5 heirs
-- Time-delayed access activation
-- Secure verification process
-- Read-only portfolio access for heirs
-- Configurable access periods
+- **Dual Pro Requirement**: Both account holder AND heir must have Pro/Lifetime subscriptions
+- **Heir Must Have Account**: Heirs must have existing Storehouses accounts
+- **Two Access Paths**:
+  - Heir-initiated requests with configurable waiting periods (14-90 days)
+  - Account holder pre-approval for immediate access
+- **Custom Permissions**: Choose read-only or edit access per heir
+- **180-Day Access**: Automatic expiration with renewal options
+- **Unlimited Heirs**: Designate as many heirs as needed
+- **Email Notifications**: Multiple alerts during waiting periods with one-click denial
+- **Access Logging**: Audit trail of all heir access sessions
+
+<Warning>
+  Heir Access requires both the account holder AND the designated heir to maintain active Pro or Lifetime subscriptions.
+</Warning>
 
 [Learn more about Heir Access →](/advanced/heir-access)
 
@@ -328,17 +339,24 @@ Professional portfolio documentation:
 
 [Learn more about Export & Reporting →](/portfolio/export-reporting)
 
-### Portfolio Sharing (Pro & Lifetime)
+### Share Links (Pro & Lifetime)
 
-Secure portfolio sharing:
+Secure, customizable share links for portfolio sharing:
 
-- Create read-only share links
-- Password-protected access
-- Expiration dates for temporary sharing
-- Revoke access at any time
-- Track who has viewed your portfolio
+- **Required Name**: Each link has a descriptive name for easy identification
+- **QR Codes**: Auto-generated QR codes for each link (generated locally for security)
+- **Password Protection**: Optional password security with bcrypt encryption
+- **Expiration Dates**: Set automatic expiration for temporary access
+- **View Limits**: Limit how many times a link can be accessed
+- **Edit Permissions**: Choose between read-only and editable access
+- **Search & Filter**: Quickly find links by name or URL
+- **Inline Editing**: Modify link settings after creation
+- **Copy to Clipboard**: One-click copying with visual confirmation
+- **Status Badges**: Visual indicators for active, inactive, and editable links
 
-[Learn more about Sharing →](/advanced/sharing)
+**No Account Required**: Recipients don't need Storehouses accounts to view shared portfolios
+
+[Learn more about Share Links →](/advanced/sharing)
 
 ## Upgrading Your Plan
 
